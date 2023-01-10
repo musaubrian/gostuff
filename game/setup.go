@@ -14,22 +14,23 @@ import (
 
 //Player defines a player
 type Player struct {
-    name string;
-    guess uint64;
+    Name string;
+    Guess uint64;
 }
-//Gets returns player name
-func getName(nameReader *bufio.Reader) string{
-    fmt.Print("What should I call you?> ")
-    playerName, err := nameReader.ReadString('\n')
+
+//Gets returns player Name
+func getName(NameReader *bufio.Reader) string{
+    fmt.Print("What should I call you? ")
+    playerName, err := NameReader.ReadString('\n')
     if err != nil {
-        log.Fatal("Could not get player name: ", err)
+        log.Fatal("Could not get player Name: ", err)
     }
 
     playerName = strings.TrimSuffix(playerName, "\n")
 
     return playerName 
 }
-
+//getGuess returns the players guess
 func getGuess(guessReader *bufio.Reader, player string) uint64 {
     fmt.Printf("Take your guess %s: ", player)
     guess, err := guessReader.ReadString('\n')
@@ -41,18 +42,19 @@ func getGuess(guessReader *bufio.Reader, player string) uint64 {
     }
     //convert to an int
     playerGuess, err := strconv.Atoi(guess)
-
     if err != nil {
         log.Fatal("Could not convert to int:", err)
-    } 
+    }
+
     return uint64(playerGuess)
 }
-//getInput returns the players guess as an int
+
+//getInput returns playerName and playerGuess
 func getInput() (uint64, string) {
     reader := bufio.NewReader(os.Stdin)
     playerName := getName(reader)
     playerGuess := getGuess(reader, playerName)
-    
+
     return playerGuess, playerName
 }
 
@@ -66,11 +68,18 @@ func generateNumber() uint64 {
 
 //Starts the game
 func Setup()  {
-    println("//Take a guess[1-50]")
+    println("\nThe billion dollar guessing game\nAllowed guesses [1-50]\n")
     player := &Player{}
     input, playerName := getInput()
-    player.name = playerName
-    player.guess = input
-    _ = generateNumber()
-    fmt.Printf("%s guessed: %d\n",player.name, player.guess)
+    player.Name = playerName
+    player.Guess= input
+    correctAnswer := generateNumber()
+    if player.Guess == correctAnswer {
+        fmt.Printf("\nIts a match\nYour Guess {%d} = correctAnswer{%d}", player.Guess, correctAnswer)
+    } else {
+        fmt.Printf("\nThe correctAnswer was {%d}\n", correctAnswer)
+        fmt.Println("Better luck next time")
+    }
+
+   // fmt.Printf("%s guessed: %d\n",player.Name, player.guess)
 }
