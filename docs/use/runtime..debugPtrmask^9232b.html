@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.debugPtrmask</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">var <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mbitmap.go.html#line-1486">debugPtrmask</a></b></span>
+
+<span class="title">7 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mbitmap.go.html#line-1042">mbitmap.go#L1042</a>: 			lock(&amp;<b>debugPtrmask</b>.lock)
+		<a href="../src/runtime/mbitmap.go.html#line-1043" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1043">#L1043</a>: 			if <b>debugPtrmask</b>.data == nil {
+		<a href="../src/runtime/mbitmap.go.html#line-1044" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1044">#L1044</a>: 				<b>debugPtrmask</b>.data = (*byte)(persistentalloc(1&lt;&lt;20, 1, &amp;memstats.other_sys))
+		<a href="../src/runtime/mbitmap.go.html#line-1046" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1046">#L1046</a>: 			ptrmask = <b>debugPtrmask</b>.data
+		<a href="../src/runtime/mbitmap.go.html#line-1480" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1480">#L1480</a>: 		if ptrmask == <b>debugPtrmask</b>.data {
+		<a href="../src/runtime/mbitmap.go.html#line-1481" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1481">#L1481</a>: 			unlock(&amp;<b>debugPtrmask</b>.lock)
+		<a href="../src/runtime/mbitmap.go.html#line-1486" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1486">#L1486</a>: var <b>debugPtrmask</b> struct {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

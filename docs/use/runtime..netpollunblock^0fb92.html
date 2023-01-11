@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.netpollunblock</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/netpoll.go.html#line-536">netpollunblock</a></b></span>
+
+<span class="title">9 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/netpoll.go.html#line-393">netpoll.go#L393</a>: 		rg = <b>netpollunblock</b>(pd, 'r', false)
+		<a href="../src/runtime/netpoll.go.html#line-396" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-396">#L396</a>: 		wg = <b>netpollunblock</b>(pd, 'w', false)
+		<a href="../src/runtime/netpoll.go.html#line-418" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-418">#L418</a>: 	rg = <b>netpollunblock</b>(pd, 'r', false)
+		<a href="../src/runtime/netpoll.go.html#line-419" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-419">#L419</a>: 	wg = <b>netpollunblock</b>(pd, 'w', false)
+		<a href="../src/runtime/netpoll.go.html#line-449" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-449">#L449</a>: 		rg = <b>netpollunblock</b>(pd, 'r', true)
+		<a href="../src/runtime/netpoll.go.html#line-452" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-452">#L452</a>: 		wg = <b>netpollunblock</b>(pd, 'w', true)
+		<a href="../src/runtime/netpoll.go.html#line-536" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-536">#L536</a>: func <b>netpollunblock</b>(pd *pollDesc, mode int32, ioready bool) *g {
+		<a href="../src/runtime/netpoll.go.html#line-585" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-585">#L585</a>: 		rg = <b>netpollunblock</b>(pd, 'r', false)
+		<a href="../src/runtime/netpoll.go.html#line-594" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-594">#L594</a>: 		wg = <b>netpollunblock</b>(pd, 'w', false)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

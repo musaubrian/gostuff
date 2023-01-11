@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.schedt.nmspinning</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-767">schedt</a>.<a href="../src/runtime/runtime2.go.html#line-790">nmspinning</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">18 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/proc.go.html#line-2295">proc.go#L2295</a>: 				if int32(atomic.Xadd(&amp;sched.<b>nmspinning</b>, -1)) &lt; 0 {
+		<a href="../src/runtime/proc.go.html#line-2375" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2375">#L2375</a>: 	if atomic.Load(&amp;sched.<b>nmspinning</b>)+atomic.Load(&amp;sched.npidle) == 0 &amp;&amp; atomic.Cas(&amp;sched.<b>nmspinning</b>, 0, 1) { // TODO: fast atomic
+		<a href="../src/runtime/proc.go.html#line-2427" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2427">#L2427</a>: 	if atomic.Load(&amp;sched.<b>nmspinning</b>) != 0 || !atomic.Cas(&amp;sched.<b>nmspinning</b>, 0, 1) {
+		<a href="../src/runtime/proc.go.html#line-2493" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2493">#L2493</a>: 		if int32(atomic.Xadd(&amp;sched.<b>nmspinning</b>, -1)) &lt; 0 {
+		<a href="../src/runtime/proc.go.html#line-2664" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2664">#L2664</a>: 	if _g_.m.spinning || 2*atomic.Load(&amp;sched.<b>nmspinning</b>) &lt; procs-atomic.Load(&amp;sched.npidle) {
+		<a href="../src/runtime/proc.go.html#line-2667" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2667">#L2667</a>: 			atomic.Xadd(&amp;sched.<b>nmspinning</b>, 1)
+		<a href="../src/runtime/proc.go.html#line-2771" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2771">#L2771</a>: 		if int32(atomic.Xadd(&amp;sched.<b>nmspinning</b>, -1)) &lt; 0 {
+		<a href="../src/runtime/proc.go.html#line-2786" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2786">#L2786</a>: 			atomic.Xadd(&amp;sched.<b>nmspinning</b>, 1)
+		<a href="../src/runtime/proc.go.html#line-2795" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2795">#L2795</a>: 			atomic.Xadd(&amp;sched.<b>nmspinning</b>, 1)
+		<a href="../src/runtime/proc.go.html#line-2864" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2864">#L2864</a>: 				atomic.Xadd(&amp;sched.<b>nmspinning</b>, 1)
+		<a href="../src/runtime/proc.go.html#line-3103" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3103">#L3103</a>: 	nmspinning := atomic.Xadd(&amp;sched.<b>nmspinning</b>, -1)
+		<a href="../src/runtime/proc.go.html#line-5101" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5101">#L5101</a>: 			atomic.Xadd(&amp;sched.<b>nmspinning</b>, 1)
+		<a href="../src/runtime/proc.go.html#line-5333" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5333">#L5333</a>: 			if runqempty(_p_) &amp;&amp; atomic.Load(&amp;sched.<b>nmspinning</b>)+atomic.Load(&amp;sched.npidle) &gt; 0 &amp;&amp; pd.syscallwhen+10*1000*1000 &gt; now {
+		<a href="../src/runtime/proc.go.html#line-5424" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5424">#L5424</a>: 	print("SCHED ", (now-starttime)/1e6, "ms: gomaxprocs=", gomaxprocs, " idleprocs=", sched.npidle, " threads=", mcount(), " spinningthreads=", sched.<b>nmspinning</b>, " idlethreads=", sched.nmidle, " runqueue=", sched.runqsize)
+		<a href="../src/runtime/proc.go.html#line-6201" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6201">#L6201</a>: 	if i &gt;= active_spin || ncpu &lt;= 1 || gomaxprocs &lt;= int32(sched.npidle+sched.<b>nmspinning</b>)+1 {
+		<a href="../src/runtime/runtime2.go.html#line-790">runtime2.go#L790</a>: 	<b>nmspinning</b> uint32 // See "Worker thread parking/unparking" comment in proc.go.
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

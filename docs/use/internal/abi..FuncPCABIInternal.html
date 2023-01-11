@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: internal/abi.FuncPCABIInternal</title>
+<link href="../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../pkg/internal/abi.html">internal/abi</a>.<a href="../../src/internal/abi/abi.go.html#line-126">FuncPCABIInternal</a></b></span>
+
+<span class="title">61 uses</span>
+
+	internal/abi (current package)
+		<a href="../../src/internal/abi/abi.go.html#line-126">abi.go#L126</a>: func <b>FuncPCABIInternal</b>(f any) uintptr
+
+	<a href="../../pkg/runtime.html">runtime</a>
+		<a href="../../src/runtime/chan.go.html#line-174">chan.go#L174</a>: 		racereadpc(c.raceaddr(), callerpc, abi.<b>FuncPCABIInternal</b>(chansend))
+		<a href="../../src/runtime/chan.go.html#line-370" class="path-duplicate">chan.go</a><a href="../../src/runtime/chan.go.html#line-370">#L370</a>: 		racewritepc(c.raceaddr(), callerpc, abi.<b>FuncPCABIInternal</b>(closechan))
+		<a href="../../src/runtime/cpuprof.go.html#line-181">cpuprof.go#L181</a>: 			abi.<b>FuncPCABIInternal</b>(_LostExternalCode) + sys.PCQuantum,
+		<a href="../../src/runtime/cpuprof.go.html#line-182" class="path-duplicate">cpuprof.go</a><a href="../../src/runtime/cpuprof.go.html#line-182">#L182</a>: 			abi.<b>FuncPCABIInternal</b>(_ExternalCode) + sys.PCQuantum,
+		<a href="../../src/runtime/cpuprof.go.html#line-191" class="path-duplicate">cpuprof.go</a><a href="../../src/runtime/cpuprof.go.html#line-191">#L191</a>: 			abi.<b>FuncPCABIInternal</b>(_LostSIGPROFDuringAtomic64) + sys.PCQuantum,
+		<a href="../../src/runtime/cpuprof.go.html#line-192" class="path-duplicate">cpuprof.go</a><a href="../../src/runtime/cpuprof.go.html#line-192">#L192</a>: 			abi.<b>FuncPCABIInternal</b>(_System) + sys.PCQuantum,
+		<a href="../../src/runtime/iface.go.html#line-323">iface.go#L323</a>: 		raceReadObjectPC(t, v, getcallerpc(), abi.<b>FuncPCABIInternal</b>(convT))
+		<a href="../../src/runtime/iface.go.html#line-338" class="path-duplicate">iface.go</a><a href="../../src/runtime/iface.go.html#line-338">#L338</a>: 		raceReadObjectPC(t, v, getcallerpc(), abi.<b>FuncPCABIInternal</b>(convTnoptr))
+		<a href="../../src/runtime/map.go.html#line-398">map.go#L398</a>: 		pc := abi.<b>FuncPCABIInternal</b>(mapaccess1)
+		<a href="../../src/runtime/map.go.html#line-459" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-459">#L459</a>: 		pc := abi.<b>FuncPCABIInternal</b>(mapaccess2)
+		<a href="../../src/runtime/map.go.html#line-584" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-584">#L584</a>: 		pc := abi.<b>FuncPCABIInternal</b>(mapassign)
+		<a href="../../src/runtime/map.go.html#line-698" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-698">#L698</a>: 		pc := abi.<b>FuncPCABIInternal</b>(mapdelete)
+		<a href="../../src/runtime/map.go.html#line-818" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-818">#L818</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapiterinit))
+		<a href="../../src/runtime/map.go.html#line-870" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-870">#L870</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapiternext))
+		<a href="../../src/runtime/map.go.html#line-996" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-996">#L996</a>: 		pc := abi.<b>FuncPCABIInternal</b>(mapclear)
+		<a href="../../src/runtime/map.go.html#line-1400" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-1400">#L1400</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(reflect_maplen))
+		<a href="../../src/runtime/map.go.html#line-1412" class="path-duplicate">map.go</a><a href="../../src/runtime/map.go.html#line-1412">#L1412</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(reflect_maplen))
+		<a href="../../src/runtime/map_fast32.go.html#line-16">map_fast32.go#L16</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess1_fast32))
+		<a href="../../src/runtime/map_fast32.go.html#line-56" class="path-duplicate">map_fast32.go</a><a href="../../src/runtime/map_fast32.go.html#line-56">#L56</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess2_fast32))
+		<a href="../../src/runtime/map_fast32.go.html#line-99" class="path-duplicate">map_fast32.go</a><a href="../../src/runtime/map_fast32.go.html#line-99">#L99</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapassign_fast32))
+		<a href="../../src/runtime/map_fast32.go.html#line-189" class="path-duplicate">map_fast32.go</a><a href="../../src/runtime/map_fast32.go.html#line-189">#L189</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapassign_fast32))
+		<a href="../../src/runtime/map_fast32.go.html#line-276" class="path-duplicate">map_fast32.go</a><a href="../../src/runtime/map_fast32.go.html#line-276">#L276</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapdelete_fast32))
+		<a href="../../src/runtime/map_fast64.go.html#line-16">map_fast64.go#L16</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess1_fast64))
+		<a href="../../src/runtime/map_fast64.go.html#line-56" class="path-duplicate">map_fast64.go</a><a href="../../src/runtime/map_fast64.go.html#line-56">#L56</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess2_fast64))
+		<a href="../../src/runtime/map_fast64.go.html#line-99" class="path-duplicate">map_fast64.go</a><a href="../../src/runtime/map_fast64.go.html#line-99">#L99</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapassign_fast64))
+		<a href="../../src/runtime/map_fast64.go.html#line-189" class="path-duplicate">map_fast64.go</a><a href="../../src/runtime/map_fast64.go.html#line-189">#L189</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapassign_fast64))
+		<a href="../../src/runtime/map_fast64.go.html#line-276" class="path-duplicate">map_fast64.go</a><a href="../../src/runtime/map_fast64.go.html#line-276">#L276</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapdelete_fast64))
+		<a href="../../src/runtime/map_faststr.go.html#line-16">map_faststr.go#L16</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess1_faststr))
+		<a href="../../src/runtime/map_faststr.go.html#line-111" class="path-duplicate">map_faststr.go</a><a href="../../src/runtime/map_faststr.go.html#line-111">#L111</a>: 		racereadpc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapaccess2_faststr))
+		<a href="../../src/runtime/map_faststr.go.html#line-209" class="path-duplicate">map_faststr.go</a><a href="../../src/runtime/map_faststr.go.html#line-209">#L209</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapassign_faststr))
+		<a href="../../src/runtime/map_faststr.go.html#line-304" class="path-duplicate">map_faststr.go</a><a href="../../src/runtime/map_faststr.go.html#line-304">#L304</a>: 		racewritepc(unsafe.Pointer(h), callerpc, abi.<b>FuncPCABIInternal</b>(mapdelete_faststr))
+		<a href="../../src/runtime/mbarrier.go.html#line-180">mbarrier.go#L180</a>: 		raceWriteObjectPC(typ, dst, getcallerpc(), abi.<b>FuncPCABIInternal</b>(reflect_typedmemmove))
+		<a href="../../src/runtime/mbarrier.go.html#line-181" class="path-duplicate">mbarrier.go</a><a href="../../src/runtime/mbarrier.go.html#line-181">#L181</a>: 		raceReadObjectPC(typ, src, getcallerpc(), abi.<b>FuncPCABIInternal</b>(reflect_typedmemmove))
+		<a href="../../src/runtime/mbarrier.go.html#line-262" class="path-duplicate">mbarrier.go</a><a href="../../src/runtime/mbarrier.go.html#line-262">#L262</a>: 		pc := abi.<b>FuncPCABIInternal</b>(slicecopy)
+		<a href="../../src/runtime/mprof.go.html#line-715">mprof.go#L715</a>: 		racewriterangepc(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.Sizeof(r.Stack0), getcallerpc(), abi.<b>FuncPCABIInternal</b>(MemProfile))
+		<a href="../../src/runtime/mprof.go.html#line-773" class="path-duplicate">mprof.go</a><a href="../../src/runtime/mprof.go.html#line-773">#L773</a>: 				racewriterangepc(unsafe.Pointer(&amp;r.Stack0[0]), unsafe.Sizeof(r.Stack0), getcallerpc(), abi.<b>FuncPCABIInternal</b>(BlockProfile))
+		<a href="../../src/runtime/os_linux.go.html#line-476">os_linux.go#L476</a>: 	if fn == abi.<b>FuncPCABIInternal</b>(sighandler) { // abi.FuncPCABIInternal(sighandler) matches the callers in signal_unix.go
+		<a href="../../src/runtime/preempt.go.html#line-320">preempt.go#L320</a>: 	f = findfunc(abi.<b>FuncPCABIInternal</b>(asyncPreempt2))
+		<a href="../../src/runtime/proc.go.html#line-1934">proc.go#L1934</a>: 		gp.racectx = racegostart(abi.<b>FuncPCABIInternal</b>(newextram) + sys.PCQuantum)
+		<a href="../../src/runtime/proc.go.html#line-4594" class="path-duplicate">proc.go</a><a href="../../src/runtime/proc.go.html#line-4594">#L4594</a>: 				pc = abi.<b>FuncPCABIInternal</b>(_VDSO) + sys.PCQuantum
+		<a href="../../src/runtime/proc.go.html#line-4597" class="path-duplicate">proc.go</a><a href="../../src/runtime/proc.go.html#line-4597">#L4597</a>: 				pc = abi.<b>FuncPCABIInternal</b>(_ExternalCode) + sys.PCQuantum
+		<a href="../../src/runtime/proc.go.html#line-4601" class="path-duplicate">proc.go</a><a href="../../src/runtime/proc.go.html#line-4601">#L4601</a>: 				stk[1] = abi.<b>FuncPCABIInternal</b>(_GC) + sys.PCQuantum
+		<a href="../../src/runtime/proc.go.html#line-4603" class="path-duplicate">proc.go</a><a href="../../src/runtime/proc.go.html#line-4603">#L4603</a>: 				stk[1] = abi.<b>FuncPCABIInternal</b>(_System) + sys.PCQuantum
+		<a href="../../src/runtime/proc.go.html#line-6338" class="path-duplicate">proc.go</a><a href="../../src/runtime/proc.go.html#line-6338">#L6338</a>: 			pkg := funcpkgpath(findfunc(abi.<b>FuncPCABIInternal</b>(f)))
+		<a href="../../src/runtime/select.go.html#line-26">select.go#L26</a>: 	chansendpc = abi.<b>FuncPCABIInternal</b>(chansend)
+		<a href="../../src/runtime/select.go.html#line-27" class="path-duplicate">select.go</a><a href="../../src/runtime/select.go.html#line-27">#L27</a>: 	chanrecvpc = abi.<b>FuncPCABIInternal</b>(chanrecv)
+		<a href="../../src/runtime/signal_unix.go.html#line-148">signal_unix.go#L148</a>: 		setsig(i, abi.<b>FuncPCABIInternal</b>(sighandler))
+		<a href="../../src/runtime/signal_unix.go.html#line-206" class="path-duplicate">signal_unix.go</a><a href="../../src/runtime/signal_unix.go.html#line-206">#L206</a>: 			setsig(sig, abi.<b>FuncPCABIInternal</b>(sighandler))
+		<a href="../../src/runtime/signal_unix.go.html#line-301" class="path-duplicate">signal_unix.go</a><a href="../../src/runtime/signal_unix.go.html#line-301">#L301</a>: 			setsig(_SIGPROF, abi.<b>FuncPCABIInternal</b>(sighandler))
+		<a href="../../src/runtime/signal_unix.go.html#line-531" class="path-duplicate">signal_unix.go</a><a href="../../src/runtime/signal_unix.go.html#line-531">#L531</a>: 			abi.<b>FuncPCABIInternal</b>(_ExternalCode) + sys.PCQuantum,
+		<a href="../../src/runtime/signal_unix.go.html#line-947" class="path-duplicate">signal_unix.go</a><a href="../../src/runtime/signal_unix.go.html#line-947">#L947</a>: 	setsig(sig, abi.<b>FuncPCABIInternal</b>(sighandler))
+		<a href="../../src/runtime/slice.go.html#line-73">slice.go#L73</a>: 		pc := abi.<b>FuncPCABIInternal</b>(makeslicecopy)
+		<a href="../../src/runtime/slice.go.html#line-181" class="path-duplicate">slice.go</a><a href="../../src/runtime/slice.go.html#line-181">#L181</a>: 		racereadrangepc(old.array, uintptr(old.len*int(et.size)), callerpc, abi.<b>FuncPCABIInternal</b>(growslice))
+		<a href="../../src/runtime/slice.go.html#line-324" class="path-duplicate">slice.go</a><a href="../../src/runtime/slice.go.html#line-324">#L324</a>: 		pc := abi.<b>FuncPCABIInternal</b>(slicecopy)
+		<a href="../../src/runtime/stack.go.html#line-1132">stack.go#L1132</a>: 		fn = unsafe.Pointer(abi.<b>FuncPCABIInternal</b>(nilfunc))
+		<a href="../../src/runtime/string.go.html#line-92">string.go#L92</a>: 			abi.<b>FuncPCABIInternal</b>(slicebytetostring))
+		<a href="../../src/runtime/string.go.html#line-159" class="path-duplicate">string.go</a><a href="../../src/runtime/string.go.html#line-159">#L159</a>: 			abi.<b>FuncPCABIInternal</b>(slicebytetostringtmp))
+		<a href="../../src/runtime/string.go.html#line-213" class="path-duplicate">string.go</a><a href="../../src/runtime/string.go.html#line-213">#L213</a>: 			abi.<b>FuncPCABIInternal</b>(slicerunetostring))
+		<a href="../../src/runtime/time.go.html#line-844">time.go#L844</a>: 			ppcur.timerRaceCtx = racegostart(abi.<b>FuncPCABIInternal</b>(runtimer) + sys.PCQuantum)
+		<a href="../../src/runtime/type.go.html#line-276">type.go#L276</a>: 		return unsafe.Pointer(abi.<b>FuncPCABIInternal</b>(unreachableMethod))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

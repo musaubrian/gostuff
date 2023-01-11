@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: time.Month</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/time.html">time</a>.<a href="../src/time/time.go.html#line-282">Month</a></b></span>
+
+<span class="title">19 uses</span>
+
+	time (current package)
+		<a href="../src/time/format.go.html#line-619">format.go#L619</a>: 		month <b>Month</b>
+		<a href="../src/time/format.go.html#line-1285" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1285">#L1285</a>: 	if day &lt; 1 || day &gt; daysIn(<b>Month</b>(month), year) {
+		<a href="../src/time/format.go.html#line-1290" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1290">#L1290</a>: 		return Date(year, <b>Month</b>(month), day, hour, min, sec, nsec, z), nil
+		<a href="../src/time/format.go.html#line-1294" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1294">#L1294</a>: 		t := Date(year, <b>Month</b>(month), day, hour, min, sec, nsec, UTC)
+		<a href="../src/time/format.go.html#line-1311" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1311">#L1311</a>: 		t := Date(year, <b>Month</b>(month), day, hour, min, sec, nsec, UTC)
+		<a href="../src/time/format.go.html#line-1331" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1331">#L1331</a>: 	return Date(year, <b>Month</b>(month), day, hour, min, sec, nsec, defaultLocation), nil
+		<a href="../src/time/time.go.html#line-282">time.go#L282</a>: type <b>Month</b> int
+		<a href="../src/time/time.go.html#line-285" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-285">#L285</a>: 	January <b>Month</b> = 1 + iota
+		<a href="../src/time/time.go.html#line-300" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-300">#L300</a>: func (m <b>Month</b>) String() string {
+		<a href="../src/time/time.go.html#line-483" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-483">#L483</a>: func (t Time) Date() (year int, month <b>Month</b>, day int) {
+		<a href="../src/time/time.go.html#line-495" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-495">#L495</a>: func (t Time) Month() <b>Month</b> {
+		<a href="../src/time/time.go.html#line-925" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-925">#L925</a>: 	return Date(year+years, month+<b>Month</b>(months), day+days, hour, min, sec, int(t.nsec()), t.Location())
+		<a href="../src/time/time.go.html#line-940" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-940">#L940</a>: func (t Time) date(full bool) (year int, month <b>Month</b>, day int, yday int) {
+		<a href="../src/time/time.go.html#line-945" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-945">#L945</a>: func absDate(abs uint64, full bool) (year int, month <b>Month</b>, day int, yday int) {
+		<a href="../src/time/time.go.html#line-1003" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1003">#L1003</a>: 	month = <b>Month</b>(day / 31)
+		<a href="../src/time/time.go.html#line-1037" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1037">#L1037</a>: func daysIn(m <b>Month</b>, year int) int {
+		<a href="../src/time/time.go.html#line-1440" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1440">#L1440</a>: func Date(year int, month <b>Month</b>, day, hour, min, sec, nsec int, loc *Location) Time {
+		<a href="../src/time/time.go.html#line-1448" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1448">#L1448</a>: 	month = <b>Month</b>(m) + 1
+		<a href="../src/time/zoneinfo.go.html#line-569">zoneinfo.go#L569</a>: 			if d+7 &gt;= daysIn(<b>Month</b>(r.mon), year) {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.Value.Field</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/value.go.html#line-39">Value</a>.<a href="../src/reflect/value.go.html#line-1264">Field</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">18 uses</span>
+
+	reflect (current package)
+		<a href="../src/reflect/deepequal.go.html#line-130">deepequal.go#L130</a>: 			if !deepValueEqual(v1.<b>Field</b>(i), v2.<b>Field</b>(i), visited) {
+		<a href="../src/reflect/type.go.html#line-2515">type.go#L2515</a>: 							return recv.<b>Field</b>(ifield).Method(imethod).Call(args)
+		<a href="../src/reflect/type.go.html#line-2523" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2523">#L2523</a>: 							return recv.<b>Field</b>(ifield).Method(imethod).Call(args)
+		<a href="../src/reflect/type.go.html#line-2532" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2532">#L2532</a>: 							return recv.<b>Field</b>(ifield).Method(imethod).Call(args)
+		<a href="../src/reflect/type.go.html#line-2540" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2540">#L2540</a>: 							return recv.<b>Field</b>(ifield).Method(imethod).Call(args)
+		<a href="../src/reflect/type.go.html#line-2688" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2688">#L2688</a>: 		typ = (*structType)(tt.Elem().<b>Field</b>(0).Addr().UnsafePointer())
+		<a href="../src/reflect/type.go.html#line-2689" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2689">#L2689</a>: 		ut = (*uncommonType)(tt.Elem().<b>Field</b>(1).Addr().UnsafePointer())
+		<a href="../src/reflect/type.go.html#line-2691" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2691">#L2691</a>: 		copy(tt.Elem().<b>Field</b>(2).Slice(0, len(methods)).Interface().([]method), methods)
+		<a href="../src/reflect/value.go.html#line-1264">value.go#L1264</a>: func (v Value) <b>Field</b>(i int) Value {
+		<a href="../src/reflect/value.go.html#line-1299" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1299">#L1299</a>: 		return v.<b>Field</b>(index[0])
+		<a href="../src/reflect/value.go.html#line-1311" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1311">#L1311</a>: 		v = v.<b>Field</b>(x)
+		<a href="../src/reflect/value.go.html#line-1322" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1322">#L1322</a>: 		return v.<b>Field</b>(index[0]), nil
+		<a href="../src/reflect/value.go.html#line-1334" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1334">#L1334</a>: 		v = v.<b>Field</b>(x)
+		<a href="../src/reflect/value.go.html#line-1594" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1594">#L1594</a>: 			if !v.<b>Field</b>(i).IsZero() {
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-322">print.go#L322</a>: 	val := v.<b>Field</b>(i)
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-157">sort.go#L157</a>: 			if c := compare(aVal.<b>Field</b>(i), bVal.<b>Field</b>(i)); c != 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

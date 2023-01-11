@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: time.Duration</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/time.html">time</a>.<a href="../src/time/time.go.html#line-591">Duration</a></b></span>
+
+<span class="title">53 uses</span>
+
+	time (current package)
+		<a href="../src/time/format.go.html#line-1522">format.go#L1522</a>: func ParseDuration(s string) (<b>Duration</b>, error) {
+		<a href="../src/time/format.go.html#line-1613" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1613">#L1613</a>: 		return -<b>Duration</b>(d), nil
+		<a href="../src/time/format.go.html#line-1618" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-1618">#L1618</a>: 	return <b>Duration</b>(d), nil
+		<a href="../src/time/sleep.go.html#line-9">sleep.go#L9</a>: func Sleep(d <b>Duration</b>)
+		<a href="../src/time/sleep.go.html#line-28" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-28">#L28</a>: func when(d <b>Duration</b>) int64 {
+		<a href="../src/time/sleep.go.html#line-86" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-86">#L86</a>: func NewTimer(d <b>Duration</b>) *Timer {
+		<a href="../src/time/sleep.go.html#line-134" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-134">#L134</a>: func (t *Timer) Reset(d <b>Duration</b>) bool {
+		<a href="../src/time/sleep.go.html#line-156" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-156">#L156</a>: func After(d <b>Duration</b>) &lt;-chan Time {
+		<a href="../src/time/sleep.go.html#line-163" class="path-duplicate">sleep.go</a><a href="../src/time/sleep.go.html#line-163">#L163</a>: func AfterFunc(d <b>Duration</b>, f func()) *Timer {
+		<a href="../src/time/tick.go.html#line-22">tick.go#L22</a>: func NewTicker(d <b>Duration</b>) *Ticker {
+		<a href="../src/time/tick.go.html#line-53" class="path-duplicate">tick.go</a><a href="../src/time/tick.go.html#line-53">#L53</a>: func (t *Ticker) Reset(d <b>Duration</b>) {
+		<a href="../src/time/tick.go.html#line-68" class="path-duplicate">tick.go</a><a href="../src/time/tick.go.html#line-68">#L68</a>: func Tick(d <b>Duration</b>) &lt;-chan Time {
+		<a href="../src/time/time.go.html#line-591">time.go#L591</a>: type <b>Duration</b> int64
+		<a href="../src/time/time.go.html#line-594" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-594">#L594</a>: 	minDuration <b>Duration</b> = -1 &lt;&lt; 63
+		<a href="../src/time/time.go.html#line-595" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-595">#L595</a>: 	maxDuration <b>Duration</b> = 1&lt;&lt;63 - 1
+		<a href="../src/time/time.go.html#line-611" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-611">#L611</a>: 	Nanosecond  <b>Duration</b> = 1
+		<a href="../src/time/time.go.html#line-623" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-623">#L623</a>: func (d <b>Duration</b>) String() string {
+		<a href="../src/time/time.go.html#line-738" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-738">#L738</a>: func (d <b>Duration</b>) Nanoseconds() int64 { return int64(d) }
+		<a href="../src/time/time.go.html#line-741" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-741">#L741</a>: func (d <b>Duration</b>) Microseconds() int64 { return int64(d) / 1e3 }
+		<a href="../src/time/time.go.html#line-744" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-744">#L744</a>: func (d <b>Duration</b>) Milliseconds() int64 { return int64(d) / 1e6 }
+		<a href="../src/time/time.go.html#line-756" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-756">#L756</a>: func (d <b>Duration</b>) Seconds() float64 {
+		<a href="../src/time/time.go.html#line-763" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-763">#L763</a>: func (d <b>Duration</b>) Minutes() float64 {
+		<a href="../src/time/time.go.html#line-770" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-770">#L770</a>: func (d <b>Duration</b>) Hours() float64 {
+		<a href="../src/time/time.go.html#line-778" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-778">#L778</a>: func (d <b>Duration</b>) Truncate(m <b>Duration</b>) <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-787" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-787">#L787</a>: func lessThanHalf(x, y <b>Duration</b>) bool {
+		<a href="../src/time/time.go.html#line-797" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-797">#L797</a>: func (d <b>Duration</b>) Round(m <b>Duration</b>) <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-823" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-823">#L823</a>: func (d <b>Duration</b>) Abs() <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-835" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-835">#L835</a>: func (t Time) Add(d <b>Duration</b>) Time {
+		<a href="../src/time/time.go.html#line-863" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-863">#L863</a>: func (t Time) Sub(u Time) <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-867" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-867">#L867</a>: 		d := <b>Duration</b>(te - ue)
+		<a href="../src/time/time.go.html#line-876" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-876">#L876</a>: 	d := <b>Duration</b>(t.sec()-u.sec())*Second + <b>Duration</b>(t.nsec()-u.nsec())
+		<a href="../src/time/time.go.html#line-890" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-890">#L890</a>: func Since(t Time) <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-903" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-903">#L903</a>: func Until(t Time) <b>Duration</b> {
+		<a href="../src/time/time.go.html#line-1501" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1501">#L1501</a>: func (t Time) Truncate(d <b>Duration</b>) Time {
+		<a href="../src/time/time.go.html#line-1518" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1518">#L1518</a>: func (t Time) Round(d <b>Duration</b>) Time {
+		<a href="../src/time/time.go.html#line-1533" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1533">#L1533</a>: func div(t Time, d <b>Duration</b>) (qmod2 int, r <b>Duration</b>) {
+		<a href="../src/time/time.go.html#line-1552" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1552">#L1552</a>: 		r = <b>Duration</b>(nsec % int32(d))
+		<a href="../src/time/time.go.html#line-1558" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1558">#L1558</a>: 		r = <b>Duration</b>(sec%d1)*Second + <b>Duration</b>(nsec)
+		<a href="../src/time/time.go.html#line-1605" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1605">#L1605</a>: 		r = <b>Duration</b>(u0)
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/exec.go.html#line-142">exec.go#L142</a>: func (p *ProcessState) UserTime() time.<b>Duration</b> {
+		<a href="../src/os/exec.go.html#line-147" class="path-duplicate">exec.go</a><a href="../src/os/exec.go.html#line-147">#L147</a>: func (p *ProcessState) SystemTime() time.<b>Duration</b> {
+		<a href="../src/os/exec_unix.go.html#line-100">exec_unix.go#L100</a>: func (p *ProcessState) userTime() time.<b>Duration</b> {
+		<a href="../src/os/exec_unix.go.html#line-101" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-101">#L101</a>: 	return time.<b>Duration</b>(p.rusage.Utime.Nano()) * time.Nanosecond
+		<a href="../src/os/exec_unix.go.html#line-104" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-104">#L104</a>: func (p *ProcessState) systemTime() time.<b>Duration</b> {
+		<a href="../src/os/exec_unix.go.html#line-105" class="path-duplicate">exec_unix.go</a><a href="../src/os/exec_unix.go.html#line-105">#L105</a>: 	return time.<b>Duration</b>(p.rusage.Stime.Nano()) * time.Nanosecond
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

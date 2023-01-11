@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Store64</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-102">Store64</a></b></span>
+
+<span class="title">23 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-102">atomic_amd64.go#L102</a>: func <b>Store64</b>(ptr *uint64, val uint64)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-264">types.go#L264</a>: 	<b>Store64</b>(&amp;u.value, value)
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgc.go.html#line-1003">mgc.go#L1003</a>: 	atomic.<b>Store64</b>(&amp;memstats.last_gc_unix, uint64(unixNow)) // must be Unix time to make sense to user
+		<a href="../../../src/runtime/mgc.go.html#line-1004" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1004">#L1004</a>: 	atomic.<b>Store64</b>(&amp;memstats.last_gc_nanotime, uint64(now)) // monotonic time for us
+		<a href="../../../src/runtime/mprof.go.html#line-477">mprof.go#L477</a>: 	atomic.<b>Store64</b>(&amp;blockprofilerate, uint64(r))
+		<a href="../../../src/runtime/mprof.go.html#line-538" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-538">#L538</a>: 	atomic.<b>Store64</b>(&amp;mutexprofilerate, uint64(rate))
+		<a href="../../../src/runtime/mspanset.go.html#line-353">mspanset.go#L353</a>: 	atomic.<b>Store64</b>((*uint64)(h), 0)
+		<a href="../../../src/runtime/proc.go.html#line-2817">proc.go#L2817</a>: 		atomic.<b>Store64</b>(&amp;sched.pollUntil, uint64(pollUntil))
+		<a href="../../../src/runtime/proc.go.html#line-2838" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2838">#L2838</a>: 		atomic.<b>Store64</b>(&amp;sched.pollUntil, 0)
+		<a href="../../../src/runtime/proc.go.html#line-2839" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2839">#L2839</a>: 		atomic.<b>Store64</b>(&amp;sched.lastpoll, uint64(now))
+		<a href="../../../src/runtime/proc.go.html#line-4739" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-4739">#L4739</a>: 		atomic.<b>Store64</b>(&amp;pp.timer0When, 0)
+		<a href="../../../src/runtime/profbuf.go.html#line-121">profbuf.go#L121</a>: 	atomic.<b>Store64</b>((*uint64)(x), uint64(new))
+		<a href="../../../src/runtime/profbuf.go.html#line-188" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-188">#L188</a>: 			atomic.<b>Store64</b>(&amp;b.overflowTime, uint64(now))
+		<a href="../../../src/runtime/profbuf.go.html#line-189" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-189">#L189</a>: 			atomic.<b>Store64</b>(&amp;b.overflow, (((overflow&gt;&gt;32)+1)&lt;&lt;32)+1)
+		<a href="../../../src/runtime/runtime.go.html#line-45">runtime.go#L45</a>: 		atomic.<b>Store64</b>(&amp;ticks.val, uint64(r))
+		<a href="../../../src/runtime/runtime1.go.html#line-124">runtime1.go#L124</a>: 	atomic.<b>Store64</b>(&amp;test_z64, (1&lt;&lt;40)+1)
+		<a href="../../../src/runtime/time.go.html#line-304">time.go#L304</a>: 		atomic.<b>Store64</b>(&amp;pp.timer0When, uint64(t.when))
+		<a href="../../../src/runtime/time.go.html#line-403" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-403">#L403</a>: 		atomic.<b>Store64</b>(&amp;pp.timerModifiedEarliest, 0)
+		<a href="../../../src/runtime/time.go.html#line-431" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-431">#L431</a>: 		atomic.<b>Store64</b>(&amp;pp.timerModifiedEarliest, 0)
+		<a href="../../../src/runtime/time.go.html#line-683" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-683">#L683</a>: 	atomic.<b>Store64</b>(&amp;pp.timerModifiedEarliest, 0)
+		<a href="../../../src/runtime/time.go.html#line-906" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-906">#L906</a>: 	atomic.<b>Store64</b>(&amp;pp.timerModifiedEarliest, 0)
+		<a href="../../../src/runtime/time.go.html#line-1006" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-1006">#L1006</a>: 		atomic.<b>Store64</b>(&amp;pp.timer0When, 0)
+		<a href="../../../src/runtime/time.go.html#line-1008" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-1008">#L1008</a>: 		atomic.<b>Store64</b>(&amp;pp.timer0When, uint64(pp.timers[0].when))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

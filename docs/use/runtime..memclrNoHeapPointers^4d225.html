@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.memclrNoHeapPointers</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/stubs.go.html#line-92">memclrNoHeapPointers</a></b></span>
+
+<span class="title">25 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/heapdump.go.html#line-679">heapdump.go#L679</a>: 	<b>memclrNoHeapPointers</b>(unsafe.Pointer(&amp;typecache), unsafe.Sizeof(typecache))
+		<a href="../src/runtime/malloc.go.html#line-1022">malloc.go#L1022</a>: 				<b>memclrNoHeapPointers</b>(unsafe.Pointer(v), size)
+		<a href="../src/runtime/malloc.go.html#line-1038" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1038">#L1038</a>: 				<b>memclrNoHeapPointers</b>(x, size)
+		<a href="../src/runtime/malloc.go.html#line-1194" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1194">#L1194</a>: 		<b>memclrNoHeapPointers</b>(unsafe.Pointer(voff), n)
+		<a href="../src/runtime/map.go.html#line-373">map.go#L373</a>: 			<b>memclrNoHeapPointers</b>(buckets, size)
+		<a href="../src/runtime/map.go.html#line-760" class="path-duplicate">map.go</a><a href="../src/runtime/map.go.html#line-760">#L760</a>: 				<b>memclrNoHeapPointers</b>(e, t.elem.size)
+		<a href="../src/runtime/map_fast32.go.html#line-314">map_fast32.go#L314</a>: 				<b>memclrNoHeapPointers</b>(e, t.elem.size)
+		<a href="../src/runtime/map_fast64.go.html#line-316">map_fast64.go#L316</a>: 				<b>memclrNoHeapPointers</b>(e, t.elem.size)
+		<a href="../src/runtime/map_faststr.go.html#line-342">map_faststr.go#L342</a>: 				<b>memclrNoHeapPointers</b>(e, t.elem.size)
+		<a href="../src/runtime/mbarrier.go.html#line-319">mbarrier.go#L319</a>: 	<b>memclrNoHeapPointers</b>(ptr, typ.size)
+		<a href="../src/runtime/mbarrier.go.html#line-332" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-332">#L332</a>: 	<b>memclrNoHeapPointers</b>(ptr, size)
+		<a href="../src/runtime/mbarrier.go.html#line-343" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-343">#L343</a>: 	<b>memclrNoHeapPointers</b>(ptr, n)
+		<a href="../src/runtime/mbitmap.go.html#line-794">mbitmap.go#L794</a>: 			<b>memclrNoHeapPointers</b>(unsafe.Pointer(h.bitp), nbyte)
+		<a href="../src/runtime/mbitmap.go.html#line-1408" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1408">#L1408</a>: 		<b>memclrNoHeapPointers</b>(unsafe.Pointer(x), uintptr(unsafe.Pointer(src))-x)
+		<a href="../src/runtime/mbitmap.go.html#line-1574" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1574">#L1574</a>: 	<b>memclrNoHeapPointers</b>(endProg, uintptr(endAlloc)-uintptr(endProg))
+		<a href="../src/runtime/mfixalloc.go.html#line-84">mfixalloc.go#L84</a>: 			<b>memclrNoHeapPointers</b>(v, f.size)
+		<a href="../src/runtime/mheap.go.html#line-2155">mheap.go#L2155</a>: 		<b>memclrNoHeapPointers</b>(unsafe.Pointer(result), gcBitsChunkBytes)
+		<a href="../src/runtime/proc.go.html#line-4146">proc.go#L4146</a>: 	<b>memclrNoHeapPointers</b>(unsafe.Pointer(&amp;newg.sched), unsafe.Sizeof(newg.sched))
+		<a href="../src/runtime/slice.go.html#line-59">slice.go#L59</a>: 			<b>memclrNoHeapPointers</b>(add(to, copymem), tomem-copymem)
+		<a href="../src/runtime/slice.go.html#line-287" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-287">#L287</a>: 		<b>memclrNoHeapPointers</b>(add(p, newlenmem), capmem-newlenmem)
+		<a href="../src/runtime/stack.go.html#line-459">stack.go#L459</a>: 		<b>memclrNoHeapPointers</b>(v, n) // for testing, clobber stack data
+		<a href="../src/runtime/string.go.html#line-288">string.go#L288</a>: 		<b>memclrNoHeapPointers</b>(add(p, uintptr(size)), cap-uintptr(size))
+		<a href="../src/runtime/string.go.html#line-303" class="path-duplicate">string.go</a><a href="../src/runtime/string.go.html#line-303">#L303</a>: 		<b>memclrNoHeapPointers</b>(add(p, uintptr(size)*4), mem-uintptr(size)*4)
+		<a href="../src/runtime/stubs.go.html#line-92">stubs.go#L92</a>: func <b>memclrNoHeapPointers</b>(ptr unsafe.Pointer, n uintptr)
+		<a href="../src/runtime/stubs.go.html#line-96" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-96">#L96</a>: 	<b>memclrNoHeapPointers</b>(ptr, n)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

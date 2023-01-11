@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: io.nopCloser.Read</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/io.html">io</a>.<a href="../src/io/io.go.html#line-634">nopCloser</a>.<a href="../src/io/io.go.html#line-84">Read</a></b></span><span style="font-size: large;"><i> (method, <a href="../imp/io.nopCloser^98812.html#name-Read">view implemented interface methods</a>)</i></span>
+
+<span class="title">14 uses</span>
+
+	io (current package)
+		<a href="../src/io/io.go.html#line-84">io.go#L84</a>: 	<b>Read</b>(p []byte) (n int, err error)
+		<a href="../src/io/io.go.html#line-332" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-332">#L332</a>: 		nn, err = r.<b>Read</b>(buf[n:])
+		<a href="../src/io/io.go.html#line-427" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-427">#L427</a>: 		nr, er := src.<b>Read</b>(buf)
+		<a href="../src/io/io.go.html#line-477" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-477">#L477</a>: 	n, err = l.R.<b>Read</b>(p)
+		<a href="../src/io/io.go.html#line-573" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-573">#L573</a>: 	n, err = t.r.<b>Read</b>(p)
+		<a href="../src/io/io.go.html#line-611" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-611">#L611</a>: 		readSize, err = r.<b>Read</b>(*bufp)
+		<a href="../src/io/io.go.html#line-661" class="path-duplicate">io.go</a><a href="../src/io/io.go.html#line-661">#L661</a>: 		n, err := r.<b>Read</b>(b[len(b):cap(b)])
+		<a href="../src/io/multi.go.html#line-26">multi.go#L26</a>: 		n, err = mr.readers[0].<b>Read</b>(p)
+
+	<a href="../pkg/bufio.html">bufio</a>
+		<a href="../src/bufio/bufio.go.html#line-106">bufio.go#L106</a>: 		n, err := b.rd.<b>Read</b>(b.buf[b.w:])
+		<a href="../src/bufio/bufio.go.html#line-223" class="path-duplicate">bufio.go</a><a href="../src/bufio/bufio.go.html#line-223">#L223</a>: 			n, b.err = b.rd.<b>Read</b>(p)
+		<a href="../src/bufio/bufio.go.html#line-237" class="path-duplicate">bufio.go</a><a href="../src/bufio/bufio.go.html#line-237">#L237</a>: 		n, b.err = b.rd.<b>Read</b>(b.buf)
+		<a href="../src/bufio/bufio.go.html#line-791" class="path-duplicate">bufio.go</a><a href="../src/bufio/bufio.go.html#line-791">#L791</a>: 			m, err = r.<b>Read</b>(b.buf[b.n:])
+		<a href="../src/bufio/scan.go.html#line-214">scan.go#L214</a>: 			n, err := s.r.<b>Read</b>(s.buf[s.end:len(s.buf)])
+
+	<a href="../pkg/bytes.html">bytes</a>
+		<a href="../src/bytes/buffer.go.html#line-202">buffer.go#L202</a>: 		m, e := r.<b>Read</b>(b.buf[i:cap(b.buf)])
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

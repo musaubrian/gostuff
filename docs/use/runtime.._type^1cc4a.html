@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime._type</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/type.go.html#line-35">_type</a></b></span>
+
+<span class="title">121 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/alg.go.html#line-144">alg.go#L144</a>: func typehash(t *<b>_type</b>, p unsafe.Pointer, h uintptr) uintptr {
+		<a href="../src/runtime/alg.go.html#line-196" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-196">#L196</a>: func reflect_typehash(t *<b>_type</b>, p unsafe.Pointer, h uintptr) uintptr {
+		<a href="../src/runtime/alg.go.html#line-243" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-243">#L243</a>: func efaceeq(t *<b>_type</b>, x, y unsafe.Pointer) bool {
+		<a href="../src/runtime/cgocall.go.html#line-447">cgocall.go#L447</a>: func cgoCheckArg(t *<b>_type</b>, p unsafe.Pointer, indir, top bool, msg string) {
+		<a href="../src/runtime/cgocall.go.html#line-483" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-483">#L483</a>: 		it := *(**<b>_type</b>)(p)
+		<a href="../src/runtime/cgocheck.go.html#line-67">cgocheck.go#L67</a>: func cgoCheckMemmove(typ *<b>_type</b>, dst, src unsafe.Pointer, off, size uintptr) {
+		<a href="../src/runtime/cgocheck.go.html#line-88" class="path-duplicate">cgocheck.go</a><a href="../src/runtime/cgocheck.go.html#line-88">#L88</a>: func cgoCheckSliceCopy(typ *<b>_type</b>, dst, src unsafe.Pointer, n int) {
+		<a href="../src/runtime/cgocheck.go.html#line-111" class="path-duplicate">cgocheck.go</a><a href="../src/runtime/cgocheck.go.html#line-111">#L111</a>: func cgoCheckTypedBlock(typ *<b>_type</b>, src unsafe.Pointer, off, size uintptr) {
+		<a href="../src/runtime/cgocheck.go.html#line-211" class="path-duplicate">cgocheck.go</a><a href="../src/runtime/cgocheck.go.html#line-211">#L211</a>: func cgoCheckUsingType(typ *<b>_type</b>, src unsafe.Pointer, off, size uintptr) {
+		<a href="../src/runtime/chan.go.html#line-39">chan.go#L39</a>: 	elemtype *<b>_type</b> // element type
+		<a href="../src/runtime/chan.go.html#line-335" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-335">#L335</a>: func sendDirect(t *<b>_type</b>, sg *sudog, src unsafe.Pointer) {
+		<a href="../src/runtime/chan.go.html#line-348" class="path-duplicate">chan.go</a><a href="../src/runtime/chan.go.html#line-348">#L348</a>: func recvDirect(t *<b>_type</b>, sg *sudog, dst unsafe.Pointer) {
+		<a href="../src/runtime/checkptr.go.html#line-9">checkptr.go#L9</a>: func checkptrAlignment(p unsafe.Pointer, elem *<b>_type</b>, n uintptr) {
+		<a href="../src/runtime/error.go.html#line-22">error.go#L22</a>: 	_interface    *<b>_type</b>
+		<a href="../src/runtime/error.go.html#line-23" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-23">#L23</a>: 	concrete      *<b>_type</b>
+		<a href="../src/runtime/error.go.html#line-24" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-24">#L24</a>: 	asserted      *<b>_type</b>
+		<a href="../src/runtime/heapdump.go.html#line-118">heapdump.go#L118</a>: 	t [typeCacheAssoc]*<b>_type</b>
+		<a href="../src/runtime/heapdump.go.html#line-164" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-164">#L164</a>: func dumptype(t *<b>_type</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-226" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-226">#L226</a>: func dumpfinalizer(obj unsafe.Pointer, fn *funcval, fint *<b>_type</b>, ot *ptrtype) {
+		<a href="../src/runtime/heapdump.go.html#line-426" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-426">#L426</a>: func finq_callback(fn *funcval, obj unsafe.Pointer, nret uintptr, fint *<b>_type</b>, ot *ptrtype) {
+		<a href="../src/runtime/iface.go.html#line-29">iface.go#L29</a>: func itabHashFunc(inter *interfacetype, typ *<b>_type</b>) uintptr {
+		<a href="../src/runtime/iface.go.html#line-34" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-34">#L34</a>: func getitab(inter *interfacetype, typ *<b>_type</b>, canfail bool) *itab {
+		<a href="../src/runtime/iface.go.html#line-97" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-97">#L97</a>: func (t *itabTableType) find(inter *interfacetype, typ *<b>_type</b>) *itab {
+		<a href="../src/runtime/iface.go.html#line-261" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-261">#L261</a>: func panicdottypeE(have, want, iface *<b>_type</b>) {
+		<a href="../src/runtime/iface.go.html#line-267" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-267">#L267</a>: func panicdottypeI(have *itab, want, iface *<b>_type</b>) {
+		<a href="../src/runtime/iface.go.html#line-268" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-268">#L268</a>: 	var t *<b>_type</b>
+		<a href="../src/runtime/iface.go.html#line-277" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-277">#L277</a>: func panicnildottype(want *<b>_type</b>) {
+		<a href="../src/runtime/iface.go.html#line-305" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-305">#L305</a>: 	uint16Type *<b>_type</b> = efaceOf(&amp;uint16Eface)._type
+		<a href="../src/runtime/iface.go.html#line-306" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-306">#L306</a>: 	uint32Type *<b>_type</b> = efaceOf(&amp;uint32Eface)._type
+		<a href="../src/runtime/iface.go.html#line-307" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-307">#L307</a>: 	uint64Type *<b>_type</b> = efaceOf(&amp;uint64Eface)._type
+		<a href="../src/runtime/iface.go.html#line-308" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-308">#L308</a>: 	stringType *<b>_type</b> = efaceOf(&amp;stringEface)._type
+		<a href="../src/runtime/iface.go.html#line-309" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-309">#L309</a>: 	sliceType  *<b>_type</b> = efaceOf(&amp;sliceEface)._type
+		<a href="../src/runtime/iface.go.html#line-321" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-321">#L321</a>: func convT(t *<b>_type</b>, v unsafe.Pointer) unsafe.Pointer {
+		<a href="../src/runtime/iface.go.html#line-335" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-335">#L335</a>: func convTnoptr(t *<b>_type</b>, v unsafe.Pointer) unsafe.Pointer {
+		<a href="../src/runtime/iface.go.html#line-448" class="path-duplicate">iface.go</a><a href="../src/runtime/iface.go.html#line-448">#L448</a>: func assertE2I(inter *interfacetype, t *<b>_type</b>) *itab {
+		<a href="../src/runtime/malloc.go.html#line-842">malloc.go#L842</a>: func mallocgc(size uintptr, typ *<b>_type</b>, needzero bool) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1201" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1201">#L1201</a>: func newobject(typ *<b>_type</b>) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1206" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1206">#L1206</a>: func reflect_unsafe_New(typ *<b>_type</b>) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1211" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1211">#L1211</a>: func reflectlite_unsafe_New(typ *<b>_type</b>) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1216" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1216">#L1216</a>: func newarray(typ *<b>_type</b>, n int) unsafe.Pointer {
+		<a href="../src/runtime/malloc.go.html#line-1228" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-1228">#L1228</a>: func reflect_unsafe_NewArray(typ *<b>_type</b>, n int) unsafe.Pointer {
+		<a href="../src/runtime/mbarrier.go.html#line-157">mbarrier.go#L157</a>: func typedmemmove(typ *<b>_type</b>, dst, src unsafe.Pointer) {
+		<a href="../src/runtime/mbarrier.go.html#line-178" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-178">#L178</a>: func reflect_typedmemmove(typ *<b>_type</b>, dst, src unsafe.Pointer) {
+		<a href="../src/runtime/mbarrier.go.html#line-195" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-195">#L195</a>: func reflectlite_typedmemmove(typ *<b>_type</b>, dst, src unsafe.Pointer) {
+		<a href="../src/runtime/mbarrier.go.html#line-204" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-204">#L204</a>: func reflect_typedmemmovepartial(typ *<b>_type</b>, dst, src unsafe.Pointer, off, size uintptr) {
+		<a href="../src/runtime/mbarrier.go.html#line-232" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-232">#L232</a>: func reflectcallmove(typ *<b>_type</b>, dst, src unsafe.Pointer, size uintptr, regs *abi.RegArgs) {
+		<a href="../src/runtime/mbarrier.go.html#line-247" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-247">#L247</a>: func typedslicecopy(typ *<b>_type</b>, dstPtr unsafe.Pointer, dstLen int, srcPtr unsafe.Pointer, srcLen int) int {
+		<a href="../src/runtime/mbarrier.go.html#line-299" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-299">#L299</a>: func reflect_typedslicecopy(elemType *<b>_type</b>, dst, src slice) int {
+		<a href="../src/runtime/mbarrier.go.html#line-315" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-315">#L315</a>: func typedmemclr(typ *<b>_type</b>, ptr unsafe.Pointer) {
+		<a href="../src/runtime/mbarrier.go.html#line-323" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-323">#L323</a>: func reflect_typedmemclr(typ *<b>_type</b>, ptr unsafe.Pointer) {
+		<a href="../src/runtime/mbarrier.go.html#line-328" class="path-duplicate">mbarrier.go</a><a href="../src/runtime/mbarrier.go.html#line-328">#L328</a>: func reflect_typedmemclrpartial(typ *<b>_type</b>, ptr unsafe.Pointer, off, size uintptr) {
+		<a href="../src/runtime/mbitmap.go.html#line-727">mbitmap.go#L727</a>: func typeBitsBulkBarrier(typ *<b>_type</b>, dst, src, size uintptr) {
+		<a href="../src/runtime/mbitmap.go.html#line-844" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-844">#L844</a>: func heapBitsSetType(x, size, dataSize uintptr, typ *<b>_type</b>) {
+		<a href="../src/runtime/mfinal.go.html#line-46">mfinal.go#L46</a>: 	fint *<b>_type</b>         // type of first argument of fn
+		<a href="../src/runtime/mfinal.go.html#line-78" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-78">#L78</a>: func queuefinalizer(p unsafe.Pointer, fn *funcval, nret uintptr, fint *<b>_type</b>, ot *ptrtype) {
+		<a href="../src/runtime/mfinal.go.html#line-128" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-128">#L128</a>: func iterate_finq(callback func(*funcval, unsafe.Pointer, uintptr, *<b>_type</b>, *ptrtype)) {
+		<a href="../src/runtime/mheap.go.html#line-1855">mheap.go#L1855</a>: 	fint    *<b>_type</b>   // May be a heap pointer, but always live.
+		<a href="../src/runtime/mheap.go.html#line-1860" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1860">#L1860</a>: func addfinalizer(p unsafe.Pointer, f *funcval, nret uintptr, fint *<b>_type</b>, ot *ptrtype) bool {
+		<a href="../src/runtime/mprof.go.html#line-1231">mprof.go#L1231</a>: func tracealloc(p unsafe.Pointer, size uintptr, typ *<b>_type</b>) {
+		<a href="../src/runtime/netpoll.go.html#line-655">netpoll.go#L655</a>: 	pdType  *<b>_type</b> = efaceOf(&amp;pdEface)._type
+		<a href="../src/runtime/plugin.go.html#line-82">plugin.go#L82</a>: 		t := (*<b>_type</b>)(unsafe.Pointer(md.types)).typeOff(ptab.typ)
+		<a href="../src/runtime/race0.go.html#line-19">race0.go#L19</a>: func raceReadObjectPC(t *<b>_type</b>, addr unsafe.Pointer, callerpc, pc uintptr)  { throw("race") }
+		<a href="../src/runtime/race0.go.html#line-20" class="path-duplicate">race0.go</a><a href="../src/runtime/race0.go.html#line-20">#L20</a>: func raceWriteObjectPC(t *<b>_type</b>, addr unsafe.Pointer, callerpc, pc uintptr) { throw("race") }
+		<a href="../src/runtime/runtime1.go.html#line-515">runtime1.go#L515</a>: 	return unsafe.Pointer((*<b>_type</b>)(rtype).typeOff(typeOff(off)))
+		<a href="../src/runtime/runtime1.go.html#line-522" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-522">#L522</a>: 	return (*<b>_type</b>)(rtype).textOff(textOff(off))
+		<a href="../src/runtime/runtime1.go.html#line-537" class="path-duplicate">runtime1.go</a><a href="../src/runtime/runtime1.go.html#line-537">#L537</a>: 	return unsafe.Pointer((*<b>_type</b>)(rtype).typeOff(typeOff(off)))
+		<a href="../src/runtime/runtime2.go.html#line-208">runtime2.go#L208</a>: 	_type *<b>_type</b>
+		<a href="../src/runtime/runtime2.go.html#line-911" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-911">#L911</a>: 	_type *<b>_type</b>
+		<a href="../src/runtime/slice.go.html#line-38">slice.go#L38</a>: func makeslicecopy(et *<b>_type</b>, tolen int, fromlen int, from unsafe.Pointer) unsafe.Pointer {
+		<a href="../src/runtime/slice.go.html#line-88" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-88">#L88</a>: func makeslice(et *<b>_type</b>, len, cap int) unsafe.Pointer {
+		<a href="../src/runtime/slice.go.html#line-106" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-106">#L106</a>: func makeslice64(et *<b>_type</b>, len64, cap64 int64) unsafe.Pointer {
+		<a href="../src/runtime/slice.go.html#line-127" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-127">#L127</a>: func unsafeslice(et *<b>_type</b>, ptr unsafe.Pointer, len int) {
+		<a href="../src/runtime/slice.go.html#line-142" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-142">#L142</a>: func unsafeslice64(et *<b>_type</b>, ptr unsafe.Pointer, len64 int64) {
+		<a href="../src/runtime/slice.go.html#line-150" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-150">#L150</a>: func unsafeslicecheckptr(et *<b>_type</b>, ptr unsafe.Pointer, len64 int64) {
+		<a href="../src/runtime/slice.go.html#line-178" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-178">#L178</a>: func growslice(et *<b>_type</b>, old slice, cap int) slice {
+		<a href="../src/runtime/stubs.go.html#line-283">stubs.go#L283</a>: func reflectcall(stackArgsType *<b>_type</b>, fn, stackArgs unsafe.Pointer, stackArgsSize, stackRetOffset, frameSize uint32, regArgs *abi.RegArgs)
+		<a href="../src/runtime/symtab.go.html#line-452">symtab.go#L452</a>: 	typemap map[typeOff]*<b>_type</b> // offset to *_rtype in previous module
+		<a href="../src/runtime/symtab.go.html#line-484" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-484">#L484</a>: var pinnedTypemaps []map[typeOff]*<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-35">type.go#L35</a>: type <b>_type</b> struct {
+		<a href="../src/runtime/type.go.html#line-54" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-54">#L54</a>: func (t *<b>_type</b>) string() string {
+		<a href="../src/runtime/type.go.html#line-62" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-62">#L62</a>: func (t *<b>_type</b>) uncommon() *uncommontype {
+		<a href="../src/runtime/type.go.html#line-117" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-117">#L117</a>: 			<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-124" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-124">#L124</a>: func (t *<b>_type</b>) name() string {
+		<a href="../src/runtime/type.go.html#line-147" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-147">#L147</a>: func (t *<b>_type</b>) pkgpath() string {
+		<a href="../src/runtime/type.go.html#line-226" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-226">#L226</a>: func (t *<b>_type</b>) nameOff(off nameOff) name {
+		<a href="../src/runtime/type.go.html#line-230" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-230">#L230</a>: func resolveTypeOff(ptrInModule unsafe.Pointer, off typeOff) *<b>_type</b> {
+		<a href="../src/runtime/type.go.html#line-255" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-255">#L255</a>: 		return (*<b>_type</b>)(res)
+		<a href="../src/runtime/type.go.html#line-265" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-265">#L265</a>: 	return (*<b>_type</b>)(unsafe.Pointer(res))
+		<a href="../src/runtime/type.go.html#line-268" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-268">#L268</a>: func (t *<b>_type</b>) typeOff(off typeOff) *<b>_type</b> {
+		<a href="../src/runtime/type.go.html#line-272" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-272">#L272</a>: func (t *<b>_type</b>) textOff(off textOff) unsafe.Pointer {
+		<a href="../src/runtime/type.go.html#line-303" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-303">#L303</a>: func (t *functype) in() []*<b>_type</b> {
+		<a href="../src/runtime/type.go.html#line-309" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-309">#L309</a>: 	return (*[1 &lt;&lt; 20]*<b>_type</b>)(add(unsafe.Pointer(t), uadd))[:t.inCount]
+		<a href="../src/runtime/type.go.html#line-312" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-312">#L312</a>: func (t *functype) out() []*<b>_type</b> {
+		<a href="../src/runtime/type.go.html#line-319" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-319">#L319</a>: 	return (*[1 &lt;&lt; 20]*<b>_type</b>)(add(unsafe.Pointer(t), uadd))[t.inCount : t.inCount+outCount]
+		<a href="../src/runtime/type.go.html#line-351" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-351">#L351</a>: 	typ     <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-357" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-357">#L357</a>: 	typ    <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-358" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-358">#L358</a>: 	key    *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-359" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-359">#L359</a>: 	elem   *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-360" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-360">#L360</a>: 	bucket *<b>_type</b> // internal type representing a hash bucket
+		<a href="../src/runtime/type.go.html#line-388" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-388">#L388</a>: 	typ   <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-389" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-389">#L389</a>: 	elem  *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-390" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-390">#L390</a>: 	slice *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-395" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-395">#L395</a>: 	typ  <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-396" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-396">#L396</a>: 	elem *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-401" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-401">#L401</a>: 	typ  <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-402" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-402">#L402</a>: 	elem *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-406" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-406">#L406</a>: 	typ      <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-412" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-412">#L412</a>: 	typ  <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-413" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-413">#L413</a>: 	elem *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-418" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-418">#L418</a>: 	typ    *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-423" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-423">#L423</a>: 	typ     <b>_type</b>
+		<a href="../src/runtime/type.go.html#line-513" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-513">#L513</a>: 	typehash := make(map[uint32][]*<b>_type</b>, len(firstmoduledata.typelinks))
+		<a href="../src/runtime/type.go.html#line-521" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-521">#L521</a>: 			var t *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-523" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-523">#L523</a>: 				t = (*<b>_type</b>)(unsafe.Pointer(prev.types + uintptr(tl)))
+		<a href="../src/runtime/type.go.html#line-541" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-541">#L541</a>: 			tm := make(map[typeOff]*<b>_type</b>, len(md.typelinks))
+		<a href="../src/runtime/type.go.html#line-545" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-545">#L545</a>: 				t := (*<b>_type</b>)(unsafe.Pointer(md.types + uintptr(tl)))
+		<a href="../src/runtime/type.go.html#line-562" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-562">#L562</a>: 	t1 *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-563" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-563">#L563</a>: 	t2 *<b>_type</b>
+		<a href="../src/runtime/type.go.html#line-578" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-578">#L578</a>: func typesEqual(t, v *<b>_type</b>, seen map[_typePair]struct{}) bool {
+		<a href="../src/runtime/typekind.go.html#line-41">typekind.go#L41</a>: func isDirectIface(t *<b>_type</b>) bool {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

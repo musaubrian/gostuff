@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.g</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-407">g</a></b></span>
+
+<span class="title">172 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/cgo_sigaction.go.html#line-45">cgo_sigaction.go#L45</a>: 		var g *<b>g</b>
+		<a href="../src/runtime/cgocall.go.html#line-281">cgocall.go#L281</a>: 		defer func(gp *<b>g</b>) {
+		<a href="../src/runtime/chan.go.html#line-657">chan.go#L657</a>: func chanparkcommit(gp *<b>g</b>, chanLock unsafe.Pointer) bool {
+		<a href="../src/runtime/debugcall.go.html#line-155">debugcall.go#L155</a>: 	mcall(func(gp *<b>g</b>) {
+		<a href="../src/runtime/debugcall.go.html#line-191" class="path-duplicate">debugcall.go</a><a href="../src/runtime/debugcall.go.html#line-191">#L191</a>: 	callingG *<b>g</b>
+		<a href="../src/runtime/debugcall.go.html#line-207" class="path-duplicate">debugcall.go</a><a href="../src/runtime/debugcall.go.html#line-207">#L207</a>: 	mcall(func(gp *<b>g</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-342">heapdump.go#L342</a>: func dumpgoroutine(gp *<b>g</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-410" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-410">#L410</a>: 	forEachG(func(gp *<b>g</b>) {
+		<a href="../src/runtime/lock_futex.go.html#line-242">lock_futex.go#L242</a>: func beforeIdle(int64, int64) (*<b>g</b>, bool) {
+		<a href="../src/runtime/malloc.go.html#line-891">malloc.go#L891</a>: 	var assistG *<b>g</b>
+		<a href="../src/runtime/mfinal.go.html#line-33">mfinal.go#L33</a>: var fing *<b>g</b>        // goroutine that runs finalizers
+		<a href="../src/runtime/mfinal.go.html#line-137" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-137">#L137</a>: func wakefing() *<b>g</b> {
+		<a href="../src/runtime/mfinal.go.html#line-138" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-138">#L138</a>: 	var res *<b>g</b>
+		<a href="../src/runtime/mgc.go.html#line-338">mgc.go#L338</a>: 	stackRoots []*<b>g</b>
+		<a href="../src/runtime/mgc.go.html#line-1235" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1235">#L1235</a>: 		gopark(func(g *<b>g</b>, nodep unsafe.Pointer) bool {
+		<a href="../src/runtime/mgc.go.html#line-1551" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1551">#L1551</a>: 	forEachG(func(gp *<b>g</b>) {
+		<a href="../src/runtime/mgcmark.go.html#line-132">mgcmark.go#L132</a>: 	forEachGRace(func(gp *<b>g</b>) {
+		<a href="../src/runtime/mgcmark.go.html#line-404" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-404">#L404</a>: func gcAssistAlloc(gp *<b>g</b>) {
+		<a href="../src/runtime/mgcmark.go.html#line-529" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-529">#L529</a>: func gcAssistAlloc1(gp *<b>g</b>, scanWork int64) {
+		<a href="../src/runtime/mgcmark.go.html#line-733" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-733">#L733</a>: func scanstack(gp *<b>g</b>, gcw *gcWork) int64 {
+		<a href="../src/runtime/mgcpacer.go.html#line-810">mgcpacer.go#L810</a>: func (c *gcControllerState) findRunnableGCWorker(_p_ *p, now int64) (*<b>g</b>, int64) {
+		<a href="../src/runtime/mgcscavenge.go.html#line-246">mgcscavenge.go#L246</a>: 	g *<b>g</b>
+		<a href="../src/runtime/mgcsweep.go.html#line-37">mgcsweep.go#L37</a>: 	g       *<b>g</b>
+		<a href="../src/runtime/mprof.go.html#line-972">mprof.go#L972</a>: 	forEachGRace(func(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-985" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-985">#L985</a>: 	forEachGRace(func(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-1013" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1013">#L1013</a>: func tryRecordGoroutineProfileWB(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-1023" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1023">#L1023</a>: func tryRecordGoroutineProfile(gp1 *<b>g</b>, yield func()) {
+		<a href="../src/runtime/mprof.go.html#line-1072" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1072">#L1072</a>: func doRecordGoroutineProfile(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-1105" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1105">#L1105</a>: 	isOK := func(gp1 *<b>g</b>) bool {
+		<a href="../src/runtime/mprof.go.html#line-1115" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1115">#L1115</a>: 	forEachGRace(func(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-1140" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1140">#L1140</a>: 		forEachGRace(func(gp1 *<b>g</b>) {
+		<a href="../src/runtime/mprof.go.html#line-1182" class="path-duplicate">mprof.go</a><a href="../src/runtime/mprof.go.html#line-1182">#L1182</a>: func saveg(pc, sp uintptr, gp *<b>g</b>, r *StackRecord) {
+		<a href="../src/runtime/netpoll.go.html#line-391">netpoll.go#L391</a>: 	var rg, wg *<b>g</b>
+		<a href="../src/runtime/netpoll.go.html#line-416" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-416">#L416</a>: 	var rg, wg *<b>g</b>
+		<a href="../src/runtime/netpoll.go.html#line-447" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-447">#L447</a>: 	var rg, wg *<b>g</b>
+		<a href="../src/runtime/netpoll.go.html#line-479" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-479">#L479</a>: func netpollblockcommit(gp *<b>g</b>, gpp unsafe.Pointer) bool {
+		<a href="../src/runtime/netpoll.go.html#line-490" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-490">#L490</a>: func netpollgoready(gp *<b>g</b>, traceskip int) {
+		<a href="../src/runtime/netpoll.go.html#line-536" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-536">#L536</a>: func netpollunblock(pd *pollDesc, mode int32, ioready bool) *<b>g</b> {
+		<a href="../src/runtime/netpoll.go.html#line-560" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-560">#L560</a>: 			return (*<b>g</b>)(unsafe.Pointer(old))
+		<a href="../src/runtime/netpoll.go.html#line-578" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-578">#L578</a>: 	var rg *<b>g</b>
+		<a href="../src/runtime/netpoll.go.html#line-587" class="path-duplicate">netpoll.go</a><a href="../src/runtime/netpoll.go.html#line-587">#L587</a>: 	var wg *<b>g</b>
+		<a href="../src/runtime/panic.go.html#line-637">panic.go#L637</a>: func addOneOpenDeferFrame(gp *<b>g</b>, pc uintptr, sp unsafe.Pointer) {
+		<a href="../src/runtime/panic.go.html#line-747" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-747">#L747</a>: func runOpenDeferFrame(gp *<b>g</b>, d *_defer) bool {
+		<a href="../src/runtime/panic.go.html#line-1085" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1085">#L1085</a>: func recovery(gp *<b>g</b>) {
+		<a href="../src/runtime/panic.go.html#line-1243" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1243">#L1243</a>: func dopanic_m(gp *<b>g</b>, pc, sp uintptr) bool {
+		<a href="../src/runtime/panic.go.html#line-1293" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1293">#L1293</a>: func canpanic(gp *<b>g</b>) bool {
+		<a href="../src/runtime/panic.go.html#line-1324" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1324">#L1324</a>: func shouldPushSigpanic(gp *<b>g</b>, pc, lr uintptr) bool {
+		<a href="../src/runtime/preempt.go.html#line-62">preempt.go#L62</a>: 	g *<b>g</b>
+		<a href="../src/runtime/preempt.go.html#line-105" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-105">#L105</a>: func suspendG(gp *<b>g</b>) suspendGState {
+		<a href="../src/runtime/preempt.go.html#line-342" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-342">#L342</a>: func wantAsyncPreempt(gp *<b>g</b>) bool {
+		<a href="../src/runtime/preempt.go.html#line-363" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-363">#L363</a>: func isAsyncSafePoint(gp *<b>g</b>, pc, sp, lr uintptr) (bool, uintptr) {
+		<a href="../src/runtime/proc.go.html#line-115">proc.go#L115</a>: 	g0           <b>g</b>
+		<a href="../src/runtime/proc.go.html#line-346" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-346">#L346</a>: func gopark(unlockf func(*<b>g</b>, unsafe.Pointer) bool, lock unsafe.Pointer, reason waitReason, traceEv byte, traceskip int) {
+		<a href="../src/runtime/proc.go.html#line-372" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-372">#L372</a>: func goready(gp *<b>g</b>, traceskip int) {
+		<a href="../src/runtime/proc.go.html#line-467" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-467">#L467</a>: func badmcall(fn func(*<b>g</b>)) {
+		<a href="../src/runtime/proc.go.html#line-471" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-471">#L471</a>: func badmcall2(fn func(*<b>g</b>)) {
+		<a href="../src/runtime/proc.go.html#line-515" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-515">#L515</a>: 	allgs    []*<b>g</b>
+		<a href="../src/runtime/proc.go.html#line-530" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-530">#L530</a>: 	allgptr **<b>g</b>
+		<a href="../src/runtime/proc.go.html#line-533" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-533">#L533</a>: func allgadd(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-550" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-550">#L550</a>: func allGsSnapshot() []*<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-562" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-562">#L562</a>: func atomicAllG() (**<b>g</b>, uintptr) {
+		<a href="../src/runtime/proc.go.html#line-564" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-564">#L564</a>: 	ptr := (**<b>g</b>)(atomic.Loadp(unsafe.Pointer(&amp;allgptr)))
+		<a href="../src/runtime/proc.go.html#line-569" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-569">#L569</a>: func atomicAllGIndex(ptr **<b>g</b>, i uintptr) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-570" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-570">#L570</a>: 	return *(**<b>g</b>)(add(unsafe.Pointer(ptr), i*goarch.PtrSize))
+		<a href="../src/runtime/proc.go.html#line-576" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-576">#L576</a>: func forEachG(fn func(gp *<b>g</b>)) {
+		<a href="../src/runtime/proc.go.html#line-588" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-588">#L588</a>: func forEachGRace(fn func(gp *<b>g</b>)) {
+		<a href="../src/runtime/proc.go.html#line-753" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-753">#L753</a>: func dumpgstatus(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-843" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-843">#L843</a>: func ready(gp *<b>g</b>, traceskip int, next bool) {
+		<a href="../src/runtime/proc.go.html#line-901" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-901">#L901</a>: func readgstatus(gp *<b>g</b>) uint32 {
+		<a href="../src/runtime/proc.go.html#line-909" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-909">#L909</a>: func casfrom_Gscanstatus(gp *<b>g</b>, oldval, newval uint32) {
+		<a href="../src/runtime/proc.go.html#line-937" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-937">#L937</a>: func castogscanstatus(gp *<b>g</b>, oldval, newval uint32) bool {
+		<a href="../src/runtime/proc.go.html#line-963" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-963">#L963</a>: func casgstatus(gp *<b>g</b>, oldval, newval uint32) {
+		<a href="../src/runtime/proc.go.html#line-1037" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1037">#L1037</a>: func casgcopystack(gp *<b>g</b>) uint32 {
+		<a href="../src/runtime/proc.go.html#line-1053" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1053">#L1053</a>: func casGToPreemptScan(gp *<b>g</b>, old, new uint32) {
+		<a href="../src/runtime/proc.go.html#line-1065" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-1065">#L1065</a>: func casGFromPreempted(gp *<b>g</b>, old, new uint32) bool {
+		<a href="../src/runtime/proc.go.html#line-2463" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2463">#L2463</a>: func startlockedm(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-2517" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2517">#L2517</a>: func execute(gp *<b>g</b>, inheritTime bool) {
+		<a href="../src/runtime/proc.go.html#line-2561" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2561">#L2561</a>: func findRunnable() (gp *<b>g</b>, inheritTime, tryWakeP bool) {
+		<a href="../src/runtime/proc.go.html#line-2905" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-2905">#L2905</a>: func stealWork(now int64) (gp *<b>g</b>, inheritTime bool, rnow, pollUntil int64, newWork bool) {
+		<a href="../src/runtime/proc.go.html#line-3017" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3017">#L3017</a>: func checkIdleGCNoP() (*p, *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3134" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3134">#L3134</a>: 	var tail *<b>g</b>
+		<a href="../src/runtime/proc.go.html#line-3335" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3335">#L3335</a>: func parkunlock_c(gp *<b>g</b>, lock unsafe.Pointer) bool {
+		<a href="../src/runtime/proc.go.html#line-3341" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3341">#L3341</a>: func park_m(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3366" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3366">#L3366</a>: func goschedImpl(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3382" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3382">#L3382</a>: func gosched_m(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3390" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3390">#L3390</a>: func goschedguarded_m(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3402" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3402">#L3402</a>: func gopreempt_m(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3412" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3412">#L3412</a>: func preemptPark(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3457" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3457">#L3457</a>: func goyield_m(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3480" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3480">#L3480</a>: func goexit0(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-3940" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3940">#L3940</a>: func exitsyscall0(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-4075" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4075">#L4075</a>: func malg(stacksize int32) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-4076" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4076">#L4076</a>: 	newg := new(<b>g</b>)
+		<a href="../src/runtime/proc.go.html#line-4112" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4112">#L4112</a>: func newproc1(fn *funcval, callergp *<b>g</b>, callerpc uintptr) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-4208" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4208">#L4208</a>: func saveAncestors(callergp *<b>g</b>) *[]ancestorInfo {
+		<a href="../src/runtime/proc.go.html#line-4241" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4241">#L4241</a>: func gfput(_p_ *p, gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-4284" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4284">#L4284</a>: func gfget(_p_ *p) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-4510" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4510">#L4510</a>: func sigprof(pc, sp, lr uintptr, gp *<b>g</b>, mp *m) {
+		<a href="../src/runtime/proc.go.html#line-5059" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5059">#L5059</a>: 	forEachG(func(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-5479" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5479">#L5479</a>: 	forEachG(func(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-5524" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5524">#L5524</a>: func schedEnabled(gp *<b>g</b>) bool {
+		<a href="../src/runtime/proc.go.html#line-5568" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5568">#L5568</a>: func globrunqput(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-5580" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5580">#L5580</a>: func globrunqputhead(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-5603" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5603">#L5603</a>: func globrunqget(_p_ *p, max int32) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-5785" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5785">#L5785</a>: func runqput(_p_ *p, gp *<b>g</b>, next bool) {
+		<a href="../src/runtime/proc.go.html#line-5820" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5820">#L5820</a>: func runqputslow(_p_ *p, gp *<b>g</b>, h, t uint32) bool {
+		<a href="../src/runtime/proc.go.html#line-5821" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5821">#L5821</a>: 	var batch [len(_p_.runq)/2 + 1]*<b>g</b>
+		<a href="../src/runtime/proc.go.html#line-5897" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5897">#L5897</a>: func runqget(_p_ *p) (gp *<b>g</b>, inheritTime bool) {
+		<a href="../src/runtime/proc.go.html#line-6018" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6018">#L6018</a>: func runqsteal(_p_, p2 *p, stealRunNextG bool) *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-6050" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6050">#L6050</a>: func (q *gQueue) push(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-6059" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6059">#L6059</a>: func (q *gQueue) pushBack(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-6086" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6086">#L6086</a>: func (q *gQueue) pop() *<b>g</b> {
+		<a href="../src/runtime/proc.go.html#line-6116" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6116">#L6116</a>: func (l *gList) push(gp *<b>g</b>) {
+		<a href="../src/runtime/proc.go.html#line-6130" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6130">#L6130</a>: func (l *gList) pop() *<b>g</b> {
+		<a href="../src/runtime/race0.go.html#line-31">race0.go#L31</a>: func raceacquireg(gp *<b>g</b>, addr unsafe.Pointer)                               { throw("race") }
+		<a href="../src/runtime/race0.go.html#line-34" class="path-duplicate">race0.go</a><a href="../src/runtime/race0.go.html#line-34">#L34</a>: func racereleaseg(gp *<b>g</b>, addr unsafe.Pointer)                               { throw("race") }
+		<a href="../src/runtime/race0.go.html#line-36" class="path-duplicate">race0.go</a><a href="../src/runtime/race0.go.html#line-36">#L36</a>: func racereleaseacquireg(gp *<b>g</b>, addr unsafe.Pointer)                        { throw("race") }
+		<a href="../src/runtime/race0.go.html#line-38" class="path-duplicate">race0.go</a><a href="../src/runtime/race0.go.html#line-38">#L38</a>: func racereleasemergeg(gp *<b>g</b>, addr unsafe.Pointer)                          { throw("race") }
+		<a href="../src/runtime/runtime2.go.html#line-263">runtime2.go#L263</a>: func (gp guintptr) ptr() *<b>g</b> { return (*<b>g</b>)(unsafe.Pointer(gp)) }
+		<a href="../src/runtime/runtime2.go.html#line-266" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-266">#L266</a>: func (gp *guintptr) set(g *<b>g</b>) { *gp = guintptr(unsafe.Pointer(g)) }
+		<a href="../src/runtime/runtime2.go.html#line-278" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-278">#L278</a>: func setGNoWB(gp **<b>g</b>, new *<b>g</b>) {
+		<a href="../src/runtime/runtime2.go.html#line-353" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-353">#L353</a>: 	g *<b>g</b>
+		<a href="../src/runtime/runtime2.go.html#line-407" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-407">#L407</a>: type <b>g</b> struct {
+		<a href="../src/runtime/runtime2.go.html#line-527" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-527">#L527</a>: 	g0      *<b>g</b>     // goroutine with scheduling stack
+		<a href="../src/runtime/runtime2.go.html#line-534" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-534">#L534</a>: 	gsignal       *<b>g</b>                // signal-handling g
+		<a href="../src/runtime/runtime2.go.html#line-539" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-539">#L539</a>: 	curg          *<b>g</b>       // current running goroutine
+		<a href="../src/runtime/runtime2.go.html#line-572" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-572">#L572</a>: 	waitunlockf   func(*<b>g</b>, unsafe.Pointer) bool
+		<a href="../src/runtime/runtime2.go.html#line-926" class="path-duplicate">runtime2.go</a><a href="../src/runtime/runtime2.go.html#line-926">#L926</a>: 	g    *<b>g</b>
+		<a href="../src/runtime/select.go.html#line-63">select.go#L63</a>: func selparkcommit(gp *<b>g</b>, _ unsafe.Pointer) bool {
+		<a href="../src/runtime/select.go.html#line-234" class="path-duplicate">select.go</a><a href="../src/runtime/select.go.html#line-234">#L234</a>: 		gp     *<b>g</b>
+		<a href="../src/runtime/signal_amd64.go.html#line-49">signal_amd64.go#L49</a>: func (c *sigctxt) preparePanic(sig uint32, gp *<b>g</b>) {
+		<a href="../src/runtime/signal_unix.go.html#line-341">signal_unix.go#L341</a>: func doSigPreempt(gp *<b>g</b>, ctxt *sigctxt) {
+		<a href="../src/runtime/signal_unix.go.html#line-398" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-398">#L398</a>: func sigFetchG(c *sigctxt) *<b>g</b> {
+		<a href="../src/runtime/signal_unix.go.html#line-411" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-411">#L411</a>: 				gp := *(**<b>g</b>)(unsafe.Pointer(s.base()))
+		<a href="../src/runtime/signal_unix.go.html#line-594" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-594">#L594</a>: var testSigtrap func(info *siginfo, ctxt *sigctxt, gp *<b>g</b>) bool
+		<a href="../src/runtime/signal_unix.go.html#line-595" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-595">#L595</a>: var testSigusr1 func(gp *<b>g</b>) bool
+		<a href="../src/runtime/signal_unix.go.html#line-608" class="path-duplicate">signal_unix.go</a><a href="../src/runtime/signal_unix.go.html#line-608">#L608</a>: func sighandler(sig uint32, info *siginfo, ctxt unsafe.Pointer, gp *<b>g</b>) {
+		<a href="../src/runtime/stack.go.html#line-741">stack.go#L741</a>: func adjustctxt(gp *<b>g</b>, adjinfo *adjustinfo) {
+		<a href="../src/runtime/stack.go.html#line-757" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-757">#L757</a>: func adjustdefers(gp *<b>g</b>, adjinfo *adjustinfo) {
+		<a href="../src/runtime/stack.go.html#line-772" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-772">#L772</a>: func adjustpanics(gp *<b>g</b>, adjinfo *adjustinfo) {
+		<a href="../src/runtime/stack.go.html#line-778" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-778">#L778</a>: func adjustsudogs(gp *<b>g</b>, adjinfo *adjustinfo) {
+		<a href="../src/runtime/stack.go.html#line-792" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-792">#L792</a>: func findsghi(gp *<b>g</b>, stk stack) uintptr {
+		<a href="../src/runtime/stack.go.html#line-806" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-806">#L806</a>: func syncadjustsudogs(gp *<b>g</b>, used uintptr, adjinfo *adjustinfo) uintptr {
+		<a href="../src/runtime/stack.go.html#line-857" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-857">#L857</a>: func copystack(gp *<b>g</b>, newsize uintptr) {
+		<a href="../src/runtime/stack.go.html#line-1140" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1140">#L1140</a>: func isShrinkStackSafe(gp *<b>g</b>) bool {
+		<a href="../src/runtime/stack.go.html#line-1160" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1160">#L1160</a>: func shrinkstack(gp *<b>g</b>) {
+		<a href="../src/runtime/stubs.go.html#line-24">stubs.go#L24</a>: func getg() *<b>g</b>
+		<a href="../src/runtime/stubs.go.html#line-40" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-40">#L40</a>: func mcall(fn func(*<b>g</b>))
+		<a href="../src/runtime/stubs.go.html#line-236" class="path-duplicate">stubs.go</a><a href="../src/runtime/stubs.go.html#line-236">#L236</a>: func setg(gg *<b>g</b>)
+		<a href="../src/runtime/time.go.html#line-202">time.go#L202</a>: func resetForSleep(gp *<b>g</b>, ut unsafe.Pointer) bool {
+		<a href="../src/runtime/time.go.html#line-249" class="path-duplicate">time.go</a><a href="../src/runtime/time.go.html#line-249">#L249</a>: 	goready(arg.(*<b>g</b>), 0)
+		<a href="../src/runtime/trace.go.html#line-113">trace.go#L113</a>: 	lockOwner     *<b>g</b>          // to avoid deadlocks during recursive lock locks
+		<a href="../src/runtime/trace.go.html#line-257" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-257">#L257</a>: 	forEachGRace(func(gp *<b>g</b>) {
+		<a href="../src/runtime/trace.go.html#line-514" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-514">#L514</a>: func traceReader() *<b>g</b> {
+		<a href="../src/runtime/trace.go.html#line-682" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-682">#L682</a>: func traceCPUSample(gp *<b>g</b>, pp *p, stk []uintptr) {
+		<a href="../src/runtime/trace.go.html#line-1251" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1251">#L1251</a>: func traceGoCreate(newg *<b>g</b>, pc uintptr) {
+		<a href="../src/runtime/trace.go.html#line-1296" class="path-duplicate">trace.go</a><a href="../src/runtime/trace.go.html#line-1296">#L1296</a>: func traceGoUnpark(gp *<b>g</b>, skip int) {
+		<a href="../src/runtime/traceback.go.html#line-33">traceback.go#L33</a>: func gentraceback(pc0, sp0, lr0 uintptr, gp *<b>g</b>, skip int, pcbuf *uintptr, max int, callback func(*stkframe, unsafe.Pointer) bool, v unsafe.Pointer, flags uint) int {
+		<a href="../src/runtime/traceback.go.html#line-780" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-780">#L780</a>: func printcreatedby(gp *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-803" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-803">#L803</a>: func traceback(pc, sp, lr uintptr, gp *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-815" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-815">#L815</a>: func tracebacktrap(pc, sp, lr uintptr, gp *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-824" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-824">#L824</a>: func traceback1(pc, sp, lr uintptr, gp *<b>g</b>, flags uint) {
+		<a href="../src/runtime/traceback.go.html#line-930" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-930">#L930</a>: func gcallers(gp *<b>g</b>, skip int, pcbuf []uintptr) int {
+		<a href="../src/runtime/traceback.go.html#line-936" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-936">#L936</a>: func showframe(f funcInfo, gp *<b>g</b>, firstFrame bool, funcID, childID funcID) bool {
+		<a href="../src/runtime/traceback.go.html#line-1004" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1004">#L1004</a>: func goroutineheader(gp *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-1041" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1041">#L1041</a>: func tracebackothers(me *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-1059" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1059">#L1059</a>: 	forEachGRace(func(gp *<b>g</b>) {
+		<a href="../src/runtime/traceback.go.html#line-1133" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1133">#L1133</a>: func isSystemGoroutine(gp *<b>g</b>, fixed bool) bool {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

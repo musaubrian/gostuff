@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.MapIter.m</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/value.go.html#line-1746">MapIter</a>.<a href="../src/reflect/value.go.html#line-1747">m</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">14 uses</span>
+
+	reflect (current package)
+		<a href="../src/reflect/value.go.html#line-1747">value.go#L1747</a>: 	<b>m</b>     Value
+		<a href="../src/reflect/value.go.html#line-1761" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1761">#L1761</a>: 	t := (*mapType)(unsafe.Pointer(iter.<b>m</b>.typ))
+		<a href="../src/reflect/value.go.html#line-1763" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1763">#L1763</a>: 	return copyVal(ktype, iter.<b>m</b>.flag.ro()|flag(ktype.Kind()), iterkey)
+		<a href="../src/reflect/value.go.html#line-1784" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1784">#L1784</a>: 	t := (*mapType)(unsafe.Pointer(iter.<b>m</b>.typ))
+		<a href="../src/reflect/value.go.html#line-1787" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1787">#L1787</a>: 	key := Value{ktype, iterkey, iter.<b>m</b>.flag | flag(ktype.Kind()) | flagIndir}
+		<a href="../src/reflect/value.go.html#line-1802" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1802">#L1802</a>: 	t := (*mapType)(unsafe.Pointer(iter.<b>m</b>.typ))
+		<a href="../src/reflect/value.go.html#line-1804" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1804">#L1804</a>: 	return copyVal(vtype, iter.<b>m</b>.flag.ro()|flag(vtype.Kind()), iterelem)
+		<a href="../src/reflect/value.go.html#line-1825" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1825">#L1825</a>: 	t := (*mapType)(unsafe.Pointer(iter.<b>m</b>.typ))
+		<a href="../src/reflect/value.go.html#line-1828" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1828">#L1828</a>: 	elem := Value{vtype, iterelem, iter.<b>m</b>.flag | flag(vtype.Kind()) | flagIndir}
+		<a href="../src/reflect/value.go.html#line-1837" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1837">#L1837</a>: 	if !iter.<b>m</b>.IsValid() {
+		<a href="../src/reflect/value.go.html#line-1841" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1841">#L1841</a>: 		mapiterinit(iter.<b>m</b>.typ, iter.<b>m</b>.pointer(), &amp;iter.hiter)
+		<a href="../src/reflect/value.go.html#line-1859" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1859">#L1859</a>: 	iter.<b>m</b> = v
+		<a href="../src/reflect/value.go.html#line-1886" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1886">#L1886</a>: 	return &amp;MapIter{<b>m</b>: v}
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

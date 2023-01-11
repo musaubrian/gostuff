@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: unicode.IsSpace</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/unicode.html">unicode</a>.<a href="../src/unicode/graphic.go.html#line-128">IsSpace</a></b></span>
+
+<span class="title">9 uses</span>
+
+	unicode (current package)
+		<a href="../src/unicode/graphic.go.html#line-128">graphic.go#L128</a>: func <b>IsSpace</b>(r rune) bool {
+
+	<a href="../pkg/bytes.html">bytes</a>
+		<a href="../src/bytes/bytes.go.html#line-434">bytes.go#L434</a>: 		return FieldsFunc(s, unicode.<b>IsSpace</b>)
+		<a href="../src/bytes/bytes.go.html#line-752" class="path-duplicate">bytes.go</a><a href="../src/bytes/bytes.go.html#line-752">#L752</a>: 	return unicode.<b>IsSpace</b>(r)
+		<a href="../src/bytes/bytes.go.html#line-1051" class="path-duplicate">bytes.go</a><a href="../src/bytes/bytes.go.html#line-1051">#L1051</a>: 			return TrimFunc(s[start:], unicode.<b>IsSpace</b>)
+		<a href="../src/bytes/bytes.go.html#line-1063" class="path-duplicate">bytes.go</a><a href="../src/bytes/bytes.go.html#line-1063">#L1063</a>: 			return TrimFunc(s[start:stop], unicode.<b>IsSpace</b>)
+
+	<a href="../pkg/strings.html">strings</a>
+		<a href="../src/strings/strings.go.html#line-346">strings.go#L346</a>: 		return FieldsFunc(s, unicode.<b>IsSpace</b>)
+		<a href="../src/strings/strings.go.html#line-712" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-712">#L712</a>: 	return unicode.<b>IsSpace</b>(r)
+		<a href="../src/strings/strings.go.html#line-953" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-953">#L953</a>: 			return TrimFunc(s[start:], unicode.<b>IsSpace</b>)
+		<a href="../src/strings/strings.go.html#line-966" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-966">#L966</a>: 			return TrimRightFunc(s[start:stop], unicode.<b>IsSpace</b>)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

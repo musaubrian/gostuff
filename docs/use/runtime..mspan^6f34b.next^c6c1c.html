@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mspan.next</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-377">mspan</a>.<a href="../src/runtime/mheap.go.html#line-378">next</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">17 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mheap.go.html#line-378">mheap.go#L378</a>: 	<b>next</b> *mspan     // next span in list, or nil if none
+		<a href="../src/runtime/mheap.go.html#line-1602" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1602">#L1602</a>: 	span.<b>next</b> = nil
+		<a href="../src/runtime/mheap.go.html#line-1638" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1638">#L1638</a>: 		list.first = span.<b>next</b>
+		<a href="../src/runtime/mheap.go.html#line-1640" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1640">#L1640</a>: 		span.prev.<b>next</b> = span.<b>next</b>
+		<a href="../src/runtime/mheap.go.html#line-1645" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1645">#L1645</a>: 		span.<b>next</b>.prev = span.prev
+		<a href="../src/runtime/mheap.go.html#line-1647" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1647">#L1647</a>: 	span.<b>next</b> = nil
+		<a href="../src/runtime/mheap.go.html#line-1657" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1657">#L1657</a>: 	if span.<b>next</b> != nil || span.prev != nil || span.list != nil {
+		<a href="../src/runtime/mheap.go.html#line-1658" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1658">#L1658</a>: 		println("runtime: failed mSpanList.insert", span, span.<b>next</b>, span.prev, span.list)
+		<a href="../src/runtime/mheap.go.html#line-1661" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1661">#L1661</a>: 	span.<b>next</b> = list.first
+		<a href="../src/runtime/mheap.go.html#line-1675" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1675">#L1675</a>: 	if span.<b>next</b> != nil || span.prev != nil || span.list != nil {
+		<a href="../src/runtime/mheap.go.html#line-1676" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1676">#L1676</a>: 		println("runtime: failed mSpanList.insertBack", span, span.<b>next</b>, span.prev, span.list)
+		<a href="../src/runtime/mheap.go.html#line-1682" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1682">#L1682</a>: 		list.last.<b>next</b> = span
+		<a href="../src/runtime/mheap.go.html#line-1699" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1699">#L1699</a>: 	for s := other.first; s != nil; s = s.<b>next</b> {
+		<a href="../src/runtime/mheap.go.html#line-1708" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1708">#L1708</a>: 		other.last.<b>next</b> = list.first
+		<a href="../src/runtime/stack.go.html#line-1224">stack.go#L1224</a>: 			next := s.<b>next</b>
+		<a href="../src/runtime/stack.go.html#line-1240" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1240">#L1240</a>: 			next := s.<b>next</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

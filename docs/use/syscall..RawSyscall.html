@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.RawSyscall</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/syscall_linux.go.html#line-60">RawSyscall</a></b></span>
+
+<span class="title">57 uses</span>
+
+	syscall (current package)
+		<a href="../src/syscall/exec_linux.go.html#line-110">exec_linux.go#L110</a>: 		<b>RawSyscall</b>(SYS_WRITE, uintptr(p[1]), uintptr(unsafe.Pointer(&amp;err2)), unsafe.Sizeof(err2))
+		<a href="../src/syscall/exec_linux.go.html#line-250" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-250">#L250</a>: 		if _, _, err1 = <b>RawSyscall</b>(SYS_CLOSE, uintptr(p[1]), 0, 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-253" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-253">#L253</a>: 		r1, _, err1 = <b>RawSyscall</b>(SYS_READ, uintptr(p[0]), uintptr(unsafe.Pointer(&amp;err2)), unsafe.Sizeof(err2))
+		<a href="../src/syscall/exec_linux.go.html#line-269" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-269">#L269</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_SETSID, 0, 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-278" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-278">#L278</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_SETPGID, 0, uintptr(sys.Pgid), 0)
+		<a href="../src/syscall/exec_linux.go.html#line-293" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-293">#L293</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_IOCTL, uintptr(sys.Ctty), uintptr(TIOCSPGRP), uintptr(unsafe.Pointer(&amp;pgrp)))
+		<a href="../src/syscall/exec_linux.go.html#line-305" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-305">#L305</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_UNSHARE, sys.Unshareflags, 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-315" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-315">#L315</a>: 			r1, _, err1 = <b>RawSyscall</b>(SYS_WRITE, uintptr(fd1), uintptr(unsafe.Pointer(&amp;setgroups[0])), uintptr(len(setgroups)))
+		<a href="../src/syscall/exec_linux.go.html#line-319" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-319">#L319</a>: 			if _, _, err1 = <b>RawSyscall</b>(SYS_CLOSE, uintptr(fd1), 0, 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-326" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-326">#L326</a>: 			r1, _, err1 = <b>RawSyscall</b>(SYS_WRITE, uintptr(fd1), uintptr(unsafe.Pointer(&amp;gidmap[0])), uintptr(len(gidmap)))
+		<a href="../src/syscall/exec_linux.go.html#line-330" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-330">#L330</a>: 			if _, _, err1 = <b>RawSyscall</b>(SYS_CLOSE, uintptr(fd1), 0, 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-340" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-340">#L340</a>: 			r1, _, err1 = <b>RawSyscall</b>(SYS_WRITE, uintptr(fd1), uintptr(unsafe.Pointer(&amp;uidmap[0])), uintptr(len(uidmap)))
+		<a href="../src/syscall/exec_linux.go.html#line-344" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-344">#L344</a>: 			if _, _, err1 = <b>RawSyscall</b>(SYS_CLOSE, uintptr(fd1), 0, 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-366" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-366">#L366</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_CHROOT, uintptr(unsafe.Pointer(chroot)), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-380" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-380">#L380</a>: 			_, _, err1 = <b>RawSyscall</b>(_SYS_setgroups, ngroups, groups, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-385" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-385">#L385</a>: 		_, _, err1 = <b>RawSyscall</b>(sys_SETGID, uintptr(cred.Gid), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-389" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-389">#L389</a>: 		_, _, err1 = <b>RawSyscall</b>(sys_SETUID, uintptr(cred.Uid), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-400" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-400">#L400</a>: 		if _, _, err1 := <b>RawSyscall</b>(SYS_CAPGET, uintptr(unsafe.Pointer(&amp;caps.hdr)), uintptr(unsafe.Pointer(&amp;caps.data[0])), 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-411" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-411">#L411</a>: 		if _, _, err1 := <b>RawSyscall</b>(SYS_CAPSET, uintptr(unsafe.Pointer(&amp;caps.hdr)), uintptr(unsafe.Pointer(&amp;caps.data[0])), 0); err1 != 0 {
+		<a href="../src/syscall/exec_linux.go.html#line-425" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-425">#L425</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_CHDIR, uintptr(unsafe.Pointer(dir)), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-444" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-444">#L444</a>: 			_, _, err1 := <b>RawSyscall</b>(SYS_KILL, pid, uintptr(sys.Pdeathsig), 0)
+		<a href="../src/syscall/exec_linux.go.html#line-454" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-454">#L454</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_DUP3, uintptr(pipe), uintptr(nextfd), O_CLOEXEC)
+		<a href="../src/syscall/exec_linux.go.html#line-466" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-466">#L466</a>: 			_, _, err1 = <b>RawSyscall</b>(SYS_DUP3, uintptr(fd[i]), uintptr(nextfd), O_CLOEXEC)
+		<a href="../src/syscall/exec_linux.go.html#line-478" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-478">#L478</a>: 			<b>RawSyscall</b>(SYS_CLOSE, uintptr(i), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-484" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-484">#L484</a>: 			_, _, err1 = <b>RawSyscall</b>(fcntl64Syscall, uintptr(fd[i]), F_SETFD, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-492" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-492">#L492</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_DUP3, uintptr(fd[i]), uintptr(i), 0)
+		<a href="../src/syscall/exec_linux.go.html#line-503" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-503">#L503</a>: 		<b>RawSyscall</b>(SYS_CLOSE, uintptr(i), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-508" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-508">#L508</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_IOCTL, 0, uintptr(TIOCNOTTY), 0)
+		<a href="../src/syscall/exec_linux.go.html#line-516" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-516">#L516</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_IOCTL, uintptr(sys.Ctty), uintptr(TIOCSCTTY), 1)
+		<a href="../src/syscall/exec_linux.go.html#line-526" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-526">#L526</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_PTRACE, uintptr(PTRACE_TRACEME), 0, 0)
+		<a href="../src/syscall/exec_linux.go.html#line-533" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-533">#L533</a>: 	_, _, err1 = <b>RawSyscall</b>(SYS_EXECVE,
+		<a href="../src/syscall/exec_linux.go.html#line-540" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-540">#L540</a>: 	<b>RawSyscall</b>(SYS_WRITE, uintptr(pipe), uintptr(unsafe.Pointer(&amp;err1)), unsafe.Sizeof(err1))
+		<a href="../src/syscall/exec_linux.go.html#line-542" class="path-duplicate">exec_linux.go</a><a href="../src/syscall/exec_linux.go.html#line-542">#L542</a>: 		<b>RawSyscall</b>(SYS_EXIT, 253, 0, 0)
+		<a href="../src/syscall/exec_unix.go.html#line-299">exec_unix.go#L299</a>: 		_, _, err1 = <b>RawSyscall</b>(SYS_EXECVE,
+		<a href="../src/syscall/syscall_linux.go.html#line-60">syscall_linux.go#L60</a>: func <b>RawSyscall</b>(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno) {
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-79">zsyscall_linux_amd64.go#L79</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_PIPE2, uintptr(unsafe.Pointer(p)), uintptr(flags), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-326" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-326">#L326</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_EPOLL_CREATE1, uintptr(flag), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-450" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-450">#L450</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_GETPGID, uintptr(pid), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-488" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-488">#L488</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_GETRUSAGE, uintptr(who), uintptr(unsafe.Pointer(rusage)), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-549" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-549">#L549</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_INOTIFY_INIT1, uintptr(flags), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-560" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-560">#L560</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_INOTIFY_RM_WATCH, uintptr(fd), uintptr(watchdesc), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-571" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-571">#L571</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_KILL, uintptr(pid), uintptr(sig), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-759" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-759">#L759</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_SETPGID, uintptr(pid), uintptr(pgid), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-769" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-769">#L769</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_SETSID, 0, 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-780" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-780">#L780</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_SETTIMEOFDAY, uintptr(unsafe.Pointer(tv)), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-833" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-833">#L833</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_SYSINFO, uintptr(unsafe.Pointer(info)), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-854" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-854">#L854</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_TGKILL, uintptr(tgid), uintptr(tid), uintptr(sig))
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-864" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-864">#L864</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_TIMES, uintptr(unsafe.Pointer(tms)), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-883" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-883">#L883</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_UNAME, uintptr(unsafe.Pointer(buf)), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1071" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1071">#L1071</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_EPOLL_CREATE, uintptr(size), 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1146" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1146">#L1146</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_GETRLIMIT, uintptr(resource), uintptr(unsafe.Pointer(rlim)), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1164" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1164">#L1164</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_INOTIFY_INIT, 0, 0, 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1322" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1322">#L1322</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_SETRLIMIT, uintptr(resource), uintptr(unsafe.Pointer(rlim)), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1449" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1449">#L1449</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_GETGROUPS, uintptr(n), uintptr(unsafe.Pointer(list)), 0)
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1480" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1480">#L1480</a>: 	r0, _, e1 := <b>RawSyscall</b>(SYS_SOCKET, uintptr(domain), uintptr(typ), uintptr(proto))
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1501" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1501">#L1501</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_GETPEERNAME, uintptr(fd), uintptr(unsafe.Pointer(rsa)), uintptr(unsafe.Pointer(addrlen)))
+		<a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1511" class="path-duplicate">zsyscall_linux_amd64.go</a><a href="../src/syscall/zsyscall_linux_amd64.go.html#line-1511">#L1511</a>: 	_, _, e1 := <b>RawSyscall</b>(SYS_GETSOCKNAME, uintptr(fd), uintptr(unsafe.Pointer(rsa)), uintptr(unsafe.Pointer(addrlen)))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

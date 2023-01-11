@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: sync.Mutex.Lock</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/sync.html">sync</a>.<a href="../src/sync/mutex.go.html#line-34">Mutex</a>.<a href="../src/sync/mutex.go.html#line-81">Lock</a></b></span><span style="font-size: large;"><i> (method, <a href="../imp/sync.Mutex.html#name-Lock">view implemented interface methods</a>)</i></span>
+
+<span class="title">33 uses</span>
+
+	sync (current package)
+		<a href="../src/sync/map.go.html#line-114">map.go#L114</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-150" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-150">#L150</a>: 	m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-217" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-217">#L217</a>: 	m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-280" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-280">#L280</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/map.go.html#line-338" class="path-duplicate">map.go</a><a href="../src/sync/map.go.html#line-338">#L338</a>: 		m.mu.<b>Lock</b>()
+		<a href="../src/sync/mutex.go.html#line-81">mutex.go#L81</a>: func (m *Mutex) <b>Lock</b>() {
+		<a href="../src/sync/once.go.html#line-70">once.go#L70</a>: 	o.m.<b>Lock</b>()
+		<a href="../src/sync/pool.go.html#line-216">pool.go#L216</a>: 	allPoolsMu.<b>Lock</b>()
+		<a href="../src/sync/rwmutex.go.html#line-147">rwmutex.go#L147</a>: 	rw.w.<b>Lock</b>()
+
+	<a href="../pkg/internal/testlog.html">internal/testlog</a>
+		<a href="../src/internal/testlog/exit.go.html#line-15">exit.go#L15</a>: 	panicOnExit0.mu.<b>Lock</b>()
+		<a href="../src/internal/testlog/exit.go.html#line-30" class="path-duplicate">exit.go</a><a href="../src/internal/testlog/exit.go.html#line-30">#L30</a>: 	panicOnExit0.mu.<b>Lock</b>()
+
+	<a href="../pkg/io.html">io</a>
+		<a href="../src/io/pipe.go.html#line-22">pipe.go#L22</a>: 	a.<b>Lock</b>()
+		<a href="../src/io/pipe.go.html#line-30" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-30">#L30</a>: 	a.<b>Lock</b>()
+		<a href="../src/io/pipe.go.html#line-81" class="path-duplicate">pipe.go</a><a href="../src/io/pipe.go.html#line-81">#L81</a>: 		p.wrMu.<b>Lock</b>()
+
+	<a href="../pkg/log.html">log</a>
+		<a href="../src/log/log.go.html#line-80">log.go#L80</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-179" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-179">#L179</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-190" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-190">#L190</a>: 		l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-271" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-271">#L271</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-279" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-279">#L279</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-286" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-286">#L286</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-293" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-293">#L293</a>: 	l.mu.<b>Lock</b>()
+		<a href="../src/log/log.go.html#line-300" class="path-duplicate">log.go</a><a href="../src/log/log.go.html#line-300">#L300</a>: 	l.mu.<b>Lock</b>()
+
+	<a href="../pkg/math/rand.html">math/rand</a>
+		<a href="../src/math/rand/rand.go.html#line-386">rand.go#L386</a>: 	r.lk.<b>Lock</b>()
+		<a href="../src/math/rand/rand.go.html#line-393" class="path-duplicate">rand.go</a><a href="../src/math/rand/rand.go.html#line-393">#L393</a>: 	r.lk.<b>Lock</b>()
+		<a href="../src/math/rand/rand.go.html#line-400" class="path-duplicate">rand.go</a><a href="../src/math/rand/rand.go.html#line-400">#L400</a>: 	r.lk.<b>Lock</b>()
+		<a href="../src/math/rand/rand.go.html#line-407" class="path-duplicate">rand.go</a><a href="../src/math/rand/rand.go.html#line-407">#L407</a>: 	r.lk.<b>Lock</b>()
+		<a href="../src/math/rand/rand.go.html#line-415" class="path-duplicate">rand.go</a><a href="../src/math/rand/rand.go.html#line-415">#L415</a>: 	r.lk.<b>Lock</b>()
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/getwd.go.html#line-58">getwd.go#L58</a>: 	getwdCache.<b>Lock</b>()
+		<a href="../src/os/getwd.go.html#line-121" class="path-duplicate">getwd.go</a><a href="../src/os/getwd.go.html#line-121">#L121</a>: 	getwdCache.<b>Lock</b>()
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/type.go.html#line-2095">type.go#L2095</a>: 	funcLookupCache.<b>Lock</b>()
+		<a href="../src/reflect/type.go.html#line-2735" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2735">#L2735</a>: 	structLookupCache.<b>Lock</b>()
+
+	<a href="../pkg/syscall.html">syscall</a>
+		<a href="../src/syscall/syscall_unix.go.html#line-68">syscall_unix.go#L68</a>: 	m.<b>Lock</b>()
+		<a href="../src/syscall/syscall_unix.go.html#line-81" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-81">#L81</a>: 	m.<b>Lock</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: time.Time.ext</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/time.html">time</a>.<a href="../src/time/time.go.html#line-129">Time</a>.<a href="../src/time/time.go.html#line-142">ext</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">26 uses</span>
+
+	time (current package)
+		<a href="../src/time/format.go.html#line-513">format.go#L513</a>: 		m2 := uint64(t.<b>ext</b>)
+		<a href="../src/time/format.go.html#line-515" class="path-duplicate">format.go</a><a href="../src/time/format.go.html#line-515">#L515</a>: 		if t.<b>ext</b> &lt; 0 {
+		<a href="../src/time/time.go.html#line-142">time.go#L142</a>: 	<b>ext</b>  int64
+		<a href="../src/time/time.go.html#line-174" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-174">#L174</a>: 	return t.<b>ext</b>
+		<a href="../src/time/time.go.html#line-195" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-195">#L195</a>: 	sum := t.<b>ext</b> + d
+		<a href="../src/time/time.go.html#line-196" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-196">#L196</a>: 	if (sum &gt; t.<b>ext</b>) == (d &gt; 0) {
+		<a href="../src/time/time.go.html#line-197" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-197">#L197</a>: 		t.<b>ext</b> = sum
+		<a href="../src/time/time.go.html#line-199" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-199">#L199</a>: 		t.<b>ext</b> = 1&lt;&lt;63 - 1
+		<a href="../src/time/time.go.html#line-201" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-201">#L201</a>: 		t.<b>ext</b> = -(1&lt;&lt;63 - 1)
+		<a href="../src/time/time.go.html#line-217" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-217">#L217</a>: 		t.<b>ext</b> = t.sec()
+		<a href="../src/time/time.go.html#line-228" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-228">#L228</a>: 		sec := t.<b>ext</b>
+		<a href="../src/time/time.go.html#line-234" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-234">#L234</a>: 	t.<b>ext</b> = m
+		<a href="../src/time/time.go.html#line-246" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-246">#L246</a>: 	return t.<b>ext</b>
+		<a href="../src/time/time.go.html#line-252" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-252">#L252</a>: 		return t.<b>ext</b> &gt; u.<b>ext</b>
+		<a href="../src/time/time.go.html#line-262" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-262">#L262</a>: 		return t.<b>ext</b> &lt; u.<b>ext</b>
+		<a href="../src/time/time.go.html#line-276" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-276">#L276</a>: 		return t.<b>ext</b> == u.<b>ext</b>
+		<a href="../src/time/time.go.html#line-848" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-848">#L848</a>: 		te := t.<b>ext</b> + int64(d)
+		<a href="../src/time/time.go.html#line-849" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-849">#L849</a>: 		if d &lt; 0 &amp;&amp; te &gt; t.<b>ext</b> || d &gt; 0 &amp;&amp; te &lt; t.<b>ext</b> {
+		<a href="../src/time/time.go.html#line-853" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-853">#L853</a>: 			t.<b>ext</b> = te
+		<a href="../src/time/time.go.html#line-865" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-865">#L865</a>: 		te := t.<b>ext</b>
+		<a href="../src/time/time.go.html#line-866" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-866">#L866</a>: 		ue := u.<b>ext</b>
+		<a href="../src/time/time.go.html#line-1288" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1288">#L1288</a>: 	t.<b>ext</b> = sec
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

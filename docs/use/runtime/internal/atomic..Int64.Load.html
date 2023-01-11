@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Int64.Load</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-55">Int64</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-62">Load</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">28 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-62">types.go#L62</a>: func (i *Int64) <b>Load</b>() int64 {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgc.go.html#line-1013">mgc.go#L1013</a>: 	markCpu := gcController.assistTime.<b>Load</b>() + gcController.dedicatedMarkTime + gcController.fractionalMarkTime
+		<a href="../../../src/runtime/mgc.go.html#line-1108" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1108">#L1108</a>: 			gcController.assistTime.<b>Load</b>(),
+		<a href="../../../src/runtime/mgclimit.go.html#line-131">mgclimit.go#L131</a>: 	if lastUpdate := l.lastUpdate.<b>Load</b>(); now &gt;= lastUpdate {
+		<a href="../../../src/runtime/mgclimit.go.html#line-146" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-146">#L146</a>: 	return now-l.lastUpdate.<b>Load</b>() &gt; gcCPULimiterUpdatePeriod
+		<a href="../../../src/runtime/mgclimit.go.html#line-181" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-181">#L181</a>: 	lastUpdate := l.lastUpdate.<b>Load</b>()
+		<a href="../../../src/runtime/mgclimit.go.html#line-190" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-190">#L190</a>: 	assistTime := l.assistTimePool.<b>Load</b>()
+		<a href="../../../src/runtime/mgclimit.go.html#line-196" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-196">#L196</a>: 	idleTime := l.idleTimePool.<b>Load</b>()
+		<a href="../../../src/runtime/mgcpacer.go.html#line-564">mgcpacer.go#L564</a>: 	work := c.heapScanWork.<b>Load</b>() + c.stackScanWork.<b>Load</b>() + c.globalsScanWork.<b>Load</b>()
+		<a href="../../../src/runtime/mgcpacer.go.html#line-675" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-675">#L675</a>: 		utilization += float64(c.assistTime.<b>Load</b>()) / float64(assistDuration*int64(procs))
+		<a href="../../../src/runtime/mgcpacer.go.html#line-721" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-721">#L721</a>: 	scanWork := c.heapScanWork.<b>Load</b>() + c.stackScanWork.<b>Load</b>() + c.globalsScanWork.<b>Load</b>()
+		<a href="../../../src/runtime/mgcpacer.go.html#line-755" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-755">#L755</a>: 		print(c.heapScanWork.<b>Load</b>(), "+", c.stackScanWork.<b>Load</b>(), "+", c.globalsScanWork.<b>Load</b>(), " B work (", c.lastHeapScan+c.lastStackScan+c.globalsScan, " B exp.) ")
+		<a href="../../../src/runtime/mgcpacer.go.html#line-904" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-904">#L904</a>: 	c.heapScan = uint64(c.heapScanWork.<b>Load</b>())
+		<a href="../../../src/runtime/mgcpacer.go.html#line-905" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-905">#L905</a>: 	c.lastHeapScan = uint64(c.heapScanWork.<b>Load</b>())
+		<a href="../../../src/runtime/mgcpacer.go.html#line-906" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-906">#L906</a>: 	c.lastStackScan = uint64(c.stackScanWork.<b>Load</b>())
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1094" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1094">#L1094</a>: 	memoryLimit := uint64(c.memoryLimit.<b>Load</b>())
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1364" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1364">#L1364</a>: 	out := c.memoryLimit.<b>Load</b>()
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1578" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1578">#L1578</a>: 	gcPaceScavenger(gcController.memoryLimit.<b>Load</b>(), heapGoal, gcController.lastHeapGoal)
+		<a href="../../../src/runtime/mheap.go.html#line-1280">mheap.go#L1280</a>: 	if limit := gcController.memoryLimit.<b>Load</b>(); go119MemoryLimitSupport &amp;&amp; !gcCPULimiter.limiting() {
+		<a href="../../../src/runtime/mranges.go.html#line-157">mranges.go#L157</a>: 		old := b.a.<b>Load</b>()
+		<a href="../../../src/runtime/mranges.go.html#line-172" class="path-duplicate">mranges.go</a><a href="../../../src/runtime/mranges.go.html#line-172">#L172</a>: 		old := b.a.<b>Load</b>()
+		<a href="../../../src/runtime/mranges.go.html#line-199" class="path-duplicate">mranges.go</a><a href="../../../src/runtime/mranges.go.html#line-199">#L199</a>: 	v := b.a.<b>Load</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

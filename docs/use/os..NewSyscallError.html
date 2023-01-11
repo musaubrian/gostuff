@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: os.NewSyscallError</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/os.html">os</a>.<a href="../src/os/error.go.html#line-69">NewSyscallError</a></b></span>
+
+<span class="title">9 uses</span>
+
+	os (current package)
+		<a href="../src/os/env.go.html#line-122">env.go#L122</a>: 		return <b>NewSyscallError</b>("setenv", err)
+		<a href="../src/os/error.go.html#line-69">error.go#L69</a>: func <b>NewSyscallError</b>(syscall string, err error) error {
+		<a href="../src/os/error_posix.go.html#line-15">error_posix.go#L15</a>: 		err = <b>NewSyscallError</b>(name, err)
+		<a href="../src/os/exec_unix.go.html#line-49">exec_unix.go#L49</a>: 		return nil, <b>NewSyscallError</b>("wait", e)
+		<a href="../src/os/getwd.go.html#line-54">getwd.go#L54</a>: 		return s, <b>NewSyscallError</b>("getwd", e)
+		<a href="../src/os/pipe2_unix.go.html#line-18">pipe2_unix.go#L18</a>: 		return nil, nil, <b>NewSyscallError</b>("pipe2", e)
+		<a href="../src/os/proc.go.html#line-54">proc.go#L54</a>: 	return gids, <b>NewSyscallError</b>("getgroups", e)
+		<a href="../src/os/readfrom_linux.go.html#line-45">readfrom_linux.go#L45</a>: 	return written, handled, <b>NewSyscallError</b>("copy_file_range", err)
+		<a href="../src/os/wait_waitid.go.html#line-45">wait_waitid.go#L45</a>: 		return false, <b>NewSyscallError</b>("waitid", e)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

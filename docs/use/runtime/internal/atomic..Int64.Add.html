@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Int64.Add</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-55">Int64</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-90">Add</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">13 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-90">types.go#L90</a>: func (i *Int64) <b>Add</b>(delta int64) int64 {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgclimit.go.html#line-152">mgclimit.go#L152</a>: 	l.assistTimePool.<b>Add</b>(t)
+		<a href="../../../src/runtime/mgclimit.go.html#line-158" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-158">#L158</a>: 	l.idleTimePool.<b>Add</b>(t)
+		<a href="../../../src/runtime/mgclimit.go.html#line-192" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-192">#L192</a>: 		l.assistTimePool.<b>Add</b>(-assistTime)
+		<a href="../../../src/runtime/mgclimit.go.html#line-198" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-198">#L198</a>: 		l.idleTimePool.<b>Add</b>(-idleTime)
+		<a href="../../../src/runtime/mgcmark.go.html#line-250">mgcmark.go#L250</a>: 		workCounter.<b>Add</b>(workDone)
+		<a href="../../../src/runtime/mgcmark.go.html#line-604" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-604">#L604</a>: 		gcController.assistTime.<b>Add</b>(_p_.gcAssistTime)
+		<a href="../../../src/runtime/mgcmark.go.html#line-1109" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-1109">#L1109</a>: 			gcController.heapScanWork.<b>Add</b>(gcw.heapScanWork)
+		<a href="../../../src/runtime/mgcmark.go.html#line-1129" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-1129">#L1129</a>: 		gcController.heapScanWork.<b>Add</b>(gcw.heapScanWork)
+		<a href="../../../src/runtime/mgcmark.go.html#line-1196" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-1196">#L1196</a>: 			gcController.heapScanWork.<b>Add</b>(gcw.heapScanWork)
+		<a href="../../../src/runtime/mgcwork.go.html#line-278">mgcwork.go#L278</a>: 		gcController.heapScanWork.<b>Add</b>(w.heapScanWork)
+		<a href="../../../src/runtime/mheap.go.html#line-1335">mheap.go#L1335</a>: 		h.pages.scav.assistTime.<b>Add</b>(now - start)
+		<a href="../../../src/runtime/mprof.go.html#line-1078">mprof.go#L1078</a>: 	offset := int(goroutineProfile.offset.<b>Add</b>(1)) - 1
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

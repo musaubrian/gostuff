@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.gcBitsArena</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-2014">gcBitsArena</a></b></span>
+
+<span class="title">12 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mheap.go.html#line-2014">mheap.go#L2014</a>: type <b>gcBitsArena</b> struct {
+		<a href="../src/runtime/mheap.go.html#line-2017" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2017">#L2017</a>: 	next *<b>gcBitsArena</b>
+		<a href="../src/runtime/mheap.go.html#line-2023" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2023">#L2023</a>: 	free     *<b>gcBitsArena</b>
+		<a href="../src/runtime/mheap.go.html#line-2024" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2024">#L2024</a>: 	next     *<b>gcBitsArena</b> // Read atomically. Write atomically under lock.
+		<a href="../src/runtime/mheap.go.html#line-2025" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2025">#L2025</a>: 	current  *<b>gcBitsArena</b>
+		<a href="../src/runtime/mheap.go.html#line-2026" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2026">#L2026</a>: 	previous *<b>gcBitsArena</b>
+		<a href="../src/runtime/mheap.go.html#line-2031" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2031">#L2031</a>: func (b *<b>gcBitsArena</b>) tryAlloc(bytes uintptr) *gcBits {
+		<a href="../src/runtime/mheap.go.html#line-2052" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2052">#L2052</a>: 	head := (*<b>gcBitsArena</b>)(atomic.Loadp(unsafe.Pointer(&amp;gcBitsArenas.next)))
+		<a href="../src/runtime/mheap.go.html#line-2143" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2143">#L2143</a>: func newArenaMayUnlock() *<b>gcBitsArena</b> {
+		<a href="../src/runtime/mheap.go.html#line-2144" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2144">#L2144</a>: 	var result *<b>gcBitsArena</b>
+		<a href="../src/runtime/mheap.go.html#line-2147" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2147">#L2147</a>: 		result = (*<b>gcBitsArena</b>)(sysAlloc(gcBitsChunkBytes, &amp;memstats.gcMiscSys))
+		<a href="../src/runtime/mheap.go.html#line-2160" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2160">#L2160</a>: 	if uintptr(unsafe.Offsetof(<b>gcBitsArena</b>{}.bits))&amp;7 == 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

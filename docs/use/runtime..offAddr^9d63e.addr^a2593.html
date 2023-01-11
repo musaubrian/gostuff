@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.offAddr.addr</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mranges.go.html#line-99">offAddr</a>.<a href="../src/runtime/mranges.go.html#line-141">addr</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">32 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mgcscavenge.go.html#line-999">mgcscavenge.go#L999</a>: 	if searchAddr == minOffAddr.<b>addr</b>() {
+		<a href="../src/runtime/mpagealloc.go.html#line-554">mpagealloc.go#L554</a>: 	ai := arenaIndex(addr.<b>addr</b>())
+		<a href="../src/runtime/mpagealloc.go.html#line-556" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-556">#L556</a>: 		vAddr, ok := p.inUse.findAddrGreaterEqual(addr.<b>addr</b>())
+		<a href="../src/runtime/mpagealloc.go.html#line-653" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-653">#L653</a>: 			print("runtime: addr = ", hex(addr.<b>addr</b>()), ", size = ", size, "\n")
+		<a href="../src/runtime/mpagealloc.go.html#line-654" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-654">#L654</a>: 			print("runtime: base = ", hex(firstFree.base.<b>addr</b>()), ", bound = ", hex(firstFree.bound.<b>addr</b>()), "\n")
+		<a href="../src/runtime/mpagealloc.go.html#line-748" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-748">#L748</a>: 			addr := levelIndexToOffAddr(l, i).add(uintptr(base) * pageSize).<b>addr</b>()
+		<a href="../src/runtime/mpagealloc.go.html#line-761" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-761">#L761</a>: 		print("runtime: p.searchAddr = ", hex(p.searchAddr.<b>addr</b>()), ", i = ", i, "\n")
+		<a href="../src/runtime/mpagealloc.go.html#line-815" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-815">#L815</a>: 	if chunkIndex(p.searchAddr.<b>addr</b>()) &gt;= p.end {
+		<a href="../src/runtime/mpagealloc.go.html#line-822" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-822">#L822</a>: 	if pallocChunkPages-chunkPageIndex(p.searchAddr.<b>addr</b>()) &gt;= uint(npages) {
+		<a href="../src/runtime/mpagealloc.go.html#line-824" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-824">#L824</a>: 		i := chunkIndex(p.searchAddr.<b>addr</b>())
+		<a href="../src/runtime/mpagealloc.go.html#line-826" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-826">#L826</a>: 			j, searchIdx := p.chunkOf(i).find(npages, chunkPageIndex(p.searchAddr.<b>addr</b>()))
+		<a href="../src/runtime/mpagealloc.go.html#line-829" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-829">#L829</a>: 				print("runtime: searchIdx = ", chunkPageIndex(p.searchAddr.<b>addr</b>()), ", p.searchAddr = ", hex(p.searchAddr.<b>addr</b>()), "\n")
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-117">mpagealloc_64bit.go#L117</a>: 		sumIdxBase, sumIdxLimit := addrsToSummaryRange(level, r.base.<b>addr</b>(), r.limit.<b>addr</b>())
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-185" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-185">#L185</a>: 		sysMap(unsafe.Pointer(need.base.<b>addr</b>()), need.size(), p.sysStat)
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-186" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-186">#L186</a>: 		sysUsed(unsafe.Pointer(need.base.<b>addr</b>()), need.size(), need.size())
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-240" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-240">#L240</a>: 		sysMap(unsafe.Pointer(need.base.<b>addr</b>()), need.size(), sysStat)
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-241" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-241">#L241</a>: 		sysUsed(unsafe.Pointer(need.base.<b>addr</b>()), need.size(), need.size())
+		<a href="../src/runtime/mpagecache.go.html#line-121">mpagecache.go#L121</a>: 	if chunkIndex(p.searchAddr.<b>addr</b>()) &gt;= p.end {
+		<a href="../src/runtime/mpagecache.go.html#line-125" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-125">#L125</a>: 	ci := chunkIndex(p.searchAddr.<b>addr</b>()) // chunk index
+		<a href="../src/runtime/mpagecache.go.html#line-130" class="path-duplicate">mpagecache.go</a><a href="../src/runtime/mpagecache.go.html#line-130">#L130</a>: 		j, _ := chunk.find(1, chunkPageIndex(p.searchAddr.<b>addr</b>()))
+		<a href="../src/runtime/mranges.go.html#line-82">mranges.go#L82</a>: 	return makeAddrRange(a.base.<b>addr</b>(), addr)
+		<a href="../src/runtime/mranges.go.html#line-141" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-141">#L141</a>: func (l offAddr) <b>addr</b>() uintptr {
+		<a href="../src/runtime/mranges.go.html#line-161" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-161">#L161</a>: 		if b.a.CompareAndSwap(old, int64(minOffAddr.<b>addr</b>()-arenaBaseOffset)) {
+		<a href="../src/runtime/mranges.go.html#line-251" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-251">#L251</a>: 		if a.ranges[i].contains(base.<b>addr</b>()) {
+		<a href="../src/runtime/mranges.go.html#line-289" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-289">#L289</a>: 		return a.ranges[0].base.<b>addr</b>(), true
+		<a href="../src/runtime/mranges.go.html#line-295" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-295">#L295</a>: 		return a.ranges[i].base.<b>addr</b>(), true
+		<a href="../src/runtime/mranges.go.html#line-325" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-325">#L325</a>: 		print("runtime: range = {", hex(r.base.<b>addr</b>()), ", ", hex(r.limit.<b>addr</b>()), "}\n")
+		<a href="../src/runtime/mranges.go.html#line-330" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-330">#L330</a>: 	i := a.findSucc(r.base.<b>addr</b>())
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

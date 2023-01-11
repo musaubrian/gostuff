@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: fmt.buffer.writeString</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/fmt.html">fmt</a>.<a href="../src/fmt/print.go.html#line-75">buffer</a>.<a href="../src/fmt/print.go.html#line-81">writeString</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">50 uses</span>
+
+	fmt (current package)
+		<a href="../src/fmt/format.go.html#line-110">format.go#L110</a>: 		f.buf.<b>writeString</b>(s)
+		<a href="../src/fmt/format.go.html#line-117" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-117">#L117</a>: 		f.buf.<b>writeString</b>(s)
+		<a href="../src/fmt/format.go.html#line-120" class="path-duplicate">format.go</a><a href="../src/fmt/format.go.html#line-120">#L120</a>: 		f.buf.<b>writeString</b>(s)
+		<a href="../src/fmt/print.go.html#line-81">print.go#L81</a>: func (b *buffer) <b>writeString</b>(s string) {
+		<a href="../src/fmt/print.go.html#line-194" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-194">#L194</a>: 	p.buf.<b>writeString</b>(s)
+		<a href="../src/fmt/print.go.html#line-353" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-353">#L353</a>: 		p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-357" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-357">#L357</a>: 	p.buf.<b>writeString</b>(v.Type().String())
+		<a href="../src/fmt/print.go.html#line-363" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-363">#L363</a>: 	p.buf.<b>writeString</b>(percentBangString)
+		<a href="../src/fmt/print.go.html#line-368" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-368">#L368</a>: 		p.buf.<b>writeString</b>(reflect.TypeOf(p.arg).String())
+		<a href="../src/fmt/print.go.html#line-372" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-372">#L372</a>: 		p.buf.<b>writeString</b>(p.value.Type().String())
+		<a href="../src/fmt/print.go.html#line-376" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-376">#L376</a>: 		p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-461" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-461">#L461</a>: 		p.buf.<b>writeString</b>("i)")
+		<a href="../src/fmt/print.go.html#line-493" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-493">#L493</a>: 			p.buf.<b>writeString</b>(typeString)
+		<a href="../src/fmt/print.go.html#line-495" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-495">#L495</a>: 				p.buf.<b>writeString</b>(nilParenString)
+		<a href="../src/fmt/print.go.html#line-501" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-501">#L501</a>: 					p.buf.<b>writeString</b>(commaSpaceString)
+		<a href="../src/fmt/print.go.html#line-543" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-543">#L543</a>: 			p.buf.<b>writeString</b>(value.Type().String())
+		<a href="../src/fmt/print.go.html#line-544" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-544">#L544</a>: 			p.buf.<b>writeString</b>(")(")
+		<a href="../src/fmt/print.go.html#line-546" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-546">#L546</a>: 				p.buf.<b>writeString</b>(nilString)
+		<a href="../src/fmt/print.go.html#line-573" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-573">#L573</a>: 			p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-587" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-587">#L587</a>: 		p.buf.<b>writeString</b>(percentBangString)
+		<a href="../src/fmt/print.go.html#line-589" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-589">#L589</a>: 		p.buf.<b>writeString</b>(panicString)
+		<a href="../src/fmt/print.go.html#line-590" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-590">#L590</a>: 		p.buf.<b>writeString</b>(method)
+		<a href="../src/fmt/print.go.html#line-591" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-591">#L591</a>: 		p.buf.<b>writeString</b>(" method: ")
+		<a href="../src/fmt/print.go.html#line-764" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-764">#L764</a>: 			p.buf.<b>writeString</b>(invReflectString)
+		<a href="../src/fmt/print.go.html#line-768" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-768">#L768</a>: 				p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-791" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-791">#L791</a>: 			p.buf.<b>writeString</b>(f.Type().String())
+		<a href="../src/fmt/print.go.html#line-793" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-793">#L793</a>: 				p.buf.<b>writeString</b>(nilParenString)
+		<a href="../src/fmt/print.go.html#line-798" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-798">#L798</a>: 			p.buf.<b>writeString</b>(mapString)
+		<a href="../src/fmt/print.go.html#line-804" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-804">#L804</a>: 					p.buf.<b>writeString</b>(commaSpaceString)
+		<a href="../src/fmt/print.go.html#line-820" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-820">#L820</a>: 			p.buf.<b>writeString</b>(f.Type().String())
+		<a href="../src/fmt/print.go.html#line-826" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-826">#L826</a>: 					p.buf.<b>writeString</b>(commaSpaceString)
+		<a href="../src/fmt/print.go.html#line-833" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-833">#L833</a>: 					p.buf.<b>writeString</b>(name)
+		<a href="../src/fmt/print.go.html#line-844" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-844">#L844</a>: 				p.buf.<b>writeString</b>(f.Type().String())
+		<a href="../src/fmt/print.go.html#line-845" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-845">#L845</a>: 				p.buf.<b>writeString</b>(nilParenString)
+		<a href="../src/fmt/print.go.html#line-847" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-847">#L847</a>: 				p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-877" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-877">#L877</a>: 			p.buf.<b>writeString</b>(f.Type().String())
+		<a href="../src/fmt/print.go.html#line-879" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-879">#L879</a>: 				p.buf.<b>writeString</b>(nilParenString)
+		<a href="../src/fmt/print.go.html#line-885" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-885">#L885</a>: 					p.buf.<b>writeString</b>(commaSpaceString)
+		<a href="../src/fmt/print.go.html#line-994" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-994">#L994</a>: 	p.buf.<b>writeString</b>(percentBangString)
+		<a href="../src/fmt/print.go.html#line-996" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-996">#L996</a>: 	p.buf.<b>writeString</b>(badIndexString)
+		<a href="../src/fmt/print.go.html#line-1000" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1000">#L1000</a>: 	p.buf.<b>writeString</b>(percentBangString)
+		<a href="../src/fmt/print.go.html#line-1002" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1002">#L1002</a>: 	p.buf.<b>writeString</b>(missingString)
+		<a href="../src/fmt/print.go.html#line-1018" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1018">#L1018</a>: 			p.buf.<b>writeString</b>(format[lasti:i])
+		<a href="../src/fmt/print.go.html#line-1076" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1076">#L1076</a>: 				p.buf.<b>writeString</b>(badWidthString)
+		<a href="../src/fmt/print.go.html#line-1110" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1110">#L1110</a>: 					p.buf.<b>writeString</b>(badPrecString)
+		<a href="../src/fmt/print.go.html#line-1127" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1127">#L1127</a>: 			p.buf.<b>writeString</b>(noVerbString)
+		<a href="../src/fmt/print.go.html#line-1163" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1163">#L1163</a>: 		p.buf.<b>writeString</b>(extraString)
+		<a href="../src/fmt/print.go.html#line-1166" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1166">#L1166</a>: 				p.buf.<b>writeString</b>(commaSpaceString)
+		<a href="../src/fmt/print.go.html#line-1169" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1169">#L1169</a>: 				p.buf.<b>writeString</b>(nilAngleString)
+		<a href="../src/fmt/print.go.html#line-1171" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-1171">#L1171</a>: 				p.buf.<b>writeString</b>(reflect.TypeOf(arg).String())
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

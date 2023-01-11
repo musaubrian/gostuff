@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: sync/atomic.LoadInt32</title>
+<link href="../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../pkg/sync/atomic.html">sync/atomic</a>.<a href="../../src/sync/atomic/doc.go.html#line-120">LoadInt32</a></b></span>
+
+<span class="title">12 uses</span>
+
+	sync/atomic (current package)
+		<a href="../../src/sync/atomic/doc.go.html#line-120">doc.go#L120</a>: func <b>LoadInt32</b>(addr *int32) (val int32)
+		<a href="../../src/sync/atomic/type.go.html#line-69">type.go#L69</a>: func (x *Int32) Load() int32 { return <b>LoadInt32</b>(&amp;x.v) }
+
+	<a href="../../pkg/sync.html">sync</a>
+		<a href="../../src/sync/rwmutex.go.html#line-90">rwmutex.go#L90</a>: 		c := atomic.<b>LoadInt32</b>(&amp;rw.readerCount)
+
+	<a href="../../pkg/internal/poll.html">internal/poll</a>
+		<a href="../../src/internal/poll/copy_file_range_linux.go.html#line-55">copy_file_range_linux.go#L55</a>: 	if supported := atomic.<b>LoadInt32</b>(&amp;copyFileRangeSupported); supported == 0 {
+		<a href="../../src/internal/poll/fd_unix.go.html#line-697">fd_unix.go#L697</a>: 	if syscall.F_DUPFD_CLOEXEC != 0 &amp;&amp; atomic.<b>LoadInt32</b>(&amp;tryDupCloexec) == 1 {
+
+	<a href="../../pkg/internal/syscall/unix.html">internal/syscall/unix</a>
+		<a href="../../src/internal/syscall/unix/getrandom.go.html#line-25">getrandom.go#L25</a>: 	if atomic.<b>LoadInt32</b>(&amp;getrandomUnsupported) != 0 {
+
+	<a href="../../pkg/log.html">log</a>
+		<a href="../../src/log/log.go.html#line-205">log.go#L205</a>: 	if atomic.<b>LoadInt32</b>(&amp;l.isDiscard) != 0 {
+		<a href="../../src/log/log.go.html#line-214" class="path-duplicate">log.go</a><a href="../../src/log/log.go.html#line-214">#L214</a>: 	if atomic.<b>LoadInt32</b>(&amp;l.isDiscard) != 0 {
+		<a href="../../src/log/log.go.html#line-223" class="path-duplicate">log.go</a><a href="../../src/log/log.go.html#line-223">#L223</a>: 	if atomic.<b>LoadInt32</b>(&amp;l.isDiscard) != 0 {
+		<a href="../../src/log/log.go.html#line-342" class="path-duplicate">log.go</a><a href="../../src/log/log.go.html#line-342">#L342</a>: 	if atomic.<b>LoadInt32</b>(&amp;std.isDiscard) != 0 {
+		<a href="../../src/log/log.go.html#line-351" class="path-duplicate">log.go</a><a href="../../src/log/log.go.html#line-351">#L351</a>: 	if atomic.<b>LoadInt32</b>(&amp;std.isDiscard) != 0 {
+		<a href="../../src/log/log.go.html#line-360" class="path-duplicate">log.go</a><a href="../../src/log/log.go.html#line-360">#L360</a>: 	if atomic.<b>LoadInt32</b>(&amp;std.isDiscard) != 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

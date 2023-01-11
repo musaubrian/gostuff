@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: time.Now</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/time.html">time</a>.<a href="../src/time/time.go.html#line-1089">Now</a></b></span>
+
+<span class="title">6 uses</span>
+
+	time (current package)
+		<a href="../src/time/sleep.go.html#line-145">sleep.go#L145</a>: 	case c.(chan Time) &lt;- <b>Now</b>():
+		<a href="../src/time/time.go.html#line-896">time.go#L896</a>: 		now = <b>Now</b>()
+		<a href="../src/time/time.go.html#line-909" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-909">#L909</a>: 		now = <b>Now</b>()
+		<a href="../src/time/time.go.html#line-1089" class="path-duplicate">time.go</a><a href="../src/time/time.go.html#line-1089">#L1089</a>: func <b>Now</b>() Time {
+
+	<a href="../pkg/github.com/musaubrian/gostuff/game.html">github.com/musaubrian/gostuff/game</a>
+		<a href="../src/github.com/musaubrian/gostuff/game/setup.go.html#line-63">setup.go#L63</a>:     rand.Seed(time.<b>Now</b>().Unix())
+
+	<a href="../pkg/log.html">log</a>
+		<a href="../src/log/log.go.html#line-176">log.go#L176</a>: 	now := time.<b>Now</b>() // get this early.
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

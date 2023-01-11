@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: strings.Builder.WriteString</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/strings.html">strings</a>.<a href="../src/strings/builder.go.html#line-15">Builder</a>.<a href="../src/strings/builder.go.html#line-122">WriteString</a></b></span><span style="font-size: large;"><i> (method, <a href="../imp/strings.Builder.html#name-WriteString">view implemented interface methods</a>)</i></span>
+
+<span class="title">17 uses</span>
+
+	strings (current package)
+		<a href="../src/strings/builder.go.html#line-122">builder.go#L122</a>: func (b *Builder) <b>WriteString</b>(s string) (int, error) {
+		<a href="../src/strings/replace.go.html#line-399">replace.go#L399</a>: 		buf.<b>WriteString</b>(s[i : i+match])
+		<a href="../src/strings/replace.go.html#line-400" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-400">#L400</a>: 		buf.<b>WriteString</b>(r.value)
+		<a href="../src/strings/replace.go.html#line-406" class="path-duplicate">replace.go</a><a href="../src/strings/replace.go.html#line-406">#L406</a>: 	buf.<b>WriteString</b>(s[i:])
+		<a href="../src/strings/strings.go.html#line-444">strings.go#L444</a>: 	b.<b>WriteString</b>(elems[0])
+		<a href="../src/strings/strings.go.html#line-446" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-446">#L446</a>: 		b.<b>WriteString</b>(sep)
+		<a href="../src/strings/strings.go.html#line-447" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-447">#L447</a>: 		b.<b>WriteString</b>(s)
+		<a href="../src/strings/strings.go.html#line-491" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-491">#L491</a>: 		b.<b>WriteString</b>(s[:i])
+		<a href="../src/strings/strings.go.html#line-546" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-546">#L546</a>: 	b.<b>WriteString</b>(s)
+		<a href="../src/strings/strings.go.html#line-549" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-549">#L549</a>: 			b.<b>WriteString</b>(b.String())
+		<a href="../src/strings/strings.go.html#line-551" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-551">#L551</a>: 			b.<b>WriteString</b>(b.String()[:n-b.Len()])
+		<a href="../src/strings/strings.go.html#line-653" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-653">#L653</a>: 			b.<b>WriteString</b>(s[:i])
+		<a href="../src/strings/strings.go.html#line-678" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-678">#L678</a>: 				b.<b>WriteString</b>(replacement)
+		<a href="../src/strings/strings.go.html#line-683" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-683">#L683</a>: 		b.<b>WriteString</b>(s[i : i+wid])
+		<a href="../src/strings/strings.go.html#line-1029" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-1029">#L1029</a>: 		b.<b>WriteString</b>(s[start:j])
+		<a href="../src/strings/strings.go.html#line-1030" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-1030">#L1030</a>: 		b.<b>WriteString</b>(new)
+		<a href="../src/strings/strings.go.html#line-1033" class="path-duplicate">strings.go</a><a href="../src/strings/strings.go.html#line-1033">#L1033</a>: 	b.<b>WriteString</b>(s[start:])
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

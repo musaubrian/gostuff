@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mSpanList.first</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mheap.go.html#line-371">mSpanList</a>.<a href="../src/runtime/mheap.go.html#line-372">first</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">23 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mgcwork.go.html#line-366">mgcwork.go#L366</a>: 		if work.wbufSpans.free.<b>first</b> != nil {
+		<a href="../src/runtime/mgcwork.go.html#line-368" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-368">#L368</a>: 			s = work.wbufSpans.free.<b>first</b>
+		<a href="../src/runtime/mgcwork.go.html#line-477" class="path-duplicate">mgcwork.go</a><a href="../src/runtime/mgcwork.go.html#line-477">#L477</a>: 			span := work.wbufSpans.free.<b>first</b>
+		<a href="../src/runtime/mheap.go.html#line-372">mheap.go#L372</a>: 	<b>first</b> *mspan // first span in list, or nil if none
+		<a href="../src/runtime/mheap.go.html#line-1627" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1627">#L1627</a>: 	list.<b>first</b> = nil
+		<a href="../src/runtime/mheap.go.html#line-1637" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1637">#L1637</a>: 	if list.<b>first</b> == span {
+		<a href="../src/runtime/mheap.go.html#line-1638" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1638">#L1638</a>: 		list.<b>first</b> = span.next
+		<a href="../src/runtime/mheap.go.html#line-1653" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1653">#L1653</a>: 	return list.<b>first</b> == nil
+		<a href="../src/runtime/mheap.go.html#line-1661" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1661">#L1661</a>: 	span.next = list.<b>first</b>
+		<a href="../src/runtime/mheap.go.html#line-1662" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1662">#L1662</a>: 	if list.<b>first</b> != nil {
+		<a href="../src/runtime/mheap.go.html#line-1665" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1665">#L1665</a>: 		list.<b>first</b>.prev = span
+		<a href="../src/runtime/mheap.go.html#line-1670" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1670">#L1670</a>: 	list.<b>first</b> = span
+		<a href="../src/runtime/mheap.go.html#line-1685" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1685">#L1685</a>: 		list.<b>first</b> = span
+		<a href="../src/runtime/mheap.go.html#line-1699" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1699">#L1699</a>: 	for s := other.<b>first</b>; s != nil; s = s.next {
+		<a href="../src/runtime/mheap.go.html#line-1708" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1708">#L1708</a>: 		other.last.next = list.<b>first</b>
+		<a href="../src/runtime/mheap.go.html#line-1709" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1709">#L1709</a>: 		list.<b>first</b>.prev = other.last
+		<a href="../src/runtime/mheap.go.html#line-1710" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1710">#L1710</a>: 		list.<b>first</b> = other.<b>first</b>
+		<a href="../src/runtime/mheap.go.html#line-1713" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1713">#L1713</a>: 	other.<b>first</b>, other.last = nil, nil
+		<a href="../src/runtime/stack.go.html#line-203">stack.go#L203</a>: 	s := list.<b>first</b>
+		<a href="../src/runtime/stack.go.html#line-407" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-407">#L407</a>: 			s = stackLarge.free[log2npage].<b>first</b>
+		<a href="../src/runtime/stack.go.html#line-1223" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1223">#L1223</a>: 		for s := list.<b>first</b>; s != nil; {
+		<a href="../src/runtime/stack.go.html#line-1239" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1239">#L1239</a>: 		for s := stackLarge.free[i].<b>first</b>; s != nil; {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

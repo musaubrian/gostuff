@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.addrRange</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mranges.go.html#line-21">addrRange</a></b></span>
+
+<span class="title">25 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-116">mpagealloc_64bit.go#L116</a>: 	addrRangeToSummaryRange := func(level int, r <b>addrRange</b>) (int, int) {
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-124" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-124">#L124</a>: 	summaryRangeToSumAddrRange := func(level, sumIdxBase, sumIdxLimit int) <b>addrRange</b> {
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-128" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-128">#L128</a>: 		return <b>addrRange</b>{
+		<a href="../src/runtime/mpagealloc_64bit.go.html#line-137" class="path-duplicate">mpagealloc_64bit.go</a><a href="../src/runtime/mpagealloc_64bit.go.html#line-137">#L137</a>: 	addrRangeToSumAddrRange := func(level int, r <b>addrRange</b>) <b>addrRange</b> {
+		<a href="../src/runtime/mranges.go.html#line-21">mranges.go#L21</a>: type <b>addrRange</b> struct {
+		<a href="../src/runtime/mranges.go.html#line-33" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-33">#L33</a>: func makeAddrRange(base, limit uintptr) <b>addrRange</b> {
+		<a href="../src/runtime/mranges.go.html#line-34" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-34">#L34</a>: 	r := <b>addrRange</b>{offAddr{base}, offAddr{limit}}
+		<a href="../src/runtime/mranges.go.html#line-42" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-42">#L42</a>: func (a <b>addrRange</b>) size() uintptr {
+		<a href="../src/runtime/mranges.go.html#line-52" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-52">#L52</a>: func (a <b>addrRange</b>) contains(addr uintptr) bool {
+		<a href="../src/runtime/mranges.go.html#line-60" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-60">#L60</a>: func (a <b>addrRange</b>) subtract(b <b>addrRange</b>) <b>addrRange</b> {
+		<a href="../src/runtime/mranges.go.html#line-62" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-62">#L62</a>: 		return <b>addrRange</b>{}
+		<a href="../src/runtime/mranges.go.html#line-75" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-75">#L75</a>: func (a <b>addrRange</b>) removeGreaterEqual(addr uintptr) <b>addrRange</b> {
+		<a href="../src/runtime/mranges.go.html#line-77" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-77">#L77</a>: 		return <b>addrRange</b>{}
+		<a href="../src/runtime/mranges.go.html#line-220" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-220">#L220</a>: 	ranges []<b>addrRange</b>
+		<a href="../src/runtime/mranges.go.html#line-234" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-234">#L234</a>: 	ranges.array = (*notInHeap)(persistentalloc(unsafe.Sizeof(<b>addrRange</b>{})*uintptr(ranges.cap), goarch.PtrSize, sysStat))
+		<a href="../src/runtime/mranges.go.html#line-312" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-312">#L312</a>: func (a *addrRanges) add(r <b>addrRange</b>) {
+		<a href="../src/runtime/mranges.go.html#line-361" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-361">#L361</a>: 			ranges.array = (*notInHeap)(persistentalloc(unsafe.Sizeof(<b>addrRange</b>{})*uintptr(ranges.cap), goarch.PtrSize, a.sysStat))
+		<a href="../src/runtime/mranges.go.html#line-378" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-378">#L378</a>: func (a *addrRanges) removeLast(nBytes uintptr) <b>addrRange</b> {
+		<a href="../src/runtime/mranges.go.html#line-380" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-380">#L380</a>: 		return <b>addrRange</b>{}
+		<a href="../src/runtime/mranges.go.html#line-388" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-388">#L388</a>: 		return <b>addrRange</b>{newEnd, r.limit}
+		<a href="../src/runtime/mranges.go.html#line-431" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-431">#L431</a>: 		ranges.array = (*notInHeap)(persistentalloc(unsafe.Sizeof(<b>addrRange</b>{})*uintptr(ranges.cap), goarch.PtrSize, b.sysStat))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

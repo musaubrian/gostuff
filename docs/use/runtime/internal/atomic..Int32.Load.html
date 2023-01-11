@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Int32.Load</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-12">Int32</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-18">Load</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">9 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-18">types.go#L18</a>: func (i *Int32) <b>Load</b>() int32 {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgc.go.html#line-561">mgc.go#L561</a>: 		if gcController.gcPercent.<b>Load</b>() &lt; 0 {
+		<a href="../../../src/runtime/mgcpacer.go.html#line-556">mgcpacer.go#L556</a>: 	gcPercent := c.gcPercent.<b>Load</b>()
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1270" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1270">#L1270</a>: 	if gcPercent := c.gcPercent.<b>Load</b>(); gcPercent &gt;= 0 {
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1315" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1315">#L1315</a>: 	out := c.gcPercent.<b>Load</b>()
+		<a href="../../../src/runtime/mgcscavenge.go.html#line-1006">mgcscavenge.go#L1006</a>: 	min := s.minHeapIdx.<b>Load</b>()
+		<a href="../../../src/runtime/mpagealloc_64bit.go.html#line-213">mpagealloc_64bit.go#L213</a>: 	haveMin := s.min.<b>Load</b>()
+		<a href="../../../src/runtime/mpagealloc_64bit.go.html#line-214" class="path-duplicate">mpagealloc_64bit.go</a><a href="../../../src/runtime/mpagealloc_64bit.go.html#line-214">#L214</a>: 	haveMax := s.max.<b>Load</b>()
+		<a href="../../../src/runtime/mpagealloc_64bit.go.html#line-252" class="path-duplicate">mpagealloc_64bit.go</a><a href="../../../src/runtime/mpagealloc_64bit.go.html#line-252">#L252</a>: 	minHeapIdx := s.minHeapIdx.<b>Load</b>()
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

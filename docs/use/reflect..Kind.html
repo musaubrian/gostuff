@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.Kind</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/type.go.html#line-241">Kind</a></b></span>
+
+<span class="title">14 uses</span>
+
+	reflect (current package)
+		<a href="../src/reflect/type.go.html#line-103">type.go#L103</a>: 	Kind() <b>Kind</b>
+		<a href="../src/reflect/type.go.html#line-241" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-241">#L241</a>: type <b>Kind</b> uint
+		<a href="../src/reflect/type.go.html#line-244" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-244">#L244</a>: 	Invalid <b>Kind</b> = iota
+		<a href="../src/reflect/type.go.html#line-641" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-641">#L641</a>: func (k <b>Kind</b>) String() string {
+		<a href="../src/reflect/type.go.html#line-830" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-830">#L830</a>: func (t *rtype) Kind() <b>Kind</b> { return <b>Kind</b>(t.kind &amp; kindMask) }
+		<a href="../src/reflect/type.go.html#line-1830" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-1830">#L1830</a>: 	kind  <b>Kind</b>
+		<a href="../src/reflect/type.go.html#line-3155" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-3155">#L3155</a>: 	switch <b>Kind</b>(t.kind &amp; kindMask) {
+		<a href="../src/reflect/value.go.html#line-82">value.go#L82</a>: func (f flag) kind() <b>Kind</b> {
+		<a href="../src/reflect/value.go.html#line-83" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-83">#L83</a>: 	return <b>Kind</b>(f &amp; flagKindMask)
+		<a href="../src/reflect/value.go.html#line-163" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-163">#L163</a>: 	Kind   <b>Kind</b>
+		<a href="../src/reflect/value.go.html#line-218" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-218">#L218</a>: func (f flag) mustBe(expected <b>Kind</b>) {
+		<a href="../src/reflect/value.go.html#line-220" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-220">#L220</a>: 	if <b>Kind</b>(f&amp;flagKindMask) != expected {
+		<a href="../src/reflect/value.go.html#line-1608" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1608">#L1608</a>: func (v Value) Kind() <b>Kind</b> {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

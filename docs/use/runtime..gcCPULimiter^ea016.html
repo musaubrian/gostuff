@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.gcCPULimiter</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">var <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mgclimit.go.html#line-30">gcCPULimiter</a></b></span>
+
+<span class="title">16 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/metrics.go.html#line-191">metrics.go#L191</a>: 				out.scalar = uint64(<b>gcCPULimiter</b>.lastEnabledCycle.Load())
+		<a href="../src/runtime/mgc.go.html#line-682">mgc.go#L682</a>: 	<b>gcCPULimiter</b>.startGCTransition(true, now)
+		<a href="../src/runtime/mgc.go.html#line-736" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-736">#L736</a>: 		<b>gcCPULimiter</b>.finishGCTransition(now)
+		<a href="../src/runtime/mgc.go.html#line-897" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-897">#L897</a>: 	<b>gcCPULimiter</b>.startGCTransition(false, now)
+		<a href="../src/runtime/mgc.go.html#line-1043" class="path-duplicate">mgc.go</a><a href="../src/runtime/mgc.go.html#line-1043">#L1043</a>: 	<b>gcCPULimiter</b>.finishGCTransition(now)
+		<a href="../src/runtime/mgclimit.go.html#line-30">mgclimit.go#L30</a>: var <b>gcCPULimiter</b> gcCPULimiterState
+		<a href="../src/runtime/mgclimit.go.html#line-476" class="path-duplicate">mgclimit.go</a><a href="../src/runtime/mgclimit.go.html#line-476">#L476</a>: 		<b>gcCPULimiter</b>.addIdleTime(duration)
+		<a href="../src/runtime/mgclimit.go.html#line-480" class="path-duplicate">mgclimit.go</a><a href="../src/runtime/mgclimit.go.html#line-480">#L480</a>: 		<b>gcCPULimiter</b>.addAssistTime(duration)
+		<a href="../src/runtime/mgcmark.go.html#line-416">mgcmark.go#L416</a>: 	if go119MemoryLimitSupport &amp;&amp; <b>gcCPULimiter</b>.limiting() {
+		<a href="../src/runtime/mgcmark.go.html#line-605" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-605">#L605</a>: 		<b>gcCPULimiter</b>.update(now)
+		<a href="../src/runtime/mgcmark.go.html#line-1162" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-1162">#L1162</a>: 	for !gp.preempt &amp;&amp; !<b>gcCPULimiter</b>.limiting() &amp;&amp; workFlushed+gcw.heapScanWork &lt; scanWork {
+		<a href="../src/runtime/mgcpacer.go.html#line-822">mgcpacer.go#L822</a>: 	if <b>gcCPULimiter</b>.needUpdate(now) {
+		<a href="../src/runtime/mgcpacer.go.html#line-823" class="path-duplicate">mgcpacer.go</a><a href="../src/runtime/mgcpacer.go.html#line-823">#L823</a>: 		<b>gcCPULimiter</b>.update(now)
+		<a href="../src/runtime/mheap.go.html#line-1280">mheap.go#L1280</a>: 	if limit := gcController.memoryLimit.Load(); go119MemoryLimitSupport &amp;&amp; !<b>gcCPULimiter</b>.limiting() {
+		<a href="../src/runtime/mheap.go.html#line-1327" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1327">#L1327</a>: 			return <b>gcCPULimiter</b>.limiting()
+		<a href="../src/runtime/proc.go.html#line-4933">proc.go#L4933</a>: 		<b>gcCPULimiter</b>.resetCapacity(now, nprocs)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

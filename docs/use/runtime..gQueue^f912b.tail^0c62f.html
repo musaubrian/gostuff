@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.gQueue.tail</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/proc.go.html#line-6039">gQueue</a>.<a href="../src/runtime/proc.go.html#line-6041">tail</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">19 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/mgcmark.go.html#line-311">mgcmark.go#L311</a>: 		q.<b>tail</b>.set(gp)
+		<a href="../src/runtime/mgcmark.go.html#line-644" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-644">#L644</a>: 		if oldList.<b>tail</b> != 0 {
+		<a href="../src/runtime/mgcmark.go.html#line-645" class="path-duplicate">mgcmark.go</a><a href="../src/runtime/mgcmark.go.html#line-645">#L645</a>: 			oldList.<b>tail</b>.ptr().schedlink.set(nil)
+		<a href="../src/runtime/proc.go.html#line-3145">proc.go#L3145</a>: 	q.<b>tail</b>.set(tail)
+		<a href="../src/runtime/proc.go.html#line-5850" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-5850">#L5850</a>: 	q.<b>tail</b>.set(batch[n])
+		<a href="../src/runtime/proc.go.html#line-6041" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6041">#L6041</a>: 	<b>tail</b> guintptr
+		<a href="../src/runtime/proc.go.html#line-6053" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6053">#L6053</a>: 	if q.<b>tail</b> == 0 {
+		<a href="../src/runtime/proc.go.html#line-6054" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6054">#L6054</a>: 		q.<b>tail</b>.set(gp)
+		<a href="../src/runtime/proc.go.html#line-6061" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6061">#L6061</a>: 	if q.<b>tail</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-6062" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6062">#L6062</a>: 		q.<b>tail</b>.ptr().schedlink.set(gp)
+		<a href="../src/runtime/proc.go.html#line-6066" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6066">#L6066</a>: 	q.<b>tail</b>.set(gp)
+		<a href="../src/runtime/proc.go.html#line-6072" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6072">#L6072</a>: 	if q2.<b>tail</b> == 0 {
+		<a href="../src/runtime/proc.go.html#line-6075" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6075">#L6075</a>: 	q2.<b>tail</b>.ptr().schedlink = 0
+		<a href="../src/runtime/proc.go.html#line-6076" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6076">#L6076</a>: 	if q.<b>tail</b> != 0 {
+		<a href="../src/runtime/proc.go.html#line-6077" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6077">#L6077</a>: 		q.<b>tail</b>.ptr().schedlink = q2.head
+		<a href="../src/runtime/proc.go.html#line-6081" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6081">#L6081</a>: 	q.<b>tail</b> = q2.<b>tail</b>
+		<a href="../src/runtime/proc.go.html#line-6091" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6091">#L6091</a>: 			q.<b>tail</b> = 0
+		<a href="../src/runtime/proc.go.html#line-6124" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6124">#L6124</a>: 		q.<b>tail</b>.ptr().schedlink = l.head
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

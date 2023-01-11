@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Uint32.Load</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-155">Uint32</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-161">Load</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">18 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-161">types.go#L161</a>: func (u *Uint32) <b>Load</b>() uint32 {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/metrics.go.html#line-191">metrics.go#L191</a>: 				out.scalar = uint64(gcCPULimiter.lastEnabledCycle.<b>Load</b>())
+		<a href="../../../src/runtime/mgcsweep.go.html#line-154">mgcsweep.go#L154</a>: 		state := a.state.<b>Load</b>()
+		<a href="../../../src/runtime/mgcsweep.go.html#line-171" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-171">#L171</a>: 		state := a.state.<b>Load</b>()
+		<a href="../../../src/runtime/mgcsweep.go.html#line-195" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-195">#L195</a>: 		state := a.state.<b>Load</b>()
+		<a href="../../../src/runtime/mgcsweep.go.html#line-207" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-207">#L207</a>: 	return a.state.<b>Load</b>() &amp;^ sweepDrainedMask
+		<a href="../../../src/runtime/mgcsweep.go.html#line-214" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-214">#L214</a>: 	return a.state.<b>Load</b>() == sweepDrainedMask
+		<a href="../../../src/runtime/mprof.go.html#line-177">mprof.go#L177</a>: 	v := c.value.<b>Load</b>()
+		<a href="../../../src/runtime/mprof.go.html#line-186" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-186">#L186</a>: 		prev := c.value.<b>Load</b>()
+		<a href="../../../src/runtime/mprof.go.html#line-203" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-203">#L203</a>: 		prev := c.value.<b>Load</b>()
+		<a href="../../../src/runtime/mprof.go.html#line-895" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-895">#L895</a>: 	return goroutineProfileState((*atomic.Uint32)(p).<b>Load</b>())
+		<a href="../../../src/runtime/netpoll.go.html#line-131">netpoll.go#L131</a>: 	return pollInfo(pd.atomicInfo.<b>Load</b>())
+		<a href="../../../src/runtime/netpoll.go.html#line-154" class="path-duplicate">netpoll.go</a><a href="../../../src/runtime/netpoll.go.html#line-154">#L154</a>: 	x := pd.atomicInfo.<b>Load</b>()
+		<a href="../../../src/runtime/netpoll.go.html#line-156" class="path-duplicate">netpoll.go</a><a href="../../../src/runtime/netpoll.go.html#line-156">#L156</a>: 		x = pd.atomicInfo.<b>Load</b>()
+		<a href="../../../src/runtime/netpoll.go.html#line-162" class="path-duplicate">netpoll.go</a><a href="../../../src/runtime/netpoll.go.html#line-162">#L162</a>: 	x := pd.atomicInfo.<b>Load</b>()
+		<a href="../../../src/runtime/netpoll.go.html#line-164" class="path-duplicate">netpoll.go</a><a href="../../../src/runtime/netpoll.go.html#line-164">#L164</a>: 		x = pd.atomicInfo.<b>Load</b>()
+		<a href="../../../src/runtime/proc.go.html#line-1734">proc.go#L1734</a>: 			wait := freem.freeWait.<b>Load</b>()
+		<a href="../../../src/runtime/proc.go.html#line-5252" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-5252">#L5252</a>: 		if scavenger.sysmonWake.<b>Load</b>() != 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

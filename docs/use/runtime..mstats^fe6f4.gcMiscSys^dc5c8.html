@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.mstats.gcMiscSys</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mstats.go.html#line-14">mstats</a>.<a href="../src/runtime/mstats.go.html#line-27">gcMiscSys</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">13 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/malloc.go.html#line-685">malloc.go#L685</a>: 		r = (*heapArena)(h.heapArenaAlloc.alloc(unsafe.Sizeof(*r), goarch.PtrSize, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/malloc.go.html#line-687" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-687">#L687</a>: 			r = (*heapArena)(persistentalloc(unsafe.Sizeof(*r), goarch.PtrSize, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/malloc.go.html#line-699" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-699">#L699</a>: 			newArray := (*notInHeap)(persistentalloc(size, goarch.PtrSize, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/mcheckmark.go.html#line-46">mcheckmark.go#L46</a>: 			bitmap = (*checkmarksMap)(persistentalloc(unsafe.Sizeof(*bitmap), 0, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/metrics.go.html#line-476">metrics.go#L476</a>: 	a.gcMiscSys = memstats.<b>gcMiscSys</b>.load()
+		<a href="../src/runtime/mfinal.go.html#line-92">mfinal.go#L92</a>: 			finc = (*finblock)(persistentalloc(_FinBlockSize, 0, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/mheap.go.html#line-729">mheap.go#L729</a>: 	h.pages.init(&amp;h.lock, &amp;memstats.<b>gcMiscSys</b>)
+		<a href="../src/runtime/mheap.go.html#line-2147" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-2147">#L2147</a>: 		result = (*gcBitsArena)(sysAlloc(gcBitsChunkBytes, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/mspanset.go.html#line-105">mspanset.go#L105</a>: 			newSpine := persistentalloc(newCap*goarch.PtrSize, cpu.CacheLineSize, &amp;memstats.<b>gcMiscSys</b>)
+		<a href="../src/runtime/mspanset.go.html#line-286" class="path-duplicate">mspanset.go</a><a href="../src/runtime/mspanset.go.html#line-286">#L286</a>: 	return (*spanSetBlock)(persistentalloc(unsafe.Sizeof(spanSetBlock{}), cpu.CacheLineSize, &amp;memstats.<b>gcMiscSys</b>))
+		<a href="../src/runtime/mstats.go.html#line-27">mstats.go#L27</a>: 	<b>gcMiscSys</b> sysMemStat // updated atomically or during STW
+		<a href="../src/runtime/mstats.go.html#line-434" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-434">#L434</a>: 		memstats.buckhash_sys.load() + memstats.<b>gcMiscSys</b>.load() + memstats.other_sys.load() +
+		<a href="../src/runtime/mstats.go.html#line-532" class="path-duplicate">mstats.go</a><a href="../src/runtime/mstats.go.html#line-532">#L532</a>: 	stats.GCSys = memstats.<b>gcMiscSys</b>.load() + gcWorkBufInUse + gcProgPtrScalarBitsInUse
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

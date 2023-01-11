@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.KeepAlive</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/mfinal.go.html#line-484">KeepAlive</a></b></span>
+
+<span class="title">21 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/cgocall.go.html#line-195">cgocall.go#L195</a>: 	<b>KeepAlive</b>(fn)
+		<a href="../src/runtime/cgocall.go.html#line-196" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-196">#L196</a>: 	<b>KeepAlive</b>(arg)
+		<a href="../src/runtime/cgocall.go.html#line-197" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-197">#L197</a>: 	<b>KeepAlive</b>(mp)
+		<a href="../src/runtime/chan.go.html#line-264">chan.go#L264</a>: 	<b>KeepAlive</b>(ep)
+		<a href="../src/runtime/mfinal.go.html#line-484">mfinal.go#L484</a>: func <b>KeepAlive</b>(x any) {
+		<a href="../src/runtime/mgc.go.html#line-1759">mgc.go#L1759</a>: 	<b>KeepAlive</b>(p)
+
+	<a href="../pkg/os.html">os</a>
+		<a href="../src/os/dir_unix.go.html#line-71">dir_unix.go#L71</a>: 			runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/exec_posix.go.html#line-57">exec_posix.go#L57</a>: 	runtime.<b>KeepAlive</b>(attr)
+		<a href="../src/os/file_posix.go.html#line-32">file_posix.go#L32</a>: 	runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/file_posix.go.html#line-41" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-41">#L41</a>: 	runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/file_posix.go.html#line-49" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-49">#L49</a>: 	runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/file_posix.go.html#line-57" class="path-duplicate">file_posix.go</a><a href="../src/os/file_posix.go.html#line-57">#L57</a>: 	runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/file_unix.go.html#line-276">file_unix.go#L276</a>: 	runtime.<b>KeepAlive</b>(f)
+		<a href="../src/os/rawconn.go.html#line-23">rawconn.go#L23</a>: 	runtime.<b>KeepAlive</b>(c.file)
+		<a href="../src/os/rawconn.go.html#line-32" class="path-duplicate">rawconn.go</a><a href="../src/os/rawconn.go.html#line-32">#L32</a>: 	runtime.<b>KeepAlive</b>(c.file)
+		<a href="../src/os/rawconn.go.html#line-41" class="path-duplicate">rawconn.go</a><a href="../src/os/rawconn.go.html#line-41">#L41</a>: 	runtime.<b>KeepAlive</b>(c.file)
+		<a href="../src/os/wait_waitid.go.html#line-37">wait_waitid.go#L37</a>: 	runtime.<b>KeepAlive</b>(p)
+
+	<a href="../pkg/reflect.html">reflect</a>
+		<a href="../src/reflect/value.go.html#line-860">value.go#L860</a>: 	runtime.<b>KeepAlive</b>(out)
+		<a href="../src/reflect/value.go.html#line-865" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-865">#L865</a>: 	runtime.<b>KeepAlive</b>(ctxt)
+		<a href="../src/reflect/value.go.html#line-1133" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1133">#L1133</a>: 	runtime.<b>KeepAlive</b>(ctxt)
+		<a href="../src/reflect/value.go.html#line-1138" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1138">#L1138</a>: 	runtime.<b>KeepAlive</b>(valueRegs)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.ptrtype</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/type.go.html#line-411">ptrtype</a></b></span>
+
+<span class="title">18 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/cgocall.go.html#line-418">cgocall.go#L418</a>: 			pt := (*<b>ptrtype</b>)(unsafe.Pointer(t))
+		<a href="../src/runtime/heapdump.go.html#line-226">heapdump.go#L226</a>: func dumpfinalizer(obj unsafe.Pointer, fn *funcval, fint *_type, ot *<b>ptrtype</b>) {
+		<a href="../src/runtime/heapdump.go.html#line-426" class="path-duplicate">heapdump.go</a><a href="../src/runtime/heapdump.go.html#line-426">#L426</a>: func finq_callback(fn *funcval, obj unsafe.Pointer, nret uintptr, fint *_type, ot *<b>ptrtype</b>) {
+		<a href="../src/runtime/mbitmap.go.html#line-1970">mbitmap.go#L1970</a>: 	typ := (*<b>ptrtype</b>)(unsafe.Pointer(efaceOf(&amp;x)._type)).elem
+		<a href="../src/runtime/mbitmap.go.html#line-1990" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-1990">#L1990</a>: 			n := (*<b>ptrtype</b>)(unsafe.Pointer(t)).elem.size
+		<a href="../src/runtime/mbitmap.go.html#line-2002" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2002">#L2002</a>: 			n := (*<b>ptrtype</b>)(unsafe.Pointer(t)).elem.size
+		<a href="../src/runtime/mbitmap.go.html#line-2042" class="path-duplicate">mbitmap.go</a><a href="../src/runtime/mbitmap.go.html#line-2042">#L2042</a>: 			n := (*<b>ptrtype</b>)(unsafe.Pointer(t)).elem.size
+		<a href="../src/runtime/mfinal.go.html#line-47">mfinal.go#L47</a>: 	ot   *<b>ptrtype</b>       // type of ptr to object (may be a heap pointer)
+		<a href="../src/runtime/mfinal.go.html#line-78" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-78">#L78</a>: func queuefinalizer(p unsafe.Pointer, fn *funcval, nret uintptr, fint *_type, ot *<b>ptrtype</b>) {
+		<a href="../src/runtime/mfinal.go.html#line-128" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-128">#L128</a>: func iterate_finq(callback func(*funcval, unsafe.Pointer, uintptr, *_type, *<b>ptrtype</b>)) {
+		<a href="../src/runtime/mfinal.go.html#line-355" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-355">#L355</a>: 	ot := (*<b>ptrtype</b>)(unsafe.Pointer(etyp))
+		<a href="../src/runtime/mfinal.go.html#line-422" class="path-duplicate">mfinal.go</a><a href="../src/runtime/mfinal.go.html#line-422">#L422</a>: 		if (fint.uncommon() == nil || etyp.uncommon() == nil) &amp;&amp; (*<b>ptrtype</b>)(unsafe.Pointer(fint)).elem == ot.elem {
+		<a href="../src/runtime/mheap.go.html#line-1856">mheap.go#L1856</a>: 	ot      *<b>ptrtype</b> // May be a heap pointer, but always live.
+		<a href="../src/runtime/mheap.go.html#line-1860" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-1860">#L1860</a>: func addfinalizer(p unsafe.Pointer, f *funcval, nret uintptr, fint *_type, ot *<b>ptrtype</b>) bool {
+		<a href="../src/runtime/type.go.html#line-75">type.go#L75</a>: 			<b>ptrtype</b>
+		<a href="../src/runtime/type.go.html#line-411" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-411">#L411</a>: type <b>ptrtype</b> struct {
+		<a href="../src/runtime/type.go.html#line-678" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-678">#L678</a>: 		pt := (*<b>ptrtype</b>)(unsafe.Pointer(t))
+		<a href="../src/runtime/type.go.html#line-679" class="path-duplicate">type.go</a><a href="../src/runtime/type.go.html#line-679">#L679</a>: 		pv := (*<b>ptrtype</b>)(unsafe.Pointer(v))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.AllThreadsSyscall</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/syscall_linux.go.html#line-1069">AllThreadsSyscall</a></b></span>
+
+<span class="title">11 uses</span>
+
+	syscall (current package)
+		<a href="../src/syscall/syscall_linux.go.html#line-375">syscall_linux.go#L375</a>: 			if _, _, e1 := <b>AllThreadsSyscall</b>(_SYS_setgroups, 0, 0, 0); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-391" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-391">#L391</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(_SYS_setgroups, n, uintptr(unsafe.Pointer(&amp;a[0])), 0); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1069" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1069">#L1069</a>: func <b>AllThreadsSyscall</b>(trap, a1, a2, a3 uintptr) (r1, r2 uintptr, err Errno) {
+		<a href="../src/syscall/syscall_linux.go.html#line-1100" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1100">#L1100</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(SYS_SETRESGID, minus1, uintptr(egid), minus1); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1113" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1113">#L1113</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(SYS_SETRESUID, minus1, uintptr(euid), minus1); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1126" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1126">#L1126</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETGID, uintptr(gid), 0, 0); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1139" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1139">#L1139</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETREGID, uintptr(rgid), uintptr(egid), 0); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1152" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1152">#L1152</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETRESGID, uintptr(rgid), uintptr(egid), uintptr(sgid)); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1165" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1165">#L1165</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETRESUID, uintptr(ruid), uintptr(euid), uintptr(suid)); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1178" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1178">#L1178</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETREUID, uintptr(ruid), uintptr(euid), 0); e1 != 0 {
+		<a href="../src/syscall/syscall_linux.go.html#line-1191" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-1191">#L1191</a>: 		if _, _, e1 := <b>AllThreadsSyscall</b>(sys_SETUID, uintptr(uid), 0, 0); e1 != 0 {
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

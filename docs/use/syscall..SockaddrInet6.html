@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: syscall.SockaddrInet6</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/syscall.html">syscall</a>.<a href="../src/syscall/syscall_unix.go.html#line-275">SockaddrInet6</a></b></span>
+
+<span class="title">15 uses</span>
+
+	syscall (current package)
+		<a href="../src/syscall/syscall_linux.go.html#line-486">syscall_linux.go#L486</a>: func (sa *<b>SockaddrInet6</b>) sockaddr() (unsafe.Pointer, _Socklen, error) {
+		<a href="../src/syscall/syscall_linux.go.html#line-623" class="path-duplicate">syscall_linux.go</a><a href="../src/syscall/syscall_linux.go.html#line-623">#L623</a>: 		sa := new(<b>SockaddrInet6</b>)
+		<a href="../src/syscall/syscall_unix.go.html#line-275">syscall_unix.go#L275</a>: type <b>SockaddrInet6</b> struct {
+		<a href="../src/syscall/syscall_unix.go.html#line-344" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-344">#L344</a>: func recvfromInet6(fd int, p []byte, flags int, from *<b>SockaddrInet6</b>) (n int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-371" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-371">#L371</a>: func recvmsgInet6(fd int, p, oob []byte, flags int, from *<b>SockaddrInet6</b>) (n, oobn int, recvflags int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-420" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-420">#L420</a>: func sendmsgNInet6(fd int, p, oob []byte, to *<b>SockaddrInet6</b>, flags int) (n int, err error) {
+		<a href="../src/syscall/syscall_unix.go.html#line-436" class="path-duplicate">syscall_unix.go</a><a href="../src/syscall/syscall_unix.go.html#line-436">#L436</a>: func sendtoInet6(fd int, p []byte, flags int, to *<b>SockaddrInet6</b>) (err error) {
+
+	<a href="../pkg/internal/poll.html">internal/poll</a>
+		<a href="../src/internal/poll/fd_unix.go.html#line-261">fd_unix.go#L261</a>: func (fd *FD) ReadFromInet6(p []byte, from *syscall.<b>SockaddrInet6</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-342" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-342">#L342</a>: func (fd *FD) ReadMsgInet6(p []byte, oob []byte, flags int, sa6 *syscall.<b>SockaddrInet6</b>) (int, int, int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-465" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-465">#L465</a>: func (fd *FD) WriteToInet6(p []byte, sa *syscall.<b>SockaddrInet6</b>) (int, error) {
+		<a href="../src/internal/poll/fd_unix.go.html#line-569" class="path-duplicate">fd_unix.go</a><a href="../src/internal/poll/fd_unix.go.html#line-569">#L569</a>: func (fd *FD) WriteMsgInet6(p []byte, oob []byte, sa *syscall.<b>SockaddrInet6</b>) (int, int, error) {
+
+	<a href="../pkg/internal/syscall/unix.html">internal/syscall/unix</a>
+		<a href="../src/internal/syscall/unix/net.go.html#line-20">net.go#L20</a>: func RecvfromInet6(fd int, p []byte, flags int, from *syscall.<b>SockaddrInet6</b>) (n int, err error)
+		<a href="../src/internal/syscall/unix/net.go.html#line-28" class="path-duplicate">net.go</a><a href="../src/internal/syscall/unix/net.go.html#line-28">#L28</a>: func SendtoInet6(fd int, p []byte, flags int, to *syscall.<b>SockaddrInet6</b>) (err error)
+		<a href="../src/internal/syscall/unix/net.go.html#line-36" class="path-duplicate">net.go</a><a href="../src/internal/syscall/unix/net.go.html#line-36">#L36</a>: func SendmsgNInet6(fd int, p, oob []byte, to *syscall.<b>SockaddrInet6</b>, flags int) (n int, err error)
+		<a href="../src/internal/syscall/unix/net.go.html#line-44" class="path-duplicate">net.go</a><a href="../src/internal/syscall/unix/net.go.html#line-44">#L44</a>: func RecvmsgInet6(fd int, p, oob []byte, flags int, from *syscall.<b>SockaddrInet6</b>) (n, oobn int, recvflags int, err error)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

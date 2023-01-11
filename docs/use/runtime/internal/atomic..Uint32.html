@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Uint32</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-155">Uint32</a></b></span>
+
+<span class="title">24 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-155">types.go#L155</a>: type <b>Uint32</b> struct {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-161" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-161">#L161</a>: func (u *<b>Uint32</b>) Load() uint32 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-172" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-172">#L172</a>: func (u *<b>Uint32</b>) LoadAcquire() uint32 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-177" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-177">#L177</a>: func (u *<b>Uint32</b>) Store(value uint32) {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-188" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-188">#L188</a>: func (u *<b>Uint32</b>) StoreRelease(value uint32) {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-196" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-196">#L196</a>: func (u *<b>Uint32</b>) CompareAndSwap(old, new uint32) bool {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-209" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-209">#L209</a>: func (u *<b>Uint32</b>) CompareAndSwapRelease(old, new uint32) bool {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-215" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-215">#L215</a>: func (u *<b>Uint32</b>) Swap(value uint32) uint32 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-224" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-224">#L224</a>: func (u *<b>Uint32</b>) And(value uint32) {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-233" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-233">#L233</a>: func (u *<b>Uint32</b>) Or(value uint32) {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-242" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-242">#L242</a>: func (u *<b>Uint32</b>) Add(delta int32) uint32 {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgclimit.go.html#line-33">mgclimit.go#L33</a>: 	lock atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mgclimit.go.html#line-75" class="path-duplicate">mgclimit.go</a><a href="../../../src/runtime/mgclimit.go.html#line-75">#L75</a>: 	lastEnabledCycle atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mgcscavenge.go.html#line-255">mgcscavenge.go#L255</a>: 	sysmonWake atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mgcsweep.go.html#line-139">mgcsweep.go#L139</a>: 	state atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mprof.go.html#line-172">mprof.go#L172</a>: 	value atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mprof.go.html#line-892" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-892">#L892</a>: type goroutineProfileStateHolder atomic.<b>Uint32</b>
+		<a href="../../../src/runtime/mprof.go.html#line-895" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-895">#L895</a>: 	return goroutineProfileState((*atomic.<b>Uint32</b>)(p).Load())
+		<a href="../../../src/runtime/mprof.go.html#line-899" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-899">#L899</a>: 	(*atomic.<b>Uint32</b>)(p).Store(uint32(value))
+		<a href="../../../src/runtime/mprof.go.html#line-903" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-903">#L903</a>: 	return (*atomic.<b>Uint32</b>)(p).CompareAndSwap(uint32(old), uint32(new))
+		<a href="../../../src/runtime/netpoll.go.html#line-92">netpoll.go#L92</a>: 	atomicInfo atomic.<b>Uint32</b> // atomic pollInfo
+		<a href="../../../src/runtime/runtime2.go.html#line-556">runtime2.go#L556</a>: 	freeWait      atomic.<b>Uint32</b> // Whether it is safe to free g0 and delete m (one of freeMRef, freeMStack, freeMWait)
+		<a href="../../../src/runtime/stubs2.go.html#line-44">stubs2.go#L44</a>: func exitThread(wait *atomic.<b>Uint32</b>)
+		<a href="../../../src/runtime/trace.go.html#line-147">trace.go#L147</a>: 	signalLock  atomic.<b>Uint32</b> // protects use of the following member, only usable in signal handlers
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.errorString</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/error.go.html#line-73">errorString</a></b></span>
+
+<span class="title">31 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/alg.go.html#line-108">alg.go#L108</a>: 		panic(<b>errorString</b>("hash of unhashable type " + t.string()))
+		<a href="../src/runtime/alg.go.html#line-125" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-125">#L125</a>: 		panic(<b>errorString</b>("hash of unhashable type " + t.string()))
+		<a href="../src/runtime/alg.go.html#line-191" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-191">#L191</a>: 		panic(<b>errorString</b>("hash of unhashable type " + t.string()))
+		<a href="../src/runtime/alg.go.html#line-249" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-249">#L249</a>: 		panic(<b>errorString</b>("comparing uncomparable type " + t.string()))
+		<a href="../src/runtime/alg.go.html#line-266" class="path-duplicate">alg.go</a><a href="../src/runtime/alg.go.html#line-266">#L266</a>: 		panic(<b>errorString</b>("comparing uncomparable type " + t.string()))
+		<a href="../src/runtime/cgocall.go.html#line-473">cgocall.go#L473</a>: 		panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-481" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-481">#L481</a>: 		panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-491" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-491">#L491</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-498" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-498">#L498</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-509" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-509">#L509</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-524" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-524">#L524</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-553" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-553">#L553</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-579" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-579">#L579</a>: 				panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/cgocall.go.html#line-591" class="path-duplicate">cgocall.go</a><a href="../src/runtime/cgocall.go.html#line-591">#L591</a>: 			panic(<b>errorString</b>(msg))
+		<a href="../src/runtime/error.go.html#line-73">error.go#L73</a>: type <b>errorString</b> string
+		<a href="../src/runtime/error.go.html#line-75" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-75">#L75</a>: func (e <b>errorString</b>) RuntimeError() {}
+		<a href="../src/runtime/error.go.html#line-77" class="path-duplicate">error.go</a><a href="../src/runtime/error.go.html#line-77">#L77</a>: func (e <b>errorString</b>) Error() string {
+		<a href="../src/runtime/panic.go.html#line-226">panic.go#L226</a>: var shiftError = error(<b>errorString</b>("negative shift amount"))
+		<a href="../src/runtime/panic.go.html#line-234" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-234">#L234</a>: var divideError = error(<b>errorString</b>("integer divide by zero"))
+		<a href="../src/runtime/panic.go.html#line-242" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-242">#L242</a>: var overflowError = error(<b>errorString</b>("integer overflow"))
+		<a href="../src/runtime/panic.go.html#line-249" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-249">#L249</a>: var floatError = error(<b>errorString</b>("floating point error"))
+		<a href="../src/runtime/panic.go.html#line-256" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-256">#L256</a>: var memoryError = error(<b>errorString</b>("invalid memory address or nil pointer dereference"))
+		<a href="../src/runtime/signal_unix.go.html#line-857">signal_unix.go#L857</a>: 	panic(<b>errorString</b>(sigtable[g.sig].name))
+		<a href="../src/runtime/slice.go.html#line-29">slice.go#L29</a>: 	panic(<b>errorString</b>("makeslice: len out of range"))
+		<a href="../src/runtime/slice.go.html#line-33" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-33">#L33</a>: 	panic(<b>errorString</b>("makeslice: cap out of range"))
+		<a href="../src/runtime/slice.go.html#line-161" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-161">#L161</a>: 	panic(<b>errorString</b>("unsafe.Slice: len out of range"))
+		<a href="../src/runtime/slice.go.html#line-165" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-165">#L165</a>: 	panic(<b>errorString</b>("unsafe.Slice: ptr is nil and len is not zero"))
+		<a href="../src/runtime/slice.go.html#line-191" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-191">#L191</a>: 		panic(<b>errorString</b>("growslice: cap out of range"))
+		<a href="../src/runtime/slice.go.html#line-279" class="path-duplicate">slice.go</a><a href="../src/runtime/slice.go.html#line-279">#L279</a>: 		panic(<b>errorString</b>("growslice: cap out of range"))
+		<a href="../src/runtime/string.go.html#line-317">string.go#L317</a>: 		panic(<b>errorString</b>("gobytes: length out of range"))
+		<a href="../src/runtime/trace.go.html#line-225">trace.go#L225</a>: 		return <b>errorString</b>("tracing is already enabled")
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

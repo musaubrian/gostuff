@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.findfunc</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/symtab.go.html#line-828">findfunc</a></b></span>
+
+<span class="title">32 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/debugcall.go.html#line-43">debugcall.go#L43</a>: 		f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/debuglog.go.html#line-809">debuglog.go#L809</a>: 	fn := <b>findfunc</b>(pc)
+		<a href="../src/runtime/error.go.html#line-307">error.go#L307</a>: 	name := funcname(<b>findfunc</b>(pc))
+		<a href="../src/runtime/heapdump.go.html#line-607">heapdump.go#L607</a>: 		f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/panic.go.html#line-55">panic.go#L55</a>: 	if goarch.IsWasm == 0 &amp;&amp; hasPrefix(funcname(<b>findfunc</b>(pc)), "runtime.") {
+		<a href="../src/runtime/panic.go.html#line-1342" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1342">#L1342</a>: 	if gp.m.incgo || <b>findfunc</b>(pc).valid() {
+		<a href="../src/runtime/panic.go.html#line-1347" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1347">#L1347</a>: 	if <b>findfunc</b>(lr).valid() {
+		<a href="../src/runtime/panic.go.html#line-1365" class="path-duplicate">panic.go</a><a href="../src/runtime/panic.go.html#line-1365">#L1365</a>: 	f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/plugin.go.html#line-112">plugin.go#L112</a>: 		f2 := <b>findfunc</b>(entry)
+		<a href="../src/runtime/preempt.go.html#line-318">preempt.go#L318</a>: 	f := <b>findfunc</b>(abi.FuncPCABI0(asyncPreempt))
+		<a href="../src/runtime/preempt.go.html#line-320" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-320">#L320</a>: 	f = <b>findfunc</b>(abi.FuncPCABIInternal(asyncPreempt2))
+		<a href="../src/runtime/preempt.go.html#line-384" class="path-duplicate">preempt.go</a><a href="../src/runtime/preempt.go.html#line-384">#L384</a>: 	f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/print.go.html#line-294">print.go#L294</a>: 		fn := <b>findfunc</b>(val)
+		<a href="../src/runtime/proc.go.html#line-3427">proc.go#L3427</a>: 		f := <b>findfunc</b>(gp.sched.pc)
+		<a href="../src/runtime/proc.go.html#line-4529" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4529">#L4529</a>: 		if f := <b>findfunc</b>(pc); f.valid() {
+		<a href="../src/runtime/proc.go.html#line-6338" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-6338">#L6338</a>: 			pkg := funcpkgpath(<b>findfunc</b>(abi.FuncPCABIInternal(f)))
+		<a href="../src/runtime/stack.go.html#line-983">stack.go#L983</a>: 		f := <b>findfunc</b>(gp.sched.pc)
+		<a href="../src/runtime/stack.go.html#line-1080" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1080">#L1080</a>: 	if f := <b>findfunc</b>(gp.sched.pc); f.valid() {
+		<a href="../src/runtime/stack.go.html#line-1186" class="path-duplicate">stack.go</a><a href="../src/runtime/stack.go.html#line-1186">#L1186</a>: 	f := <b>findfunc</b>(gp.startpc)
+		<a href="../src/runtime/symtab.go.html#line-91">symtab.go#L91</a>: 		funcInfo := <b>findfunc</b>(pc)
+		<a href="../src/runtime/symtab.go.html#line-172" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-172">#L172</a>: 	f := <b>findfunc</b>(tracepc)
+		<a href="../src/runtime/symtab.go.html#line-719" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-719">#L719</a>: 	f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/symtab.go.html#line-828" class="path-duplicate">symtab.go</a><a href="../src/runtime/symtab.go.html#line-828">#L828</a>: func <b>findfunc</b>(pc uintptr) funcInfo {
+		<a href="../src/runtime/trace.go.html#line-1433">trace.go#L1433</a>: 	f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/traceback.go.html#line-114">traceback.go#L114</a>: 	f := <b>findfunc</b>(frame.pc)
+		<a href="../src/runtime/traceback.go.html#line-175" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-175">#L175</a>: 					frame.fn = <b>findfunc</b>(frame.pc)
+		<a href="../src/runtime/traceback.go.html#line-250" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-250">#L250</a>: 			flr = <b>findfunc</b>(frame.lr)
+		<a href="../src/runtime/traceback.go.html#line-515" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-515">#L515</a>: 			f = <b>findfunc</b>(frame.pc)
+		<a href="../src/runtime/traceback.go.html#line-783" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-783">#L783</a>: 	f := <b>findfunc</b>(pc)
+		<a href="../src/runtime/traceback.go.html#line-879" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-879">#L879</a>: 		f := <b>findfunc</b>(pc) // f previously validated
+		<a href="../src/runtime/traceback.go.html#line-888" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-888">#L888</a>: 	f := <b>findfunc</b>(ancestor.gopc)
+		<a href="../src/runtime/traceback.go.html#line-1135" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-1135">#L1135</a>: 	f := <b>findfunc</b>(gp.startpc)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Load64</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-29">Load64</a></b></span>
+
+<span class="title">56 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-29">atomic_amd64.go#L29</a>: func <b>Load64</b>(ptr *uint64) uint64 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-259">types.go#L259</a>: 	return <b>Load64</b>(&amp;u.value)
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/debug.go.html#line-48">debug.go#L48</a>: 	var n = int64(atomic.<b>Load64</b>(&amp;ncgocall))
+		<a href="../../../src/runtime/lfstack.go.html#line-33">lfstack.go#L33</a>: 		old := atomic.<b>Load64</b>((*uint64)(head))
+		<a href="../../../src/runtime/lfstack.go.html#line-43" class="path-duplicate">lfstack.go</a><a href="../../../src/runtime/lfstack.go.html#line-43">#L43</a>: 		old := atomic.<b>Load64</b>((*uint64)(head))
+		<a href="../../../src/runtime/lfstack.go.html#line-48" class="path-duplicate">lfstack.go</a><a href="../../../src/runtime/lfstack.go.html#line-48">#L48</a>: 		next := atomic.<b>Load64</b>(&amp;node.next)
+		<a href="../../../src/runtime/lfstack.go.html#line-56" class="path-duplicate">lfstack.go</a><a href="../../../src/runtime/lfstack.go.html#line-56">#L56</a>: 	return atomic.<b>Load64</b>((*uint64)(head)) == 0
+		<a href="../../../src/runtime/metrics.go.html#line-200">metrics.go#L200</a>: 				hist.counts[0] = atomic.<b>Load64</b>(&amp;memstats.gcPauseDist.underflow)
+		<a href="../../../src/runtime/metrics.go.html#line-202" class="path-duplicate">metrics.go</a><a href="../../../src/runtime/metrics.go.html#line-202">#L202</a>: 					hist.counts[i+1] = atomic.<b>Load64</b>(&amp;memstats.gcPauseDist.counts[i])
+		<a href="../../../src/runtime/metrics.go.html#line-330" class="path-duplicate">metrics.go</a><a href="../../../src/runtime/metrics.go.html#line-330">#L330</a>: 				hist.counts[0] = atomic.<b>Load64</b>(&amp;sched.timeToRun.underflow)
+		<a href="../../../src/runtime/metrics.go.html#line-332" class="path-duplicate">metrics.go</a><a href="../../../src/runtime/metrics.go.html#line-332">#L332</a>: 					hist.counts[i+1] = atomic.<b>Load64</b>(&amp;sched.timeToRun.counts[i])
+		<a href="../../../src/runtime/mgc.go.html#line-559">mgc.go#L559</a>: 		return atomic.<b>Load64</b>(&amp;gcController.heapLive) &gt;= trigger
+		<a href="../../../src/runtime/mgc.go.html#line-564" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-564">#L564</a>: 		lastgc := int64(atomic.<b>Load64</b>(&amp;memstats.last_gc_nanotime))
+		<a href="../../../src/runtime/mgc.go.html#line-655" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-655">#L655</a>: 	work.heap0 = atomic.<b>Load64</b>(&amp;gcController.heapLive)
+		<a href="../../../src/runtime/mgc.go.html#line-1124" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1124">#L1124</a>: 			atomic.<b>Load64</b>(&amp;gcController.maxStackScan)&gt;&gt;20, " MB stacks, ",
+		<a href="../../../src/runtime/mgc.go.html#line-1569" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1569">#L1569</a>: 	work.initialHeapLive = atomic.<b>Load64</b>(&amp;gcController.heapLive)
+		<a href="../../../src/runtime/mgcpacer.go.html#line-562">mgcpacer.go#L562</a>: 	live := atomic.<b>Load64</b>(&amp;c.heapLive)
+		<a href="../../../src/runtime/mgcpacer.go.html#line-563" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-563">#L563</a>: 	scan := atomic.<b>Load64</b>(&amp;c.heapScan)
+		<a href="../../../src/runtime/mgcpacer.go.html#line-578" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-578">#L578</a>: 	maxStackScan := atomic.<b>Load64</b>(&amp;c.maxStackScan)
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1263" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1263">#L1263</a>: 		c.sweepDistMinTrigger.Store(atomic.<b>Load64</b>(&amp;c.heapLive) + sweepMinHeapDistance)
+		<a href="../../../src/runtime/mgcpacer.go.html#line-1271" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-1271">#L1271</a>: 		gcPercentHeapGoal = c.heapMarked + (c.heapMarked+atomic.<b>Load64</b>(&amp;c.lastStackScan)+atomic.<b>Load64</b>(&amp;c.globalsScan))*uint64(gcPercent)/100
+		<a href="../../../src/runtime/mgcsweep.go.html#line-822">mgcsweep.go#L822</a>: 	newHeapLive := uintptr(atomic.<b>Load64</b>(&amp;gcController.heapLive)-mheap_.sweepHeapLiveBasis) + spanBytes
+		<a href="../../../src/runtime/mgcsweep.go.html#line-866" class="path-duplicate">mgcsweep.go</a><a href="../../../src/runtime/mgcsweep.go.html#line-866">#L866</a>: 		heapLiveBasis := atomic.<b>Load64</b>(&amp;gcController.heapLive)
+		<a href="../../../src/runtime/mprof.go.html#line-485">mprof.go#L485</a>: 	rate := int64(atomic.<b>Load64</b>(&amp;blockprofilerate))
+		<a href="../../../src/runtime/mprof.go.html#line-547" class="path-duplicate">mprof.go</a><a href="../../../src/runtime/mprof.go.html#line-547">#L547</a>: 	rate := int64(atomic.<b>Load64</b>(&amp;mutexprofilerate))
+		<a href="../../../src/runtime/mspanset.go.html#line-322">mspanset.go#L322</a>: 	return headTailIndex(atomic.<b>Load64</b>((*uint64)(h)))
+		<a href="../../../src/runtime/mstats.go.html#line-636">mstats.go#L636</a>: 	return atomic.<b>Load64</b>((*uint64)(s))
+		<a href="../../../src/runtime/os_linux.go.html#line-825">os_linux.go#L825</a>: 		for atomic.<b>Load64</b>(&amp;mp.procid) == 0 {
+		<a href="../../../src/runtime/os_linux.go.html#line-836" class="path-duplicate">os_linux.go</a><a href="../../../src/runtime/os_linux.go.html#line-836">#L836</a>: 		if atomic.<b>Load64</b>(&amp;mp.procid) == tid {
+		<a href="../../../src/runtime/proc.go.html#line-2403">proc.go#L2403</a>: 	if sched.npidle == uint32(gomaxprocs-1) &amp;&amp; atomic.<b>Load64</b>(&amp;sched.lastpoll) != 0 {
+		<a href="../../../src/runtime/proc.go.html#line-2646" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2646">#L2646</a>: 	if netpollinited() &amp;&amp; atomic.Load(&amp;netpollWaiters) &gt; 0 &amp;&amp; atomic.<b>Load64</b>(&amp;sched.lastpoll) != 0 {
+		<a href="../../../src/runtime/proc.go.html#line-2869" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2869">#L2869</a>: 		pollerPollUntil := int64(atomic.<b>Load64</b>(&amp;sched.pollUntil))
+		<a href="../../../src/runtime/proc.go.html#line-3079" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3079">#L3079</a>: 	if atomic.<b>Load64</b>(&amp;sched.lastpoll) == 0 {
+		<a href="../../../src/runtime/proc.go.html#line-3084" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3084">#L3084</a>: 		pollerPollUntil := int64(atomic.<b>Load64</b>(&amp;sched.pollUntil))
+		<a href="../../../src/runtime/proc.go.html#line-3282" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3282">#L3282</a>: 	next := int64(atomic.<b>Load64</b>(&amp;pp.timer0When))
+		<a href="../../../src/runtime/proc.go.html#line-3283" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3283">#L3283</a>: 	nextAdj := int64(atomic.<b>Load64</b>(&amp;pp.timerModifiedEarliest))
+		<a href="../../../src/runtime/proc.go.html#line-5215" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-5215">#L5215</a>: 		lastpoll := int64(atomic.<b>Load64</b>(&amp;sched.lastpoll))
+		<a href="../../../src/runtime/profbuf.go.html#line-117">profbuf.go#L117</a>: 	return profIndex(atomic.<b>Load64</b>((*uint64)(x)))
+		<a href="../../../src/runtime/profbuf.go.html#line-153" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-153">#L153</a>: 	return uint32(atomic.<b>Load64</b>(&amp;b.overflow)) &gt; 0
+		<a href="../../../src/runtime/profbuf.go.html#line-160" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-160">#L160</a>: 	overflow := atomic.<b>Load64</b>(&amp;b.overflow)
+		<a href="../../../src/runtime/profbuf.go.html#line-161" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-161">#L161</a>: 	time = atomic.<b>Load64</b>(&amp;b.overflowTime)
+		<a href="../../../src/runtime/profbuf.go.html#line-172" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-172">#L172</a>: 		overflow = atomic.<b>Load64</b>(&amp;b.overflow)
+		<a href="../../../src/runtime/profbuf.go.html#line-173" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-173">#L173</a>: 		time = atomic.<b>Load64</b>(&amp;b.overflowTime)
+		<a href="../../../src/runtime/profbuf.go.html#line-182" class="path-duplicate">profbuf.go</a><a href="../../../src/runtime/profbuf.go.html#line-182">#L182</a>: 		overflow := atomic.<b>Load64</b>(&amp;b.overflow)
+		<a href="../../../src/runtime/runtime.go.html#line-26">runtime.go#L26</a>: 	r := int64(atomic.<b>Load64</b>(&amp;ticks.val))
+		<a href="../../../src/runtime/runtime1.go.html#line-121">runtime1.go#L121</a>: 	if atomic.<b>Load64</b>(&amp;test_z64) != 1 {
+		<a href="../../../src/runtime/runtime1.go.html#line-125" class="path-duplicate">runtime1.go</a><a href="../../../src/runtime/runtime1.go.html#line-125">#L125</a>: 	if atomic.<b>Load64</b>(&amp;test_z64) != (1&lt;&lt;40)+1 {
+		<a href="../../../src/runtime/runtime1.go.html#line-131" class="path-duplicate">runtime1.go</a><a href="../../../src/runtime/runtime1.go.html#line-131">#L131</a>: 	if atomic.<b>Load64</b>(&amp;test_z64) != (2&lt;&lt;40)+2 {
+		<a href="../../../src/runtime/runtime1.go.html#line-137" class="path-duplicate">runtime1.go</a><a href="../../../src/runtime/runtime1.go.html#line-137">#L137</a>: 	if atomic.<b>Load64</b>(&amp;test_z64) != (3&lt;&lt;40)+3 {
+		<a href="../../../src/runtime/time.go.html#line-674">time.go#L674</a>: 	first := atomic.<b>Load64</b>(&amp;pp.timerModifiedEarliest)
+		<a href="../../../src/runtime/time.go.html#line-757" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-757">#L757</a>: 	next := int64(atomic.<b>Load64</b>(&amp;pp.timer0When))
+		<a href="../../../src/runtime/time.go.html#line-758" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-758">#L758</a>: 	nextAdj := int64(atomic.<b>Load64</b>(&amp;pp.timerModifiedEarliest))
+		<a href="../../../src/runtime/time.go.html#line-1017" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-1017">#L1017</a>: 		old := atomic.<b>Load64</b>(&amp;pp.timerModifiedEarliest)
+		<a href="../../../src/runtime/time.go.html#line-1042" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-1042">#L1042</a>: 		w := int64(atomic.<b>Load64</b>(&amp;pp.timer0When))
+		<a href="../../../src/runtime/time.go.html#line-1047" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-1047">#L1047</a>: 		w = int64(atomic.<b>Load64</b>(&amp;pp.timerModifiedEarliest))
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

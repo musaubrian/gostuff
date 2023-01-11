@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Uint64</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">type <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/types.go.html#line-251">Uint64</a></b></span>
+
+<span class="title">23 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-251">types.go#L251</a>: type <b>Uint64</b> struct {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-258" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-258">#L258</a>: func (u *<b>Uint64</b>) Load() uint64 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-263" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-263">#L263</a>: func (u *<b>Uint64</b>) Store(value uint64) {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-271" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-271">#L271</a>: func (u *<b>Uint64</b>) CompareAndSwap(old, new uint64) bool {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-277" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-277">#L277</a>: func (u *<b>Uint64</b>) Swap(value uint64) uint64 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-286" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-286">#L286</a>: func (u *<b>Uint64</b>) Add(delta int64) uint64 {
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-360" class="path-duplicate">types.go</a><a href="../../../src/runtime/internal/atomic/types.go.html#line-360">#L360</a>: 	u <b>Uint64</b>
+		<a href="../../../src/runtime/internal/atomic/types_64bit.go.html#line-16">types_64bit.go#L16</a>: func (u *<b>Uint64</b>) LoadAcquire() uint64 {
+		<a href="../../../src/runtime/internal/atomic/types_64bit.go.html#line-27" class="path-duplicate">types_64bit.go</a><a href="../../../src/runtime/internal/atomic/types_64bit.go.html#line-27">#L27</a>: func (u *<b>Uint64</b>) StoreRelease(value uint64) {
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mgclimit.go.html#line-396">mgclimit.go#L396</a>: 	stamp atomic.<b>Uint64</b> // Stores a limiterEventStamp.
+		<a href="../../../src/runtime/mgcpacer.go.html#line-132">mgcpacer.go#L132</a>: 	runway atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mgcpacer.go.html#line-161" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-161">#L161</a>: 	gcPercentHeapGoal atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mgcpacer.go.html#line-174" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-174">#L174</a>: 	sweepDistMinTrigger atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mgcpacer.go.html#line-348" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-348">#L348</a>: 	idleMarkWorkers atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mgcpacer.go.html#line-385" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-385">#L385</a>: 	totalAlloc   atomic.<b>Uint64</b> // total bytes allocated
+		<a href="../../../src/runtime/mgcpacer.go.html#line-386" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-386">#L386</a>: 	totalFree    atomic.<b>Uint64</b> // total bytes freed
+		<a href="../../../src/runtime/mgcpacer.go.html#line-387" class="path-duplicate">mgcpacer.go</a><a href="../../../src/runtime/mgcpacer.go.html#line-387">#L387</a>: 	mappedReady  atomic.<b>Uint64</b> // total virtual memory in the Ready state (see mem.go).
+		<a href="../../../src/runtime/mgcscavenge.go.html#line-216">mgcscavenge.go#L216</a>: 	gcPercentGoal atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mgcscavenge.go.html#line-223" class="path-duplicate">mgcscavenge.go</a><a href="../../../src/runtime/mgcscavenge.go.html#line-223">#L223</a>: 	memoryLimitGoal atomic.<b>Uint64</b>
+		<a href="../../../src/runtime/mheap.go.html#line-106">mheap.go#L106</a>: 	pagesInUse         atomic.<b>Uint64</b> // pages of spans in stats mSpanInUse
+		<a href="../../../src/runtime/mheap.go.html#line-107" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-107">#L107</a>: 	pagesSwept         atomic.<b>Uint64</b> // pages swept this cycle
+		<a href="../../../src/runtime/mheap.go.html#line-108" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-108">#L108</a>: 	pagesSweptBasis    atomic.<b>Uint64</b> // pagesSwept to use as the origin of the sweep ratio
+		<a href="../../../src/runtime/mheap.go.html#line-122" class="path-duplicate">mheap.go</a><a href="../../../src/runtime/mheap.go.html#line-122">#L122</a>: 	reclaimIndex atomic.<b>Uint64</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

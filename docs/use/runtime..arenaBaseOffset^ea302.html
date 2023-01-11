@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.arenaBaseOffset</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">const <b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/malloc.go.html#line-308">arenaBaseOffset</a></b></span>
+
+<span class="title">24 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/malloc.go.html#line-308">malloc.go#L308</a>: 	<b>arenaBaseOffset</b> = 0xffff800000000000*goarch.IsAmd64 + 0x0a00000000000000*goos.IsAix
+		<a href="../src/runtime/malloc.go.html#line-310" class="path-duplicate">malloc.go</a><a href="../src/runtime/malloc.go.html#line-310">#L310</a>: 	arenaBaseOffsetUintptr = uintptr(<b>arenaBaseOffset</b>)
+		<a href="../src/runtime/mheap.go.html#line-565">mheap.go#L565</a>: 	return arenaIdx((p - <b>arenaBaseOffset</b>) / heapArenaBytes)
+		<a href="../src/runtime/mheap.go.html#line-571" class="path-duplicate">mheap.go</a><a href="../src/runtime/mheap.go.html#line-571">#L571</a>: 	return uintptr(i)*heapArenaBytes + <b>arenaBaseOffset</b>
+		<a href="../src/runtime/mpagealloc.go.html#line-107">mpagealloc.go#L107</a>: 	return chunkIdx((p - <b>arenaBaseOffset</b>) / pallocChunkBytes)
+		<a href="../src/runtime/mpagealloc.go.html#line-112" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-112">#L112</a>: 	return uintptr(ci)*pallocChunkBytes + <b>arenaBaseOffset</b>
+		<a href="../src/runtime/mpagealloc.go.html#line-144" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-144">#L144</a>: 	return int((addr.a - <b>arenaBaseOffset</b>) &gt;&gt; levelShift[level])
+		<a href="../src/runtime/mpagealloc.go.html#line-150" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-150">#L150</a>: 	return offAddr{(uintptr(idx) &lt;&lt; levelShift[level]) + <b>arenaBaseOffset</b>}
+		<a href="../src/runtime/mpagealloc.go.html#line-167" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-167">#L167</a>: 	lo = int((base - <b>arenaBaseOffset</b>) &gt;&gt; levelShift[level])
+		<a href="../src/runtime/mpagealloc.go.html#line-168" class="path-duplicate">mpagealloc.go</a><a href="../src/runtime/mpagealloc.go.html#line-168">#L168</a>: 	hi = int(((limit-1)-<b>arenaBaseOffset</b>)&gt;&gt;levelShift[level]) + 1
+		<a href="../src/runtime/mranges.go.html#line-35">mranges.go#L35</a>: 	if (base-<b>arenaBaseOffset</b> &gt;= base) != (limit-<b>arenaBaseOffset</b> &gt;= limit) {
+		<a href="../src/runtime/mranges.go.html#line-88" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-88">#L88</a>: 	minOffAddr = offAddr{<b>arenaBaseOffset</b>}
+		<a href="../src/runtime/mranges.go.html#line-93" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-93">#L93</a>: 	maxOffAddr = offAddr{(((1 &lt;&lt; heapAddrBits) - 1) + <b>arenaBaseOffset</b>) &amp; uintptrMask}
+		<a href="../src/runtime/mranges.go.html#line-124" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-124">#L124</a>: 	return (l1.a - <b>arenaBaseOffset</b>) &lt; (l2.a - <b>arenaBaseOffset</b>)
+		<a href="../src/runtime/mranges.go.html#line-130" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-130">#L130</a>: 	return (l1.a - <b>arenaBaseOffset</b>) &lt;= (l2.a - <b>arenaBaseOffset</b>)
+		<a href="../src/runtime/mranges.go.html#line-161" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-161">#L161</a>: 		if b.a.CompareAndSwap(old, int64(minOffAddr.addr()-<b>arenaBaseOffset</b>)) {
+		<a href="../src/runtime/mranges.go.html#line-170" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-170">#L170</a>: 	new := int64(addr - <b>arenaBaseOffset</b>)
+		<a href="../src/runtime/mranges.go.html#line-187" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-187">#L187</a>: 	b.a.CompareAndSwap(-int64(markedAddr-<b>arenaBaseOffset</b>), int64(newAddr-<b>arenaBaseOffset</b>))
+		<a href="../src/runtime/mranges.go.html#line-193" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-193">#L193</a>: 	b.a.Store(-int64(addr - <b>arenaBaseOffset</b>))
+		<a href="../src/runtime/mranges.go.html#line-205" class="path-duplicate">mranges.go</a><a href="../src/runtime/mranges.go.html#line-205">#L205</a>: 	return uintptr(v) + <b>arenaBaseOffset</b>, wasMarked
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

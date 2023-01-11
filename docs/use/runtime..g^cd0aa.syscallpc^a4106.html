@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime.g.syscallpc</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/runtime.html">runtime</a>.<a href="../src/runtime/runtime2.go.html#line-407">g</a>.<a href="../src/runtime/runtime2.go.html#line-424">syscallpc</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">12 uses</span>
+
+	runtime (current package)
+		<a href="../src/runtime/cgocall.go.html#line-229">cgocall.go#L229</a>: 	savedpc := gp.<b>syscallpc</b>
+		<a href="../src/runtime/heapdump.go.html#line-346">heapdump.go#L346</a>: 		pc = gp.<b>syscallpc</b>
+		<a href="../src/runtime/proc.go.html#line-1919">proc.go#L1919</a>: 	gp.<b>syscallpc</b> = gp.sched.pc
+		<a href="../src/runtime/proc.go.html#line-3629" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3629">#L3629</a>: 	_g_.<b>syscallpc</b> = pc
+		<a href="../src/runtime/proc.go.html#line-3727" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-3727">#L3727</a>: 	_g_.<b>syscallpc</b> = _g_.sched.pc
+		<a href="../src/runtime/proc.go.html#line-4554" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4554">#L4554</a>: 	if mp.ncgo &gt; 0 &amp;&amp; mp.curg != nil &amp;&amp; mp.curg.<b>syscallpc</b> != 0 &amp;&amp; mp.curg.syscallsp != 0 {
+		<a href="../src/runtime/proc.go.html#line-4570" class="path-duplicate">proc.go</a><a href="../src/runtime/proc.go.html#line-4570">#L4570</a>: 		n = gentraceback(mp.curg.<b>syscallpc</b>, mp.curg.syscallsp, 0, mp.curg, 0, &amp;stk[cgoOff], len(stk)-cgoOff, nil, nil, 0)
+		<a href="../src/runtime/runtime2.go.html#line-424">runtime2.go#L424</a>: 	<b>syscallpc</b> uintptr // if status==Gsyscall, syscallpc = sched.pc to use during gc
+		<a href="../src/runtime/stack.go.html#line-981">stack.go#L981</a>: 		gp.<b>syscallpc</b> = morebuf.pc
+		<a href="../src/runtime/traceback.go.html#line-61">traceback.go#L61</a>: 			pc0 = gp.<b>syscallpc</b>
+		<a href="../src/runtime/traceback.go.html#line-154" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-154">#L154</a>: 		if frame.pc == pc0 &amp;&amp; frame.sp == sp0 &amp;&amp; pc0 == gp.<b>syscallpc</b> &amp;&amp; sp0 == gp.syscallsp {
+		<a href="../src/runtime/traceback.go.html#line-843" class="path-duplicate">traceback.go</a><a href="../src/runtime/traceback.go.html#line-843">#L843</a>: 		pc = gp.<b>syscallpc</b>
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

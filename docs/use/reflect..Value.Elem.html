@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.Value.Elem</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/value.go.html#line-39">Value</a>.<a href="../src/reflect/value.go.html#line-1212">Elem</a></b></span><span style="font-size: large;"><i> (method)</i></span>
+
+<span class="title">23 uses</span>
+
+	reflect (current package)
+		<a href="../src/reflect/deepequal.go.html#line-122">deepequal.go#L122</a>: 		return deepValueEqual(v1.<b>Elem</b>(), v2.<b>Elem</b>(), visited)
+		<a href="../src/reflect/deepequal.go.html#line-127" class="path-duplicate">deepequal.go</a><a href="../src/reflect/deepequal.go.html#line-127">#L127</a>: 		return deepValueEqual(v1.<b>Elem</b>(), v2.<b>Elem</b>(), visited)
+		<a href="../src/reflect/type.go.html#line-2688">type.go#L2688</a>: 		typ = (*structType)(tt.<b>Elem</b>().Field(0).Addr().UnsafePointer())
+		<a href="../src/reflect/type.go.html#line-2689" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2689">#L2689</a>: 		ut = (*uncommonType)(tt.<b>Elem</b>().Field(1).Addr().UnsafePointer())
+		<a href="../src/reflect/type.go.html#line-2691" class="path-duplicate">type.go</a><a href="../src/reflect/type.go.html#line-2691">#L2691</a>: 		copy(tt.<b>Elem</b>().Field(2).Slice(0, len(methods)).Interface().([]method), methods)
+		<a href="../src/reflect/value.go.html#line-1212">value.go#L1212</a>: func (v Value) <b>Elem</b>() Value {
+		<a href="../src/reflect/value.go.html#line-1308" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1308">#L1308</a>: 				v = v.<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-1331" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1331">#L1331</a>: 				v = v.<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-3034" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-3034">#L3034</a>: 	return v.<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-3329" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-3329">#L3329</a>: 	ret := New(t).<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-3336" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-3336">#L3336</a>: 	ret := New(t).<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-3343" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-3343">#L3343</a>: 	ret := New(t).<b>Elem</b>()
+		<a href="../src/reflect/value.go.html#line-3482" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-3482">#L3482</a>: 	return cvtT2I(v.<b>Elem</b>(), typ)
+
+	<a href="../pkg/fmt.html">fmt</a>
+		<a href="../src/fmt/print.go.html#line-324">print.go#L324</a>: 		val = val.<b>Elem</b>()
+		<a href="../src/fmt/print.go.html#line-841" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-841">#L841</a>: 		value := f.<b>Elem</b>()
+		<a href="../src/fmt/print.go.html#line-904" class="path-duplicate">print.go</a><a href="../src/fmt/print.go.html#line-904">#L904</a>: 			switch a := f.<b>Elem</b>(); a.Kind() {
+		<a href="../src/fmt/scan.go.html#line-1024">scan.go#L1024</a>: 		switch v := ptr.<b>Elem</b>(); v.Kind() {
+
+	<a href="../pkg/internal/fmtsort.html">internal/fmtsort</a>
+		<a href="../src/internal/fmtsort/sort.go.html#line-173">sort.go#L173</a>: 		c := compare(reflect.ValueOf(aVal.<b>Elem</b>().Type()), reflect.ValueOf(bVal.<b>Elem</b>().Type()))
+		<a href="../src/internal/fmtsort/sort.go.html#line-177" class="path-duplicate">sort.go</a><a href="../src/internal/fmtsort/sort.go.html#line-177">#L177</a>: 		return compare(aVal.<b>Elem</b>(), bVal.<b>Elem</b>())
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: reflect.MapIter.hiter</title>
+<link href="../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;"><b><a href="../pkg/reflect.html">reflect</a>.<a href="../src/reflect/value.go.html#line-1746">MapIter</a>.<a href="../src/reflect/value.go.html#line-1748">hiter</a></b></span><span style="font-size: large;"><i> (field)</i></span>
+
+<span class="title">15 uses</span>
+
+	reflect (current package)
+		<a href="../src/reflect/value.go.html#line-1748">value.go#L1748</a>: 	<b>hiter</b> hiter
+		<a href="../src/reflect/value.go.html#line-1753" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1753">#L1753</a>: 	if !iter.<b>hiter</b>.initialized() {
+		<a href="../src/reflect/value.go.html#line-1756" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1756">#L1756</a>: 	iterkey := mapiterkey(&amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1770" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1770">#L1770</a>: 	if !iter.<b>hiter</b>.initialized() {
+		<a href="../src/reflect/value.go.html#line-1773" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1773">#L1773</a>: 	iterkey := mapiterkey(&amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1794" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1794">#L1794</a>: 	if !iter.<b>hiter</b>.initialized() {
+		<a href="../src/reflect/value.go.html#line-1797" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1797">#L1797</a>: 	iterelem := mapiterelem(&amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1811" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1811">#L1811</a>: 	if !iter.<b>hiter</b>.initialized() {
+		<a href="../src/reflect/value.go.html#line-1814" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1814">#L1814</a>: 	iterelem := mapiterelem(&amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1840" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1840">#L1840</a>: 	if !iter.<b>hiter</b>.initialized() {
+		<a href="../src/reflect/value.go.html#line-1841" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1841">#L1841</a>: 		mapiterinit(iter.m.typ, iter.m.pointer(), &amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1843" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1843">#L1843</a>: 		if mapiterkey(&amp;iter.<b>hiter</b>) == nil {
+		<a href="../src/reflect/value.go.html#line-1846" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1846">#L1846</a>: 		mapiternext(&amp;iter.<b>hiter</b>)
+		<a href="../src/reflect/value.go.html#line-1848" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1848">#L1848</a>: 	return mapiterkey(&amp;iter.<b>hiter</b>) != nil
+		<a href="../src/reflect/value.go.html#line-1860" class="path-duplicate">value.go</a><a href="../src/reflect/value.go.html#line-1860">#L1860</a>: 	iter.<b>hiter</b> = hiter{}
+</code></pre><pre id="footer">
+<table><tr><td><img src="../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>

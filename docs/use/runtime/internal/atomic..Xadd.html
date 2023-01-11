@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>References: runtime/internal/atomic.Xadd</title>
+<link href="../../../css/light-v0.5.6.css" rel="stylesheet">
+<script src="../../../jvs/golds-v0.5.6.js"></script>
+<body onload="onPageLoad()"><div>
+
+<pre><code><span style="font-size:x-large;">func <b><a href="../../../pkg/runtime/internal/atomic.html">runtime/internal/atomic</a>.<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-52">Xadd</a></b></span>
+
+<span class="title">68 uses</span>
+
+	runtime/internal/atomic (current package)
+		<a href="../../../src/runtime/internal/atomic/atomic_amd64.go.html#line-52">atomic_amd64.go#L52</a>: func <b>Xadd</b>(ptr *uint32, delta int32) uint32
+		<a href="../../../src/runtime/internal/atomic/types.go.html#line-243">types.go#L243</a>: 	return <b>Xadd</b>(&amp;u.value, delta)
+
+	<a href="../../../pkg/runtime.html">runtime</a>
+		<a href="../../../src/runtime/mfinal.go.html#line-117">mfinal.go#L117</a>: 	atomic.<b>Xadd</b>(&amp;finq.cnt, +1) // Sync with markroots
+		<a href="../../../src/runtime/mgc.go.html#line-827">mgc.go#L827</a>: 				atomic.<b>Xadd</b>(&amp;gcMarkDoneFlushed, 1)
+		<a href="../../../src/runtime/mgc.go.html#line-1289" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1289">#L1289</a>: 		decnwait := atomic.<b>Xadd</b>(&amp;work.nwait, -1)
+		<a href="../../../src/runtime/mgc.go.html#line-1345" class="path-duplicate">mgc.go</a><a href="../../../src/runtime/mgc.go.html#line-1345">#L1345</a>: 		incnwait := atomic.<b>Xadd</b>(&amp;work.nwait, +1)
+		<a href="../../../src/runtime/mgcmark.go.html#line-554">mgcmark.go#L554</a>: 	decnwait := atomic.<b>Xadd</b>(&amp;work.nwait, -1)
+		<a href="../../../src/runtime/mgcmark.go.html#line-582" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-582">#L582</a>: 	incnwait := atomic.<b>Xadd</b>(&amp;work.nwait, +1)
+		<a href="../../../src/runtime/mgcmark.go.html#line-1065" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-1065">#L1065</a>: 			job := atomic.<b>Xadd</b>(&amp;work.markrootNext, +1) - 1
+		<a href="../../../src/runtime/mgcmark.go.html#line-1182" class="path-duplicate">mgcmark.go</a><a href="../../../src/runtime/mgcmark.go.html#line-1182">#L1182</a>: 				job := atomic.<b>Xadd</b>(&amp;work.markrootNext, +1) - 1
+		<a href="../../../src/runtime/mspanset.go.html#line-214">mspanset.go#L214</a>: 	if atomic.<b>Xadd</b>(&amp;block.popped, 1) == spanSetBlockEntries {
+		<a href="../../../src/runtime/mstats.go.html#line-766">mstats.go#L766</a>: 		seq := atomic.<b>Xadd</b>(&amp;pp.statsSeq, 1)
+		<a href="../../../src/runtime/mstats.go.html#line-795" class="path-duplicate">mstats.go</a><a href="../../../src/runtime/mstats.go.html#line-795">#L795</a>: 		seq := atomic.<b>Xadd</b>(&amp;pp.statsSeq, 1)
+		<a href="../../../src/runtime/netpoll.go.html#line-485">netpoll.go#L485</a>: 		atomic.<b>Xadd</b>(&amp;netpollWaiters, 1)
+		<a href="../../../src/runtime/netpoll.go.html#line-491" class="path-duplicate">netpoll.go</a><a href="../../../src/runtime/netpoll.go.html#line-491">#L491</a>: 	atomic.<b>Xadd</b>(&amp;netpollWaiters, -1)
+		<a href="../../../src/runtime/panic.go.html#line-840">panic.go#L840</a>: 	atomic.<b>Xadd</b>(&amp;runningPanicDefers, 1)
+		<a href="../../../src/runtime/panic.go.html#line-920" class="path-duplicate">panic.go</a><a href="../../../src/runtime/panic.go.html#line-920">#L920</a>: 			atomic.<b>Xadd</b>(&amp;runningPanicDefers, -1)
+		<a href="../../../src/runtime/panic.go.html#line-1158" class="path-duplicate">panic.go</a><a href="../../../src/runtime/panic.go.html#line-1158">#L1158</a>: 			atomic.<b>Xadd</b>(&amp;runningPanicDefers, -1)
+		<a href="../../../src/runtime/panic.go.html#line-1213" class="path-duplicate">panic.go</a><a href="../../../src/runtime/panic.go.html#line-1213">#L1213</a>: 		atomic.<b>Xadd</b>(&amp;panicking, 1)
+		<a href="../../../src/runtime/panic.go.html#line-1275" class="path-duplicate">panic.go</a><a href="../../../src/runtime/panic.go.html#line-1275">#L1275</a>: 	if atomic.<b>Xadd</b>(&amp;panicking, -1) != 0 {
+		<a href="../../../src/runtime/proc.go.html#line-1551">proc.go#L1551</a>: 			atomic.<b>Xadd</b>(&amp;pendingPreemptSignals, -1)
+		<a href="../../../src/runtime/proc.go.html#line-1881" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-1881">#L1881</a>: 	atomic.<b>Xadd</b>(&amp;sched.ngsys, -1)
+		<a href="../../../src/runtime/proc.go.html#line-1943" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-1943">#L1943</a>: 	atomic.<b>Xadd</b>(&amp;sched.ngsys, +1)
+		<a href="../../../src/runtime/proc.go.html#line-1984" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-1984">#L1984</a>: 	atomic.<b>Xadd</b>(&amp;sched.ngsys, +1)
+		<a href="../../../src/runtime/proc.go.html#line-2037" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2037">#L2037</a>: 				atomic.<b>Xadd</b>(&amp;extraMWaiters, 1)
+		<a href="../../../src/runtime/proc.go.html#line-2295" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2295">#L2295</a>: 				if int32(atomic.<b>Xadd</b>(&amp;sched.nmspinning, -1)) &lt; 0 {
+		<a href="../../../src/runtime/proc.go.html#line-2493" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2493">#L2493</a>: 		if int32(atomic.<b>Xadd</b>(&amp;sched.nmspinning, -1)) &lt; 0 {
+		<a href="../../../src/runtime/proc.go.html#line-2667" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2667">#L2667</a>: 			atomic.<b>Xadd</b>(&amp;sched.nmspinning, 1)
+		<a href="../../../src/runtime/proc.go.html#line-2771" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2771">#L2771</a>: 		if int32(atomic.<b>Xadd</b>(&amp;sched.nmspinning, -1)) &lt; 0 {
+		<a href="../../../src/runtime/proc.go.html#line-2786" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2786">#L2786</a>: 			atomic.<b>Xadd</b>(&amp;sched.nmspinning, 1)
+		<a href="../../../src/runtime/proc.go.html#line-2795" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2795">#L2795</a>: 			atomic.<b>Xadd</b>(&amp;sched.nmspinning, 1)
+		<a href="../../../src/runtime/proc.go.html#line-2864" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-2864">#L2864</a>: 				atomic.<b>Xadd</b>(&amp;sched.nmspinning, 1)
+		<a href="../../../src/runtime/proc.go.html#line-3103" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3103">#L3103</a>: 	nmspinning := atomic.<b>Xadd</b>(&amp;sched.nmspinning, -1)
+		<a href="../../../src/runtime/proc.go.html#line-3487" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-3487">#L3487</a>: 		atomic.<b>Xadd</b>(&amp;sched.ngsys, -1)
+		<a href="../../../src/runtime/proc.go.html#line-4156" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-4156">#L4156</a>: 		atomic.<b>Xadd</b>(&amp;sched.ngsys, +1)
+		<a href="../../../src/runtime/proc.go.html#line-5101" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-5101">#L5101</a>: 			atomic.<b>Xadd</b>(&amp;sched.nmspinning, 1)
+		<a href="../../../src/runtime/proc.go.html#line-5720" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-5720">#L5720</a>: 	atomic.<b>Xadd</b>(&amp;sched.npidle, 1)
+		<a href="../../../src/runtime/proc.go.html#line-5746" class="path-duplicate">proc.go</a><a href="../../../src/runtime/proc.go.html#line-5746">#L5746</a>: 		atomic.<b>Xadd</b>(&amp;sched.npidle, -1)
+		<a href="../../../src/runtime/rwmutex.go.html#line-39">rwmutex.go#L39</a>: 	if int32(atomic.<b>Xadd</b>(&amp;rw.readerCount, 1)) &lt; 0 {
+		<a href="../../../src/runtime/rwmutex.go.html#line-63" class="path-duplicate">rwmutex.go</a><a href="../../../src/runtime/rwmutex.go.html#line-63">#L63</a>: 	if r := int32(atomic.<b>Xadd</b>(&amp;rw.readerCount, -1)); r &lt; 0 {
+		<a href="../../../src/runtime/rwmutex.go.html#line-68" class="path-duplicate">rwmutex.go</a><a href="../../../src/runtime/rwmutex.go.html#line-68">#L68</a>: 		if atomic.<b>Xadd</b>(&amp;rw.readerWait, -1) == 0 {
+		<a href="../../../src/runtime/rwmutex.go.html#line-87" class="path-duplicate">rwmutex.go</a><a href="../../../src/runtime/rwmutex.go.html#line-87">#L87</a>: 	r := int32(atomic.<b>Xadd</b>(&amp;rw.readerCount, -rwmutexMaxReaders)) + rwmutexMaxReaders
+		<a href="../../../src/runtime/rwmutex.go.html#line-90" class="path-duplicate">rwmutex.go</a><a href="../../../src/runtime/rwmutex.go.html#line-90">#L90</a>: 	if r != 0 &amp;&amp; atomic.<b>Xadd</b>(&amp;rw.readerWait, r) != 0 {
+		<a href="../../../src/runtime/rwmutex.go.html#line-106" class="path-duplicate">rwmutex.go</a><a href="../../../src/runtime/rwmutex.go.html#line-106">#L106</a>: 	r := int32(atomic.<b>Xadd</b>(&amp;rw.readerCount, rwmutexMaxReaders))
+		<a href="../../../src/runtime/sema.go.html#line-140">sema.go#L140</a>: 		atomic.<b>Xadd</b>(&amp;root.nwait, 1)
+		<a href="../../../src/runtime/sema.go.html#line-143" class="path-duplicate">sema.go</a><a href="../../../src/runtime/sema.go.html#line-143">#L143</a>: 			atomic.<b>Xadd</b>(&amp;root.nwait, -1)
+		<a href="../../../src/runtime/sema.go.html#line-167" class="path-duplicate">sema.go</a><a href="../../../src/runtime/sema.go.html#line-167">#L167</a>: 	atomic.<b>Xadd</b>(addr, 1)
+		<a href="../../../src/runtime/sema.go.html#line-186" class="path-duplicate">sema.go</a><a href="../../../src/runtime/sema.go.html#line-186">#L186</a>: 		atomic.<b>Xadd</b>(&amp;root.nwait, -1)
+		<a href="../../../src/runtime/sema.go.html#line-485" class="path-duplicate">sema.go</a><a href="../../../src/runtime/sema.go.html#line-485">#L485</a>: 	return atomic.<b>Xadd</b>(&amp;l.wait, 1) - 1
+		<a href="../../../src/runtime/signal_unix.go.html#line-352">signal_unix.go#L352</a>: 	atomic.<b>Xadd</b>(&amp;gp.m.preemptGen, 1)
+		<a href="../../../src/runtime/signal_unix.go.html#line-356" class="path-duplicate">signal_unix.go</a><a href="../../../src/runtime/signal_unix.go.html#line-356">#L356</a>: 		atomic.<b>Xadd</b>(&amp;pendingPreemptSignals, -1)
+		<a href="../../../src/runtime/signal_unix.go.html#line-377" class="path-duplicate">signal_unix.go</a><a href="../../../src/runtime/signal_unix.go.html#line-377">#L377</a>: 			atomic.<b>Xadd</b>(&amp;pendingPreemptSignals, 1)
+		<a href="../../../src/runtime/signal_unix.go.html#line-456" class="path-duplicate">signal_unix.go</a><a href="../../../src/runtime/signal_unix.go.html#line-456">#L456</a>: 				atomic.<b>Xadd</b>(&amp;pendingPreemptSignals, -1)
+		<a href="../../../src/runtime/sigqueue.go.html#line-77">sigqueue.go#L77</a>: 	atomic.<b>Xadd</b>(&amp;sig.delivering, 1)
+		<a href="../../../src/runtime/sigqueue.go.html#line-81" class="path-duplicate">sigqueue.go</a><a href="../../../src/runtime/sigqueue.go.html#line-81">#L81</a>: 		atomic.<b>Xadd</b>(&amp;sig.delivering, -1)
+		<a href="../../../src/runtime/sigqueue.go.html#line-89" class="path-duplicate">sigqueue.go</a><a href="../../../src/runtime/sigqueue.go.html#line-89">#L89</a>: 			atomic.<b>Xadd</b>(&amp;sig.delivering, -1)
+		<a href="../../../src/runtime/sigqueue.go.html#line-122" class="path-duplicate">sigqueue.go</a><a href="../../../src/runtime/sigqueue.go.html#line-122">#L122</a>: 	atomic.<b>Xadd</b>(&amp;sig.delivering, -1)
+		<a href="../../../src/runtime/time.go.html#line-306">time.go#L306</a>: 	atomic.<b>Xadd</b>(&amp;pp.numTimers, 1)
+		<a href="../../../src/runtime/time.go.html#line-329" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-329">#L329</a>: 				atomic.<b>Xadd</b>(&amp;tpp.deletedTimers, 1)
+		<a href="../../../src/runtime/time.go.html#line-347" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-347">#L347</a>: 				atomic.<b>Xadd</b>(&amp;tpp.deletedTimers, 1)
+		<a href="../../../src/runtime/time.go.html#line-400" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-400">#L400</a>: 	n := atomic.<b>Xadd</b>(&amp;pp.numTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-428" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-428">#L428</a>: 	n := atomic.<b>Xadd</b>(&amp;pp.numTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-480" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-480">#L480</a>: 				atomic.<b>Xadd</b>(&amp;t.pp.ptr().deletedTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-589" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-589">#L589</a>: 			atomic.<b>Xadd</b>(&amp;pp.deletedTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-698" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-698">#L698</a>: 				atomic.<b>Xadd</b>(&amp;pp.deletedTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-802" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-802">#L802</a>: 			atomic.<b>Xadd</b>(&amp;pp.deletedTimers, -1)
+		<a href="../../../src/runtime/time.go.html#line-967" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-967">#L967</a>: 	atomic.<b>Xadd</b>(&amp;pp.deletedTimers, -cdel)
+		<a href="../../../src/runtime/time.go.html#line-968" class="path-duplicate">time.go</a><a href="../../../src/runtime/time.go.html#line-968">#L968</a>: 	atomic.<b>Xadd</b>(&amp;pp.numTimers, -cdel)
+</code></pre><pre id="footer">
+<table><tr><td><img src="../../../png/go101-twitter.png"></td>
+<td>The pages are generated with <a href="https://go101.org/apps-and-libs/golds.html"><b>Golds</b></a> <i>v0.5.6</i>. (GOOS=linux GOARCH=amd64)
+<b>Golds</b> is a <a href="https://go101.org">Go 101</a> project developed by <a href="https://tapirgames.com">Tapir Liu</a>.
+PR and bug reports are welcome and can be submitted to <a href="https://github.com/go101/golds">the issue list</a>.
+Please follow <a href="https://twitter.com/go100and1">@Go100and1</a> (reachable from the left QR code) to get the latest news of <b>Golds</b>.</td></tr></table></pre>
