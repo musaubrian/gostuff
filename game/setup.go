@@ -67,7 +67,7 @@ func generateNumber() uint64 {
 }
 
 //Starts the game
-func Setup()  {
+func StartGame()  {
     println("\nThe billion dollar guessing game\nAllowed guesses [1-50]\nYou only get 3 chances\n")
     player := &Player{}
     input, playerName := getInput()
