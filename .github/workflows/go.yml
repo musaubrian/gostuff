@@ -22,7 +22,7 @@ jobs:
         go-version: 1.19
 
     - name: docs
-      run: godocs -v -http:6060
+      run: godoc -v -http:6060
 
     - name: fmt
       run: gofmt ./...
