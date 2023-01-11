@@ -68,7 +68,7 @@ func generateNumber() uint64 {
 
 //Starts the game
 func Setup()  {
-    println("\nThe billion dollar guessing game\nAllowed guesses [1-50]\n")
+    println("\nThe billion dollar guessing game\nAllowed guesses [1-50]\nYou only get 3 chances\n")
     player := &Player{}
     input, playerName := getInput()
     player.Name = playerName
@@ -78,8 +78,6 @@ func Setup()  {
         fmt.Printf("\nIts a match\nYour Guess {%d} = correctAnswer{%d}", player.Guess, correctAnswer)
     } else {
         fmt.Printf("\nThe correctAnswer was {%d}\n", correctAnswer)
-        fmt.Println("Better luck next time")
-    }
-
-   // fmt.Printf("%s guessed: %d\n",player.Name, player.guess)
+        fmt.Println("Lets go again")
+    } 
 }
