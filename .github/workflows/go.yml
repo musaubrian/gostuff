@@ -21,11 +21,8 @@ jobs:
       with:
         go-version: 1.19
 
-    - name: download godoc
-      run: go get godoc
-
     - name: docs
-      run: godoc -v -http:6060
+      run: go doc -all >> index.html
 
     - name: fmt
       run: gofmt ./...
