@@ -20,14 +20,14 @@ Package game sets up a new game
 
 ## Index
 
-- [func Setup()](<#func-setup>)
+- [func StartGame()](<#func-startgame>)
 - [type Player](<#type-player>)
 
 
-## func [Setup](<https://github.com/musaubrian/gostuff/blob/main/game/setup.go#L70>)
+## func [StartGame](<https://github.com/musaubrian/gostuff/blob/main/game/setup.go#L70>)
 
 ```go
-func Setup()
+func StartGame()
 ```
 
 Starts the game
