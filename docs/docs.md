@@ -24,7 +24,7 @@ Package game sets up a new game
 - [type Player](<#type-player>)
 
 
-## func [StartGame](<https://github.com/musaubrian/gostuff/blob/main/game/setup.go#L70>)
+## func [StartGame](<https://github.com/musaubrian/gostuff/blob/main/game/setup.go#L71>)
 
 ```go
 func StartGame()
