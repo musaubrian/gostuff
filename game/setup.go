@@ -12,7 +12,7 @@ import (
 	"os"
 )
 
-//Player defines a player
+//Player defines a player's content
 type Player struct {
     Name string;
     Guess uint64;
@@ -68,16 +68,27 @@ func generateNumber() uint64 {
 
 //Starts the game
 func StartGame()  {
-    println("\nThe billion dollar guessing game\nAllowed guesses [1-50]\nYou only get 3 chances\n")
+    println("\n//Rules\n- Allowed guesses [1-50]\n- Chances: 3\n")
     player := &Player{}
     input, playerName := getInput()
     player.Name = playerName
     player.Guess= input
     correctAnswer := generateNumber()
-    if player.Guess == correctAnswer {
-        fmt.Printf("\nIts a match\nYour Guess {%d} = correctAnswer{%d}", player.Guess, correctAnswer)
-    } else {
-        fmt.Printf("\nThe correctAnswer was {%d}\n", correctAnswer)
-        fmt.Println("Lets go again")
-    } 
+    trials := 3
+
+    for trials > 0 {
+        if player.Guess >= correctAnswer-5 && player.Guess <= correctAnswer+5 {
+            fmt.Printf("\nYou got pretty close there, You get a point\nYour guess [%d] : Correct answer [%d]\n", player.Guess, correctAnswer)
+            break
+        } else {
+            trials--
+            if trials == 0 {
+                fmt.Printf("\nYour chances are over\nCorrect answer was [%d]", correctAnswer)
+                break
+            }
+            fmt.Println("\nThat was incorrect")
+            fmt.Printf("You have [%d] tries left\nTry again?\n", trials)
+            player.Guess = getGuess(bufio.NewReader(os.Stdin), player.Name)
+        }
+    }
 }
