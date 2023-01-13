@@ -34,7 +34,7 @@ Starts the game
 
 ## type [Player](<https://github.com/musaubrian/gostuff/blob/main/game/setup.go#L16-L19>)
 
-Player defines a player
+Player defines a player's content
 
 ```go
 type Player struct {
